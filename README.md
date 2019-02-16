@@ -5,3 +5,5 @@
 An eye people puzzle-platformer game with religious symbolism.
 
 See the [Develop](https://github.com/Theo-Erickson/Occultus-Ocularus/tree/Develop) branch for the current development version.
+
+Using Unity version 2018.3.1f1.
