@@ -18487,6 +18487,21 @@ PrefabInstance:
       propertyPath: background
       value: 
       objectReference: {fileID: 1221137935}
+    - target: {fileID: 114329478392616022, guid: b60b13e4510963741b833fd8f53ff0dc,
+        type: 3}
+      propertyPath: jumpForce
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329478392616022, guid: b60b13e4510963741b833fd8f53ff0dc,
+        type: 3}
+      propertyPath: maxJumpTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329478392616022, guid: b60b13e4510963741b833fd8f53ff0dc,
+        type: 3}
+      propertyPath: jump_forced_decel
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b60b13e4510963741b833fd8f53ff0dc, type: 3}
 --- !u!1001 &7686641126419782375

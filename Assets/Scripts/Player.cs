@@ -9,7 +9,11 @@ public class Player : MonoBehaviour {
     [Tooltip("Whether to allow the player to fly freely")] public bool antiGrav = false;
     public float maxWalkSpeed = 1;
     public float walkForce = 20;
-    public float jumpForce = 20;
+    public float maxJumpTime = 2.0f;
+    public float jump_force = 1200;
+    public float jump_offset=0.0f;
+    public float jump_shift = -0.1f;
+    public float jump_forced_decel = -50f;
 
     [Header("Audio")]
     public AudioSource backgroundAudio;
@@ -20,6 +24,11 @@ public class Player : MonoBehaviour {
     private SpriteRenderer spriterender;
 
     private bool jump = false;
+    private bool allowedToJump = false;
+    private float jumpTime = 0.0f;
+    private bool onGround = false;
+
+
     // For determining whether the player is touching the ground
     private ContactPoint2D[] contactPoints = new ContactPoint2D[5];
 
@@ -54,6 +63,11 @@ public class Player : MonoBehaviour {
         }
 
         // "Jump"
+        jump = false;
+        if (Input.GetButton("Jump"))
+        {
+            jump = true;
+        }
         if (Input.GetButtonDown("Jump")) {
             // If you can move freely, switch camera modes
             if (antiGrav) {
@@ -69,10 +83,17 @@ public class Player : MonoBehaviour {
                 // Only jump if touching the ground
                 int count = GetComponent<Collider2D>().GetContacts(contactPoints);
                 for(int i = 0; i < count; i ++) {
-                    if(Vector2.Dot(contactPoints[i].normal, Vector2.up) > 0.5)
-                        jump = true;
+                    if (Vector2.Dot(contactPoints[i].normal, Vector2.up) > 0.5)
+                        allowedToJump = true;
+                        jumpTime = 0.0f;
                     }
             }
+        }
+        onGround = false;
+        int count2 = GetComponent<Collider2D>().GetContacts(contactPoints);
+        for (int i = 0; i < count2; i++)
+        {
+            if (Vector2.Dot(contactPoints[i].normal, Vector2.up) > 0.5 && jumpTime > 0) onGround = true;
         }
 
         // Shift between flying and grounded modes
@@ -131,9 +152,38 @@ public class Player : MonoBehaviour {
                 if (Mathf.Abs(body.velocity.x) > maxWalkSpeed)
                     body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxWalkSpeed, body.velocity.y);
 
-                if (jump) {
-                    body.AddForce(jumpForce * Vector3.up);
-                    jump = false;
+                if (jump && jumpTime <= maxJumpTime && allowedToJump)
+                {
+                    //float coef = 0.0f;
+                    //float force = 0.0f;
+
+                    float desiredSpeed = 2 / (0.5f + Mathf.Pow(5, 20 * (jumpTime + jump_shift))) + jump_offset;
+                    //float desiredSpeed = 1 / Mathf.Pow(jumpTime-1,10)-0.5f;
+                    desiredSpeed *= jump_force;
+                    float currentSpeed = this.GetComponent<Rigidbody2D>().velocity.y;
+                    float dif = desiredSpeed - currentSpeed;
+                    dif -= Physics.gravity.y;
+
+                    body.AddForce(dif * this.GetComponent<Rigidbody2D>().mass * Vector3.up * Time.deltaTime);
+                    /*
+                    //coef = 2 / (1 + Mathf.Pow(50, (jumpTime + 1)));
+                    //coef = Mathf.Sqrt(coef);
+                    coef = 1 / Mathf.Pow(jumpTime+1, 2) + 0.3f;
+                    coef*=this.GetComponent<Rigidbody2D>().mass;
+                    if (jumpTime <= 0.3f)
+                    {
+                        coef = 1;
+                        force = jumpForce;
+                    }
+                    body.AddForce(force * coef * Vector3.up);
+                    */
+                    jumpTime += Time.deltaTime;
+                }
+                else if (!onGround){
+                    allowedToJump = false;
+                    if (this.GetComponent<Rigidbody2D>().velocity.y>= 0){
+                        body.AddForce(jump_forced_decel * this.GetComponent<Rigidbody2D>().mass * Vector3.up);
+                    }
                 }
                 this.GetComponent<BoxCollider2D>().isTrigger = false;
             }
