@@ -125,7 +125,7 @@ public class CameraScript : MonoBehaviour {
             // Debug Visualization:
              GameObject.Find("Debug dot green").transform.position = desiredCameraTarget + (Vector2)player.transform.position;
              GameObject.Find("Debug dot brown").transform.position = cameraMovingTarget + (Vector2)player.transform.position;
-            print(GameObject.Find("Debug dot green"));
+            //print(GameObject.Find("Debug dot green"));
             // Finally actually move the camera to the players positon plus the camera target offset:
             transform.Translate(cameraMovingTarget + screenToPlayerVector, Space.World);
 
@@ -164,7 +164,7 @@ public class CameraScript : MonoBehaviour {
     private void LerpToPosition(Vector3 start, Vector3 end) {
         t += Time.deltaTime / timeToReachTarget;
         transform.position = Vector3.Lerp(start, end, t);
-        print("Lerp");
+        //print("Lerp");
         //Disable the player movement when the camera is shifting
         if (Vector3.Distance(transform.position, end) > 1) {
             player.GetComponent<PlayerController>().canMove = false;

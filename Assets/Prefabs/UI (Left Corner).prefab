@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2202917112584409221}
   - component: {fileID: 2202917112584409218}
   m_Layer: 5
-  m_Name: UI
+  m_Name: UI (Left Corner)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,14 +51,14 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &2202917112584409221
 MonoBehaviour:
@@ -133,8 +133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.3, y: 130.2}
-  m_SizeDelta: {x: 176.7, y: 196.3}
+  m_AnchoredPosition: {x: -275.1, y: 114.18}
+  m_SizeDelta: {x: 237.1, y: 228.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2202917112672649904
 CanvasRenderer:
@@ -175,9 +175,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "<size=18>Controls</size>\nMove: <b>WASD</b> or <b>arrow keys</b>\nJump:
-    <b>Space bar</b>\nInteract: <b>E</b>\nShift layers: <b>Left shift</b>\nFly: <b>Right
-    shift</b>\nReset position: <b>R</b>\n\nFixed camera: <b>1</b>\nFollowing camera:
-    <b>2</b> \nSoft following camera: <b>3</b> \nFree camera: <b>4</b>\n"
+  m_Text: "<size=18>Controls</size>\nMove: <b>A and D</b> or <b>Left/Right arrows</b>\nJump:
+    <b>Up arrow</b> or <b>W</b>\nInteract: <b>Space</b>\nShift layers: <b>Left shift</b>\nFly:
+    <b>Right shift</b>\nReset position: <b>R</b>\n\nFixed camera: <b>1</b>\nFollowing
+    camera: <b>2</b> \nSmooth following camera: <b>3</b> \nFree camera: <b>4</b>\n"

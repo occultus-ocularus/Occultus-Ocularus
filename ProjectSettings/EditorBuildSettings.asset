@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/LayerSwitchingExample.unity
-    guid: 435e070f9afb99648a9bb4e60eeaf62d
+    path: Assets/Scenes/Main Menu.unity
+    guid: ae2e43377d4104ac1bca7a9af4609b9b
+  - enabled: 1
+    path: Assets/Scenes/!Template Scene.unity
+    guid: dce5ec1657e7c42da9a296f62ea17f05
   m_configObjects: {}

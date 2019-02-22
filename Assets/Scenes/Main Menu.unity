@@ -579,7 +579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -99}
+  m_AnchoredPosition: {x: 0, y: 99}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762780081
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4284f651f63642d09e93745cac65e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScene: LayerSwitchingExample
+  firstScene: '!Template Scene'
   player: {fileID: 1974393871175172, guid: b60b13e4510963741b833fd8f53ff0dc, type: 3}
   sprites:
   - {fileID: 21300000, guid: 7c675829b47d88d4f8e3b7efee4ad004, type: 3}
