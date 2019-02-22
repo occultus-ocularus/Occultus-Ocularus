@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 50948675252462286}
   - component: {fileID: 7443616542632638076}
   - component: {fileID: 7443616542632638079}
-  - component: {fileID: 549943170714426841}
   - component: {fileID: 2044585435650574375}
   - component: {fileID: 5234725836872230692}
   m_Layer: 17
@@ -32,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974393871175172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,9 +54,11 @@ MonoBehaviour:
   antiGrav: 0
   maxWalkSpeed: 3
   walkForce: 40
-  jumpForce: 400
+  jumpForce: 300
+  jumpExtensionTime: 20
   backgroundAudio: {fileID: 2044585435650574375}
   footsteps: {fileID: 5234725836872230692}
+  touchingGround: 0
 --- !u!61 &61809507331186424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -75,7 +76,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 1}
+    oldSize: {x: 0.2734375, y: 0.9765625}
     newSize: {x: 3.8, y: 7.89}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -121,6 +122,12 @@ MonoBehaviour:
   foreground: {fileID: 0}
   midground: {fileID: 0}
   background: {fileID: 0}
+  foregroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  midgroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!212 &7443616542632638079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -169,21 +176,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &549943170714426841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974393871175172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86b4fb632d7e472fa23fd67f6a4882a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateTag: Prism
-  degrees: 45
-  keyCode: 101
 --- !u!82 &2044585435650574375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -195,7 +187,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

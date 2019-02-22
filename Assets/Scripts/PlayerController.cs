@@ -50,13 +50,18 @@ public class PlayerController : MonoBehaviour {
 
 
         // Flips sprite depending on direction of movement
-        if (Input.GetAxis("Horizontal") < 0) {
-            spriterender.flipX = true;
-            transform.eulerAngles = new Vector3(0, 0, 1); //slight angle allows ledge detection to work.
-        }
-        else if (Input.GetAxis("Horizontal") > 0) {
-            spriterender.flipX = false;
-            transform.eulerAngles = new Vector3(0, 0, -1);
+        if (canMove)
+        {
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                spriterender.flipX = true;
+                transform.eulerAngles = new Vector3(0, 0, 1); //slight angle allows ledge detection to work.
+            }
+            else if (Input.GetAxis("Horizontal") > 0)
+            {
+                spriterender.flipX = false;
+                transform.eulerAngles = new Vector3(0, 0, -1);
+            }
         }
 
         InputHandler();

@@ -21,8 +21,12 @@ public class Dialogue : MonoBehaviour
     private int charIndex = -1;
     private bool awaitingUser = false;
 
+    PlayerController player;
+
     public void Setup()
     {
+        player = (PlayerController)GameObject.Find("Player").GetComponent("PlayerController");
+        player.canMove = false;
         lastUpdateTime = Time.time;
         currentScrollRate = NORMAL_SCROLL_RATE;
         phrases = new string[1];
@@ -56,20 +60,20 @@ public class Dialogue : MonoBehaviour
                 phraseIndex++;
                 awaitingUser = true;
             }
-
-            if (phraseIndex == phrases.Length && Input.GetKeyUp(KeyCode.Space))
-            {
-                Destroy(gameObject);
-            }
+        }
+        if (phraseIndex >= phrases.Length && Input.GetKeyUp(KeyCode.Space))
+        {
+            Destroy(transform.parent.gameObject);
+            player.canMove = true;
         }
     }
 
-    public void parseMessage(string message)
+    public void ParseMessage(string message)
     {
         phrases = message.Split(SPLIT_SYMBOL);
     }
 
-    public static Dialogue constructDialogueBox()
+    public static Dialogue ConstructDialogueBox()
     {
         Vector2 position = GameObject.Find("DialogueBoxPos").transform.position;
         GameObject dialogueBox = Instantiate(Resources.Load("DialogueBox") as GameObject);
