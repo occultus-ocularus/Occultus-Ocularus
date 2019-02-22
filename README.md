@@ -4,4 +4,4 @@
 
 An eye people puzzle-platformer game with religious symbolism.
 
-See the [Develop](https://github.com/Theo-Erickson/Occultus-Ocularus/tree/Develop) branch for the current development version.
+See the [Develop](https://github.com/occultus-ocularus/Occultus-Ocularus/tree/Develop) branch for the current development version.
