@@ -186,6 +186,11 @@ public class MovingPlatform : MonoBehaviour
         move = false;
     }
 
+    public void StartOrStopMoving()
+    {
+        move = !move;
+    }
+
     public void Extend()
     {
         move = true;
@@ -202,6 +207,13 @@ public class MovingPlatform : MonoBehaviour
             extend = false;
         else
             extend = true;
+    }
+
+    public void ExtendOrRetract()
+    {
+        move = true;
+        extend = !extend;
+        forwards = !forwards;
     }
 
     // Makes player stick to platform when they're standing on it
