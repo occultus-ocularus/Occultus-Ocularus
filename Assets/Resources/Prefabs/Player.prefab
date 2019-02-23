@@ -59,17 +59,19 @@ MonoBehaviour:
   antiGrav: 0
   maxWalkSpeed: 3
   walkForce: 40
-  jumpForce: 300
-  jumpExtensionTime: 20
-  backgroundAudio: {fileID: 2044585435650574375}
-  footsteps: {fileID: 5234725836872230692}
+  jumpMode: 0
   maxJumpTime: 2
   jump_force: 1200
   jump_offset: 0
   jump_shift: -0.1
   jump_forced_decel: -50
+  jumpForce: 280
+  jumpExtensionTime: 14
+  wallJumpingEnabled: 1
+  ledgeRecoveryEnabled: 1
+  backgroundAudio: {fileID: 2044585435650574375}
+  footsteps: {fileID: 5234725836872230692}
   touchingGround: 0
-  flipDirectionTimer: 0
 --- !u!61 &61809507331186424
 BoxCollider2D:
   m_ObjectHideFlags: 0
