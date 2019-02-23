@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Movement")]
     [Tooltip("On/Off for player movement input")] public bool canMove;
     [Tooltip("Freeze all movement IE no gravity")] public bool frozen;
-    [Tooltip("Whether to allow the player to fly freely")] public bool antiGrav = false;
+    [Tooltip("Whether to allow the player to fly freely")] public bool antiGrav;
     public float maxWalkSpeed = 1;
     public float walkForce = 20;
     public float jumpForce = 20;
@@ -28,36 +28,35 @@ public class PlayerController : MonoBehaviour {
 
     public float maxJumpTime = 2.0f;
     public float jump_force = 1200;
-    public float jump_offset = 0.0f;
+    public float jump_offset;
     public float jump_shift = -0.1f;
     public float jump_forced_decel = -50f;
 
     private float h; //stores the horizontal axis input value
     private float prevh; //stores the previous horizontal axis reading
-    private bool jump = false;
-    private bool prevJump = false;
+    private bool jump;
+    private bool prevJump;
     // For determining whether the player is touching the ground
 
-    private bool allowedToJump = false;
-    private float jumpTime = 0.0f;
-    private bool onGround = false;
+    private bool allowedToJump;
+    private float jumpTime;
+    private bool onGround;
 
     //private ContactPoint2D[] contactPoints = new ContactPoint2D[5];
     // private int contactCount = 1;
     [HideInInspector]
     public bool touchingGround;
     // TouchingWall will be -1 when the player is contacting a surface to her right and 1 when the wall is to her left (0 when not touching any walls)
-    private int touchingWall = 0;
+    private int touchingWall;
     // For implementing the lerp when you stop moving
     private float stopLerpTime;
     [HideInInspector]
     public int flipDirectionTimer;
 
-    private int jumpTimer;
     private int walljumpTimer;
     private bool hangingOnLedge = true;
     private int triggerCount;
-    private List<Collider2D> overlapingTriggers = new List<Collider2D>();
+    private List<Collider2D> overlappingTriggers = new List<Collider2D>();
 
 
     // Use this for initialization
@@ -170,7 +169,7 @@ void FixedUpdate() {
         else {
             playerCollider.isTrigger = false;
             // -- Jumping Logic: --
-            float h = Input.GetAxis("Horizontal");
+            h = Input.GetAxis("Horizontal");
             if (h * body.velocity.x < maxWalkSpeed)
                 body.AddForce(Vector2.right * h * walkForce);
             if (Mathf.Abs(body.velocity.x) > maxWalkSpeed)
@@ -216,7 +215,7 @@ void FixedUpdate() {
 
             prevJump = jump;
 
-            if (System.Math.Abs(h) < 0.01 && touchingGround) { //when ther'es little-to-no sideways input && we're on the ground bring the player to a stop
+            if (System.Math.Abs(h) < 0.01 && touchingGround) { //when there's little-to-no sideways input && we're on the ground bring the player to a stop
                                                                // increse the stopLerpTime, 
                 stopLerpTime += 3.5f * Time.deltaTime;
                 // slow down the x velocity by an value between the current x velocity and 0, determined by how far along stopLerpTime is, 
@@ -248,35 +247,41 @@ void FixedUpdate() {
 void OnTriggerEnter2D(Collider2D otherCol) {
     triggerCount++;
     //overlapingTriggers;
-    checkTriggers(otherCol, true);
+    CheckTriggers(otherCol, true);
 
 }
 
 void OnTriggerExit2D(Collider2D otherCol) {
     triggerCount--;
     //overlapingTriggers;
-    checkTriggers(otherCol, false);
+    CheckTriggers(otherCol, false);
 
 }
 
-void checkTriggers(Collider2D otherCol, bool isEnter) {
+void CheckTriggers(Collider2D otherCol, bool isEnter) {
     if (isEnter) {
-        overlapingTriggers.Add(otherCol);
+        overlappingTriggers.Add(otherCol);
     }
     else {
-        overlapingTriggers.Remove(overlapingTriggers.Find(x => x.Equals(otherCol)));
+        overlappingTriggers.Remove(overlappingTriggers.Find(x => x.Equals(otherCol)));
     }
-    Debug.Log(overlapingTriggers.ToString());
+    Debug.Log(overlappingTriggers.ToString());
     touchingGround = false;
     touchingWall = 0;
     hangingOnLedge = false;
-    foreach (Collider2D objCollider in overlapingTriggers) {
+    foreach (Collider2D objCollider in overlappingTriggers) {
         if (playerBottomTrigger.IsTouching(objCollider)) {
             touchingGround = true;
             touchingWall = 0;
             hangingOnLedge = false;
-            if (isEnter && otherCol.gameObject.tag == "Platform") otherCol.gameObject.GetComponent<MovingPlatform>().stickPlayer(gameObject);
-        }
+            if (otherCol.gameObject.tag == "Platform") {
+                    MovingPlatform platform = otherCol.gameObject.GetComponent<MovingPlatform>();
+                    if (isEnter)
+                        platform.stickPlayer(gameObject);
+                    else
+                        platform.unStickPlayer();
+                }
+            }
         else if (playerLeftTrigger.IsTouching(objCollider)) {
             touchingWall = 1;
             hangingOnLedge = !playerTopTrigger.IsTouching(otherCol);
@@ -284,9 +289,6 @@ void checkTriggers(Collider2D otherCol, bool isEnter) {
         else if (playerRightTrigger.IsTouching(objCollider)) {
             touchingWall = -1;
             hangingOnLedge = !playerTopTrigger.IsTouching(otherCol);
-        }
-        else if (!isEnter && otherCol.gameObject.tag == "Platform") {
-            otherCol.gameObject.GetComponent<MovingPlatform>().unStickPlayer(); ;
         }
         //print(touchingWall + " G: " + touchingGround + " h:" + hangingOnLedge);
     }

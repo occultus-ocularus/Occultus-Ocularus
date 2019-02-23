@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SamsonDialogueEncounter : MonoBehaviour
 {
+    public Dialogue dialogueSetup;
+
     public void Talk()
     {
-        Dialogue dialogueInstance = Dialogue.ConstructDialogueBox();
+        Dialogue dialogueInstance = dialogueSetup.ConstructDialogueBox();
         dialogueInstance.ParseMessage("Hey, kid. Come here.|" +
             "You’re new, aren’t you?|" +
             "Neat. Mind fetching me a cup of water from the\nfountain " +
