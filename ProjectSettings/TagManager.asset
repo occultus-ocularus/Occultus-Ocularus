@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Prism
   layers:
   - Default
   - TransparentFX
@@ -13,16 +14,16 @@ TagManager:
   - UI
   - 
   - 
+  - Camera Collision
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Midground
+  - Foreground
   - 
   - 
   - 

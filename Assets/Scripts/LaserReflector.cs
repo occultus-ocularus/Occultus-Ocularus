@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 // Reflects lasers.
-public class LaserReflector : LaserAffector {
+public class LaserReflector : MonoBehaviour, LaserAffector {
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,7 @@ public class LaserReflector : LaserAffector {
 	}
 
 	// Reflects the laser.
-	public override Ray2D RedirectLaser(Ray2D inRay, RaycastHit2D hit) {
+	public Ray2D RedirectLaser(Ray2D inRay, RaycastHit2D hit) {
 		Vector2 o, d;
 		o = hit.point - inRay.direction * 0.01f;
 		d = Vector2.Reflect(inRay.direction, hit.normal);

@@ -28,20 +28,20 @@ public class LevelMove : MonoBehaviour {
             if (Mathf.Abs(other.transform.position.x - transform.position.x) < this.GetComponent<BoxCollider2D>().size.x / 2) {
                 //you have entered from the top
                 if (other.transform.position.y > this.transform.position.y) {
-                    cScript.pastRoomCameraPosition = origin;
+                    cScript.pastCameraPosition = origin;
                     cScript.SetDestination(origin, moveTime);
                 } else { //you entered from the bottom
-                    cScript.pastRoomCameraPosition = destination;
+                    cScript.pastCameraPosition = destination;
                     cScript.SetDestination(destination, moveTime);
 
                 }
             } else if (Mathf.Abs(other.transform.position.y - transform.position.y) > this.GetComponent<BoxCollider2D>().size.y / 2) {
                 //enter from the right
                 if (other.transform.position.x > this.transform.position.x) {
-                    cScript.pastRoomCameraPosition = origin;
+                    cScript.pastCameraPosition = origin;
                     cScript.SetDestination(origin, moveTime);
                 } else { //you entered from the left 
-                    cScript.pastRoomCameraPosition = destination;
+                    cScript.pastCameraPosition = destination;
                     cScript.SetDestination(destination, moveTime);
                 }
             }

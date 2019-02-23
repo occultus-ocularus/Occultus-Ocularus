@@ -11,56 +11,74 @@ public class Player : MonoBehaviour {
     public float walkForce = 20;
     public float jumpForce = 20;
 
+    [Header("Audio")]
+    public AudioSource backgroundAudio;
+    public AudioSource footsteps;
+
     private Rigidbody2D body;
-
-    // Use this for initialization
-    void Start() {
-        body = GetComponent<Rigidbody2D>();
-    }
-
-    void Update() {
-        InputHandler();
-
-    }
+    private Vector3 startPoint;
+    private SpriteRenderer spriterender;
 
     private bool jump = false;
     // For determining whether the player is touching the ground
     private ContactPoint2D[] contactPoints = new ContactPoint2D[5];
 
-    //function to handle button or mouse events to avoid cluttering update
+    // Use this for initialization
+    void Start() {
+        startPoint = this.transform.position;  
+        body = GetComponent<Rigidbody2D>();
+        spriterender = GetComponent<SpriteRenderer>();
+    }
+
+    void Update() {
+        if(this.transform.position.y < -50) { this.transform.position = startPoint; print("RESPAWN");}
+
+
+        // Flips sprite depending on direction of movement
+        if (Input.GetAxis("Horizontal") < 0)
+            spriterender.flipX = true;
+        else if (Input.GetAxis("Horizontal") > 0)
+            spriterender.flipX = false;
+
+        InputHandler();
+        AudioHandler();
+    }
+
+    // Function to handle button or mouse events to avoid cluttering update
     void InputHandler() {
-        //Reset position
+
+
+        // Reset position
         if (Input.GetKeyDown(KeyCode.R)) {
             this.transform.position = Vector3.zero;
         }
 
-        //"Jump"
+        // "Jump"
         if (Input.GetButtonDown("Jump")) {
-            //if you can move freely, switch camera modes
+            // If you can move freely, switch camera modes
             if (antiGrav) {
                 CameraScript cScript = Camera.main.GetComponent<CameraScript>();
                 if (cScript.mode == CameraScript.CameraMode.Fixed) {
                     cScript.mode = CameraScript.CameraMode.FollowPlayer;
                 } else if (cScript.mode == CameraScript.CameraMode.FollowPlayer) {
                     cScript.mode = CameraScript.CameraMode.Fixed;
-                    cScript.SetDestination(cScript.pastRoomCameraPosition, 2.0f);
+                    cScript.SetDestination(cScript.pastCameraPosition, 2.0f);
                 }
-                //if you can't then just "Jump", its placeholder
-                // Jump, apply force in FixedUpdate, recommended by Unity docs.
+                // If you can't then jump, apply force in FixedUpdate, recommended by Unity docs.
             } else {
                 // Only jump if touching the ground
                 int count = GetComponent<Collider2D>().GetContacts(contactPoints);
                 for(int i = 0; i < count; i ++) {
                     if(Vector2.Dot(contactPoints[i].normal, Vector2.up) > 0.5)
                         jump = true;
-                }
+                    }
             }
         }
 
-        //shift between flying and grounded modes
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
+        // Shift between flying and grounded modes
+        if (Input.GetKeyDown(KeyCode.RightShift)) {
             if (antiGrav) {
-                this.GetComponent<Renderer>().material.color = Color.grey;
+                this.GetComponent<Renderer>().material.color = Color.white;
                 antiGrav = false;
                 body.gravityScale = 1;
             } else {
@@ -72,26 +90,52 @@ public class Player : MonoBehaviour {
         }
     }
 
+
+    void AudioHandler(){
+        int count = GetComponent<Collider2D>().GetContacts(contactPoints);
+        for (int i = 0; i < count; i++)
+        {
+            // Only make sound if on the ground
+            if (Vector2.Dot(contactPoints[i].normal, Vector2.up) > 0.5)
+            {
+                // If horizontally moving
+                if (Mathf.Abs(body.velocity.x) > 0.1)
+                {
+                    if (!footsteps.isPlaying)
+                    {
+                        footsteps.clip = Resources.Load<AudioClip>("Audio/Footsteps/SoftFootsteps" + Random.Range(1, 4));
+                        footsteps.pitch = Random.Range(0.7f, 1.0f);
+                        footsteps.volume = Random.Range(0.1f, 0.2f);
+                        footsteps.Play();
+                    }
+                }
+            }
+        }
+
+    }
+
     void FixedUpdate() {
         if (canMove) {
 
-            //if you are allowed free flight
+            // If you are allowed free flight
             if (antiGrav) {
                 this.transform.position = this.transform.position + Vector3.up * Input.GetAxis("Vertical") * Time.deltaTime * maxWalkSpeed;
                 this.transform.position = this.transform.position + Vector3.right * Input.GetAxis("Horizontal") * Time.deltaTime * maxWalkSpeed;
+                this.GetComponent<BoxCollider2D>().isTrigger = true;
             }
             // When u walkin
             else {
                 float h = Input.GetAxis("Horizontal");
-                if(h * body.velocity.x < maxWalkSpeed)
+                if (h * body.velocity.x < maxWalkSpeed)
                     body.AddForce(Vector2.right * h * walkForce);
                 if (Mathf.Abs(body.velocity.x) > maxWalkSpeed)
                     body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxWalkSpeed, body.velocity.y);
 
-                if(jump) {
+                if (jump) {
                     body.AddForce(jumpForce * Vector3.up);
                     jump = false;
                 }
+                this.GetComponent<BoxCollider2D>().isTrigger = false;
             }
         }
     }
