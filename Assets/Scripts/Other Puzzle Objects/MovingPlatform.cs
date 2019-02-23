@@ -41,6 +41,10 @@ public class MovingPlatform : MonoBehaviour
     private bool forwards;
     private Vector3 originalPosition;
 
+    // bugfix vars for player issues when "stuck" to platform:
+    float platformPositionWhileContact;
+    GameObject collidingPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -126,7 +130,10 @@ public class MovingPlatform : MonoBehaviour
                         else
                             transform.position = new Vector3(transform.position.x + displacement, transform.position.y, transform.position.z);
                     }
-
+                    if (collidingPlayer != null) {
+                        collidingPlayer.transform.Translate(new Vector3(transform.position.x - platformPositionWhileContact, 0, 0));
+                        platformPositionWhileContact = transform.position.x;
+                    }
                 }
             }
             else if (direction == MvDir.vertical)
@@ -171,6 +178,10 @@ public class MovingPlatform : MonoBehaviour
                         else
                             transform.position = new Vector3(transform.position.x, transform.position.y + displacement, transform.position.z);
                     }
+                    if (collidingPlayer != null) {
+                        collidingPlayer.transform.Translate(new Vector3(0, transform.position.y - platformPositionWhileContact, 0));
+                        platformPositionWhileContact = transform.position.y;
+                    }
                 }
             }
         }
@@ -184,11 +195,6 @@ public class MovingPlatform : MonoBehaviour
     public void StopMoving()
     {
         move = false;
-    }
-
-    public void StartOrStopMoving()
-    {
-        move = !move;
     }
 
     public void Extend()
@@ -209,30 +215,20 @@ public class MovingPlatform : MonoBehaviour
             extend = true;
     }
 
-    public void ExtendOrRetract()
-    {
-        move = true;
-        extend = !extend;
-        forwards = !forwards;
-    }
-
-    // Makes player stick to platform when they're standing on it
-    void OnCollisionEnter2D(Collision2D col)
-    {
-
-        if (col.gameObject.tag == "Player" && col.enabled)
-        {
-            col.gameObject.transform.parent = this.transform;
+    // Called by player class when they jump or walk onto platform: Makes player stick to platform when they're standing on it.
+    public void stickPlayer(GameObject player) {
+        //col.gameObject.transform.parent.gameObject.transform.parent = transform;
+        collidingPlayer = player;
+        if (direction == MvDir.vertical) {
+            platformPositionWhileContact = transform.position.y;
+        }
+        else if (direction == MvDir.horizontal) {
+            platformPositionWhileContact = transform.position.x;
         }
     }
 
-    // Unsticks player from platform when they jump or walk off of it
-    void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            col.gameObject.transform.parent = null;
-        }
+    // Called by player class when they jump or walk off of platform (Unsticks player from platform)
+    public void unStickPlayer() {
+        collidingPlayer = null;
     }
-
 }

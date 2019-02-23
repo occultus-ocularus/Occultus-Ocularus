@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System.Linq;
 
 public class PlayerLayerSwitcher : MonoBehaviour
 {
@@ -9,8 +10,13 @@ public class PlayerLayerSwitcher : MonoBehaviour
     public GameObject foreground;
     public GameObject midground;
     public GameObject background;
-    public LayerMask foregroundLayer;
-    public LayerMask midgroundLayer;
+    private LayerMask playerLayer;
+    private LayerMask foregroundLayer;
+    private LayerMask midgroundLayer;
+    private LayerMask foregroundLaserLayer;
+    private LayerMask midgroundLaserLayer;
+    private int foregroundSortingLayer;
+    private int midgroundSortingLayer;
     private BoxCollider2D playerCollider;
     private int currentPlayerLayer;
     private bool collisionPlayerFeedbackHappening = false;
@@ -36,16 +42,28 @@ public class PlayerLayerSwitcher : MonoBehaviour
             {
                 if (destinationLayerNum == foregroundLayer.value)
                 {
-                    // set the player's depth/z position to be that of the target layer (foreground)
+                    // set the player's collision mask & depth/z position to be that of the target layer (fore)
+                    Physics2D.IgnoreLayerCollision(playerLayer, foregroundLayer, false);
+                    Physics2D.IgnoreLayerCollision(playerLayer, foregroundLaserLayer, false);
+                    Physics2D.IgnoreLayerCollision(playerLayer, midgroundLayer, true);
+                    Physics2D.IgnoreLayerCollision(playerLayer, midgroundLaserLayer, true);
+                    print(Physics.GetIgnoreLayerCollision(playerLayer, foregroundLayer));
                     player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, foreground.transform.position.z);
                     ChangeLayerOpacity(foreground, 1);
+                    Util.SetSortingLayerRecursively(player, foregroundSortingLayer);
                 }
                 else if (destinationLayerNum == midgroundLayer.value)
                 {
-                    // set the player's depth/z position to be that of the target layer (midground)
+                    // set the player's collision mask & depth/z position to be that of the target layer (midground)
+                    Physics2D.IgnoreLayerCollision(playerLayer, midgroundLayer, false);
+                    Physics2D.IgnoreLayerCollision(playerLayer, midgroundLaserLayer, false);
+                    Physics2D.IgnoreLayerCollision(playerLayer, foregroundLayer, true);
+                    Physics2D.IgnoreLayerCollision(playerLayer, foregroundLaserLayer, true);
+                    print(Physics2D.GetIgnoreLayerCollision(playerLayer, foregroundLayer));
                     player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, midground.transform.position.z);
                     // fade the foreground so the the midground is more visible
                     ChangeLayerOpacity(foreground, (float)0.8);
+                    Util.SetSortingLayerRecursively(player, midgroundSortingLayer);
                 }
                 /*
                  * Set the player's own layer to the desired layer integer so that the player will
@@ -53,7 +71,7 @@ public class PlayerLayerSwitcher : MonoBehaviour
                  * SetLayerRecursively so that all children of player will also take the same layer.
                  * This is necessary for changing the interaction trigger, joints, etc.
                  */
-                Util.SetLayerRecursively(player, destinationLayerNum);
+
                 // set everything straight after switching layers.
                 currentPlayerLayer = destinationLayerNum;
 
@@ -64,12 +82,16 @@ public class PlayerLayerSwitcher : MonoBehaviour
 
     // Use this for initialization
     void Start()  {
+        playerLayer = LayerMask.NameToLayer("Player");
         foregroundLayer = LayerMask.NameToLayer("Foreground");
+        foregroundLaserLayer = LayerMask.NameToLayer("Foreground Laser Transparent");
         midgroundLayer = LayerMask.NameToLayer("Midground");
+        midgroundLaserLayer = LayerMask.NameToLayer("Midground Laser Transparent");
         currentPlayerLayer = foregroundLayer.value;
-        print(midgroundLayer.value);
-        print(foregroundLayer.value);
-    }
+        foregroundSortingLayer = foreground.GetComponentInChildren<Renderer>().sortingLayerID;
+        midgroundSortingLayer = midground.GetComponentInChildren<Renderer>().sortingLayerID;
+        Debug.Log(foregroundSortingLayer);
+}
 
     void Update()
     {
@@ -97,6 +119,12 @@ public class PlayerLayerSwitcher : MonoBehaviour
         // for every tilemapRender component, set its material's "tint color" to be transparent (specified by the opaqueness arguement)
         for (int i = 0, tilemapRenderersLength = tilemapRenderers.Length; i < tilemapRenderersLength; i++) {
             TilemapRenderer mapRenderer = tilemapRenderers[i];
+            mapRenderer.material.color = new Color(mapRenderer.material.color.r, mapRenderer.material.color.g, mapRenderer.material.color.b, opaqueness);
+        }
+        // Do the same for all sprite renderer components:
+        SpriteRenderer[] spriteRenderers = layerRoot.GetComponentsInChildren<SpriteRenderer>();
+        for (int i = 0, spriteRenderersLength = spriteRenderers.Length; i < spriteRenderersLength; i++) {
+            SpriteRenderer mapRenderer = spriteRenderers[i];
             mapRenderer.material.color = new Color(mapRenderer.material.color.r, mapRenderer.material.color.g, mapRenderer.material.color.b, opaqueness);
         }
     }
