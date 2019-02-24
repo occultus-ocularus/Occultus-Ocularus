@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTag: Player
-  sameLayerOnly: 0
+  sameLayerOnly: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
