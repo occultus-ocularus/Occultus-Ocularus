@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/2nd Area - Suburbs/secondLayerPuzzle.unity
     guid: 17d555a9bf941094e94115540ac9f2e8
   - enabled: 1
-    path: Assets/Scenes/Levels/2nd Area - Suburbs/[tempname] LayerMess.unity
+    path: Assets/Scenes/Levels/2nd Area - Suburbs/TwoLaserDoorLayer.unity
     guid: f9ebb8acbe23644cf85fd0807d1d8fa3
   - enabled: 1
     path: Assets/Scenes/Menus/End Menu.unity
