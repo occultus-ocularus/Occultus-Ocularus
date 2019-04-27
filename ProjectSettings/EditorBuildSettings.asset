@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/1st Set of Levels/Mall.unity
     guid: 5191489791667437a913d9e4f6eabfd0
   - enabled: 1
-    path: Assets/Scenes/Levels/1st Set of  Levels/Outside Mall.unity
+    path: Assets/Scenes/Levels/1st Set of Levels/Outside Mall.unity
     guid: 457803f5de39c44989dd0347e4fbaaa0
   - enabled: 1
     path: Assets/Scenes/Menus/End Menu.unity
