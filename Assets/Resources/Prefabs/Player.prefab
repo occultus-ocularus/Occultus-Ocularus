@@ -73,8 +73,8 @@ MonoBehaviour:
   ledgeRecoveryEnabled: 0
   backgroundAudio: {fileID: 2044585435650574375}
   footsteps: {fileID: 5234725836872230692}
-  allowResetting: 0
-  allowFlying: 0
+  allowResetting: 1
+  allowFlying: 1
   body: {fileID: 0}
   touchingGround: 0
 --- !u!70 &3325430598761606428

@@ -17575,16 +17575,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 114329478392616022, guid: b60b13e4510963741b833fd8f53ff0dc,
-        type: 3}
-      propertyPath: allowResetting
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114329478392616022, guid: b60b13e4510963741b833fd8f53ff0dc,
-        type: 3}
-      propertyPath: allowFlying
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4643587371059380, guid: b60b13e4510963741b833fd8f53ff0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9
