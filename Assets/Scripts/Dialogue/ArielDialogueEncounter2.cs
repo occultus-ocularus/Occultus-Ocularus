@@ -27,5 +27,9 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
             Debug.Log("DialogAction: " + action);
     }
 
-    public void DialogueFinished() {}
+    public void DialogueFinished()
+    {
+        foreach (BoxCollider2D bc in GetComponents<BoxCollider2D>())
+            bc.enabled = false;
+    }
 }
