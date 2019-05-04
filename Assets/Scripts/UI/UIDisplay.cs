@@ -10,6 +10,8 @@ public class UIDisplay : MonoBehaviour {
     private GameObject minCtrls;
     private GameObject detailedCtrls;
 
+    private Scene currentScene;
+
     // Track whether a gamepad was connected last update, see UpdateControlsUI
     private bool gamepadConnected = false;
 
@@ -37,8 +39,8 @@ public class UIDisplay : MonoBehaviour {
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
         }
 
-        // Turn on layer switching controls if applicable to current level
-        if (SceneManager.GetActiveScene().path.Contains("2nd Area - Suburbs"))
+        // Display layer switching controls if applicable to current level
+        if (currentScene.path.Contains("Suburbs") && !currentScene.name.Equals("ArielIntro"))
         {
             minCtrls.transform.GetChild(1).gameObject.SetActive(false);
             minCtrls.transform.GetChild(2).gameObject.SetActive(true);
@@ -49,9 +51,10 @@ public class UIDisplay : MonoBehaviour {
             minCtrls.transform.GetChild(2).gameObject.SetActive(false);
         }
 
-        // Turn on camera zoom controls if applicable to current level
-        if (SceneManager.GetActiveScene().name.Equals("TwoLaserDoorLayer") ||
-            SceneManager.GetActiveScene().name.Equals("Outside Mall+TTD, MPT"))
+        // Display camera zoom controls if applicable to current level
+        if (currentScene.name.Equals("Outside Mall+TTD, MPT") ||
+            currentScene.name.Equals("TwoLaserDoorLayer"))
+
         {
             minCtrls.transform.GetChild(3).gameObject.SetActive(true);
         }
@@ -62,6 +65,7 @@ public class UIDisplay : MonoBehaviour {
     }
 
     public void Start() {
+        currentScene = SceneManager.GetActiveScene();
         UpdateControlsUI();
     }
     public void Update() {
