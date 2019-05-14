@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4077298369169677340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 4077298370317125809}
   m_Father: {fileID: 0}
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 949841991
   m_SortingLayer: 3
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4e8e7cc1c468de44cbd9b1631a792484, type: 3}
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 8cf49a3243ef24d5cbdaa101a935a84a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,9 +97,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.39
 --- !u!114 &4077298369169677312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
   sprites:
-  - {fileID: 21300000, guid: 4e8e7cc1c468de44cbd9b1631a792484, type: 3}
-  - {fileID: 21300000, guid: f30106402fdc35943b709676f3c6ce72, type: 3}
+  - {fileID: 21300000, guid: ae167e3382a134f10987e058dd9f17ae, type: 3}
+  - {fileID: 21300000, guid: 8cf49a3243ef24d5cbdaa101a935a84a, type: 3}
   index: 0
 --- !u!1 &4077298370317125808
 GameObject:
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4077298370317125809}
   - component: {fileID: 4077298370317125814}
-  m_Layer: 17
+  m_Layer: 19
   m_Name: Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

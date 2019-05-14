@@ -28,6 +28,8 @@ public class MovingPlatform : MonoBehaviour
     public bool moveOnStart;
     [Tooltip("If set to true, door will start as open and close when extended instead of opening when extended")]
     public bool startWithDoorOpen;
+    [Tooltip("If set to true, door will call extend and retract on all of its children instead of on itself.")]
+    public bool activateChildrenInstead = false;
     [Tooltip("If moving continuously, will pause at each end for this many seconds")]
     public float pauseTime;
 
@@ -92,7 +94,8 @@ public class MovingPlatform : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (paused)
+        if (activateChildrenInstead) return;
+            if (paused)
             PauseMoving();
 
         if (move && Mathf.Abs(distance) > 0) {
@@ -241,6 +244,14 @@ public class MovingPlatform : MonoBehaviour
     // Starts platform moving towards the far end of its path, where it then stops
     public void Extend()
     {
+        if (activateChildrenInstead && extend == false) {
+            extend = true;
+            MovingPlatform[] doors = this.transform.gameObject.GetComponentsInChildren<MovingPlatform>();
+            foreach (MovingPlatform platform in doors) {
+                platform.Extend();
+            }
+            return;
+        }
         extendAndRetract = true;
         move = true;
         paused = false;
@@ -254,6 +265,14 @@ public class MovingPlatform : MonoBehaviour
     // Starts platform moving towards the beginning of its path, where it then stops
     public void Retract()
     {
+        if (activateChildrenInstead && extend == true) {
+            extend = false;
+            MovingPlatform[] doors  = this.transform.gameObject.GetComponentsInChildren<MovingPlatform>();
+            foreach (MovingPlatform platform in doors) {
+                platform.Retract();
+            }
+            return;
+        }
         extendAndRetract = true;
         move = true;
         paused = false;
