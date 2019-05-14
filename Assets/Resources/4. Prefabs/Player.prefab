@@ -73,6 +73,17 @@ MonoBehaviour:
   ledgeRecoveryEnabled: 0
   backgroundAudio: {fileID: 2044585435650574375}
   footsteps: {fileID: 5234725836872230692}
+  footstepsSound:
+  - {fileID: 8300000, guid: 70e79c21d6a9a4f4c9e232221975880e, type: 3}
+  - {fileID: 8300000, guid: 583efc1c87be343daaff8abffad0e2b2, type: 3}
+  - {fileID: 8300000, guid: bb752dc26491b48519cd6ac7845b6d63, type: 3}
+  - {fileID: 8300000, guid: 0e5ff32c9ed0d43078bbd7e8ba3d8dbc, type: 3}
+  - {fileID: 8300000, guid: 53699d68953cf4562a2f5fe8ec1b5c38, type: 3}
+  - {fileID: 8300000, guid: 4ce1ae8e88adf4d1bb709366def6f3ab, type: 3}
+  - {fileID: 8300000, guid: 28b236579400e4806b822f8b87725679, type: 3}
+  - {fileID: 8300000, guid: 28b236579400e4806b822f8b87725679, type: 3}
+  jumpSound: {fileID: 8300000, guid: 1e34b503535a84aa9914c93823b7ab01, type: 3}
+  landSound: {fileID: 8300000, guid: 0eedab9b60b4e48b4a3dfc3c9c5fcfe4, type: 3}
   allowResetting: 1
   allowFlying: 1
   body: {fileID: 0}

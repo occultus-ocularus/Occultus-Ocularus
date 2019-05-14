@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     public AudioSource backgroundAudio;
     public AudioSource footsteps;
 
+    public AudioClip[] footstepsSound = new AudioClip[7];
+    public AudioClip jumpSound;
+    public AudioClip landSound;
+
+
     [Header("Development Features")]
     public bool allowResetting = true;
     public bool allowFlying = true;
@@ -147,21 +152,20 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     }
 
     void PlayHardFootstep() {
-        footsteps.clip =
-            Resources.Load<AudioClip>("Audio/SFX/Characters/Hard Footsteps/footsteps_" + Random.Range(1, 8));
+        footsteps.clip = footstepsSound[Random.Range(0, 6)];
         footsteps.pitch = Random.Range(0.7f, 1.0f);
         footsteps.volume = Random.Range(0.3f, 0.4f);
         footsteps.Play();
     }
 
     void PlayJumpSound() {
-        footsteps.clip = Resources.Load<AudioClip>("Audio/SFX/Characters/jump");
+        footsteps.clip = jumpSound;
         footsteps.volume = 0.6f;
         footsteps.Play();
     }
 
     void PlayLandSound() {
-        footsteps.clip = Resources.Load<AudioClip>("Audio/SFX/Characters/land");
+        footsteps.clip = landSound;
         footsteps.volume = 0.5f;
         footsteps.Play();
     }
