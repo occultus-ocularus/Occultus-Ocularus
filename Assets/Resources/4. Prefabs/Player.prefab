@@ -73,6 +73,8 @@ MonoBehaviour:
   ledgeRecoveryEnabled: 0
   backgroundAudio: {fileID: 2044585435650574375}
   footsteps: {fileID: 5234725836872230692}
+  initialFootstepSound: {fileID: 8300000, guid: 09afb82cacf0645dd8ad892d83c29f13,
+    type: 3}
   footstepsSound:
   - {fileID: 8300000, guid: 70e79c21d6a9a4f4c9e232221975880e, type: 3}
   - {fileID: 8300000, guid: 583efc1c87be343daaff8abffad0e2b2, type: 3}

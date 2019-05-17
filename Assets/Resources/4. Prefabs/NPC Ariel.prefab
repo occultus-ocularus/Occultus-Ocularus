@@ -234,6 +234,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 4900000, guid: 36199744cde04490da6de324b291a17b, type: 3}
   dialogueSetup: {fileID: 0}
+  textBlips:
+  - {fileID: 8300000, guid: 0a8b7cc85373a46459e8bac925ef1fe4, type: 3}
+  - {fileID: 8300000, guid: 6f2f0d3e8098144fb9c469f262a1708e, type: 3}
+  - {fileID: 8300000, guid: 7f4eb68ddb62c43a28fca02fd3115e5a, type: 3}
+  - {fileID: 8300000, guid: de8174a74cf3c4e0f87f484aa9a6fd88, type: 3}
+  - {fileID: 8300000, guid: 6506521151cef4f02ad98f2cb8b81386, type: 3}
+  samsonTextBlips:
+  - {fileID: 8300000, guid: 8444dafa8ea4a4a8fbf2753e5664ddf4, type: 3}
+  - {fileID: 8300000, guid: 193504d2afcad43288285117ef41d5c3, type: 3}
+  - {fileID: 8300000, guid: 5dd080b225f084910befa5d43af7255c, type: 3}
+  - {fileID: 8300000, guid: df686e1e9184d4522a23b422ca08289a, type: 3}
+  - {fileID: 8300000, guid: 79c311b148247407888a3483cddc5efe, type: 3}
 --- !u!82 &320941298907745522
 AudioSource:
   m_ObjectHideFlags: 0
@@ -244,9 +256,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3a881f9f57d964aeea35190ade1e8e54, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0a8b7cc85373a46459e8bac925ef1fe4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

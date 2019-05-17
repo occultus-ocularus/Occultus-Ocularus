@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     public AudioSource backgroundAudio;
     public AudioSource footsteps;
 
+    public AudioClip initialFootstepSound;
     public AudioClip[] footstepsSound = new AudioClip[7];
     public AudioClip jumpSound;
     public AudioClip landSound;
@@ -153,6 +154,13 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
 
     void PlayHardFootstep() {
         footsteps.clip = footstepsSound[Random.Range(0, 6)];
+        footsteps.pitch = Random.Range(0.7f, 1.0f);
+        footsteps.volume = Random.Range(0.3f, 0.4f);
+        footsteps.Play();
+    }
+
+    void PlayInitialFootstep() {
+        footsteps.clip = initialFootstepSound;
         footsteps.pitch = Random.Range(0.7f, 1.0f);
         footsteps.volume = Random.Range(0.3f, 0.4f);
         footsteps.Play();

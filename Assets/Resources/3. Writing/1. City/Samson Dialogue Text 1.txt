@@ -1,4 +1,4 @@
-Hey, kid. Come here.
+???: Hey, kid. Come here.
 |
 You’re new, aren’t you?
 |
@@ -11,4 +11,4 @@ Newbies don’t.
 Well said.. Okay, meet me outside — I’ll help
 you out.
 |
-Oh, by the way, I’m Samson. Nice to meet you.
+SAMSON: Oh, by the way, I’m Samson. Nice to meet you.

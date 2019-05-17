@@ -6,7 +6,15 @@ public class SamsonDialogueEncounter1 : MonoBehaviour, IDialogueEncounter
 {
     public TextAsset dialogueText;
     public Dialogue dialogueSetup;
+
     public bool moveWhenFinished = true;
+    public AudioClip[] textBlips = new AudioClip[5];
+
+    private AudioSource textBlip;
+
+    void Start() {
+        textBlip = GetComponent<AudioSource>();
+    }
 
     public void Talk()
     {
@@ -28,5 +36,10 @@ public class SamsonDialogueEncounter1 : MonoBehaviour, IDialogueEncounter
     public void DialogueAction(string action)
     {
         Debug.Log("DialogAction: " + action);
+    }
+
+    public void PlayTextBlip(string characterName) {
+        textBlip.clip = textBlips[Random.Range(0, 4)];
+        textBlip.Play();
     }
 }

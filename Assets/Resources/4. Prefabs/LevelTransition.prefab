@@ -175,3 +175,4 @@ MonoBehaviour:
   fadeOutUIImage: {fileID: 0}
   fadeSpeed: 0.8
   player: {fileID: 0}
+  transitionSound: {fileID: 8300000, guid: e2c85249fb76741a98f1853aa56dc665, type: 3}

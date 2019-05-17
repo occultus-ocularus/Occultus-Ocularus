@@ -10,6 +10,15 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     public SpriteRenderer samson;
     public LevelTransition fadeEffect;
 
+    public AudioClip[] textBlips = new AudioClip[5];
+    public AudioClip[] samsonTextBlips = new AudioClip[5];
+
+    private AudioSource textBlip;
+
+    void Start() {
+        textBlip = GetComponent<AudioSource>();
+    }
+
     public void Talk()
     {
         Dialogue dialogueInstance = dialogueSetup.ActivateDialogueBox();
@@ -31,5 +40,13 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     {
         foreach (BoxCollider2D bc in GetComponents<BoxCollider2D>())
             bc.enabled = false;
+    }
+
+    public void PlayTextBlip(string characterName) {
+        if (characterName.Equals("ARIEL") || characterName.Equals("???"))
+            textBlip.clip = textBlips[Random.Range(0, 4)];
+        else if (characterName.Equals("SAMSON"))
+            textBlip.clip = samsonTextBlips[Random.Range(0, 4)];
+        textBlip.Play();
     }
 }

@@ -10,8 +10,9 @@ public class LevelTransition : MonoBehaviour
     public Image fadeOutUIImage;
     public float fadeSpeed = 0.8f;
     public PlayerController player;
+    public AudioClip transitionSound;
 
-    public enum FadeDirection { In, Out }
+    public enum FadeDirection { In, Out };
 
     private float fadeStartValue;
     private float fadeEndValue;
@@ -20,14 +21,19 @@ public class LevelTransition : MonoBehaviour
     private bool fadeStarted;
     private SpriteRenderer spriteRenderer;
 
+    private AudioSource musicPlayer;
+
     void Start()
     {
+        musicPlayer = GameObject.Find("MusicPlayer").GetComponent<AudioSource>();
         fadeOutUIImage.enabled = true;
         StartCoroutine(Fade(FadeDirection.Out));
     }
 
     public void FadeLoadScene()
     {
+        musicPlayer.clip = transitionSound;
+        musicPlayer.Play();
         loading = true;
         fadeCompleted = false;
         if (!fadeStarted)

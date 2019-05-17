@@ -237,6 +237,12 @@ MonoBehaviour:
   dialogueText: {fileID: 4900000, guid: d47ec47d70d7c415ca96d3bd9315c8b5, type: 3}
   dialogueSetup: {fileID: 0}
   moveWhenFinished: 1
+  textBlips:
+  - {fileID: 8300000, guid: 8444dafa8ea4a4a8fbf2753e5664ddf4, type: 3}
+  - {fileID: 8300000, guid: 193504d2afcad43288285117ef41d5c3, type: 3}
+  - {fileID: 8300000, guid: 5dd080b225f084910befa5d43af7255c, type: 3}
+  - {fileID: 8300000, guid: df686e1e9184d4522a23b422ca08289a, type: 3}
+  - {fileID: 8300000, guid: 79c311b148247407888a3483cddc5efe, type: 3}
 --- !u!114 &2208987476646451524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +259,12 @@ MonoBehaviour:
   dialogueSetup: {fileID: 0}
   levelTransition: {fileID: 0}
   cityLight: {fileID: 0}
+  textBlips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &2208987476646451520
 Animator:
   serializedVersion: 3
@@ -279,12 +291,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2208987476646451521}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0cc7b0a428fdc4d80a507420faad44af, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8444dafa8ea4a4a8fbf2753e5664ddf4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

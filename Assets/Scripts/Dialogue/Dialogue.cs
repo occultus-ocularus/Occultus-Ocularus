@@ -14,6 +14,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     const float NORMAL_SCROLL_RATE = 0.04f;
     const float FAST_SCROLL_RATE = 0.015f;
 
+    public Text characterName;
     public Text text;
     public PlayerController player;
     public GameObject dialogueBox;
@@ -21,6 +22,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     private string[] phrases;
     private string[] actions;
     private bool actionPerformed;
+    private bool foundName;
 
     private IDialogueEncounter dialogueEncounter;
 
@@ -87,12 +89,21 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                 dialogueEncounter.DialogueAction(actions[phraseIndex]);
                 actionPerformed = true;
             }
+
             // Make a new letter appear after each interval defined by SCROLL_RATE
             while (Time.time - lastUpdateTime > currentScrollRate &&
                    phraseIndex < phrases.Length &&
                    !awaitingUser) {
                 string phrase = phrases[phraseIndex];
                 lastUpdateTime = Time.time;
+
+                // Output name of character
+                int nameDelimiterPoint = phrases[phraseIndex].IndexOf(':');
+                if (!foundName && nameDelimiterPoint != -1) {
+                    characterName.text = phrases[phraseIndex].Substring(0, phrases[phraseIndex].IndexOf(':'));
+                    phrases[phraseIndex] = phrases[phraseIndex].Substring(phrases[phraseIndex].IndexOf(':') + 2);
+                    foundName = true;
+                }
 
                 // Fill in the rest of the current phrase
                 if (skipToEndOfPhrase) {
@@ -102,11 +113,16 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                     awaitingUser = true;
                     skipToEndOfPhrase = false;
                     actionPerformed = false;
+                    foundName = false;
                 }
                 else {
                     text.text = phrase.Substring(0, 1 + charIndex);
                     charIndex++;
                 }
+
+                // Play text blip once every four characters
+                if (charIndex % 4 == 0)
+                    dialogueEncounter.PlayTextBlip(characterName.text);   
 
                 // Prep for next phrase when the end of current phrase is reached
                 if (charIndex == phrase.Length) {
@@ -114,6 +130,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                     phraseIndex++;
                     awaitingUser = true;
                     actionPerformed = false;
+                    foundName = false;
                 }
             }
         }
@@ -148,6 +165,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     public Dialogue ActivateDialogueBox() {
         dialogueBox.SetActive(true);
         Dialogue dialogue = dialogueBox.transform.GetChild(1).gameObject.GetComponent<Dialogue>();
+        dialogue.characterName = dialogueBox.transform.GetChild(2).gameObject.GetComponent<Text>();
         return dialogue;
     }
 }

@@ -129,10 +129,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
-    - target: {fileID: 1824618624061054, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4604808185451342, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -175,43 +171,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4604808185451342, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4604808185451342, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4604808185451342, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4604808185451342, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224952464302633506, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224952464302633506, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224404133108473724, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 224404133108473724, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 222525891668190984, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
-        type: 3}
-      propertyPath: m_CullTransparentMesh
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
