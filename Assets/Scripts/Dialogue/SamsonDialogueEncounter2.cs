@@ -8,11 +8,11 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     public Dialogue dialogueSetup;
 
     public LevelTransition levelTransition;
-    public Light cityLight;
+    //public Light cityLight;
     public AudioClip[] textBlips = new AudioClip[5];
 
     private bool talkedToSamson;
-    private bool lightsOut;
+    //private bool lightsOut;
 
     private AudioSource textBlip;
 
@@ -20,11 +20,11 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
         textBlip = GetComponent<AudioSource>();
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (lightsOut && cityLight.intensity >= 8)
             cityLight.intensity -= 1f;
-    }
+    }*/
 
     public void Talk()
     {
@@ -43,9 +43,9 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
 
     public void DialogueAction(string action)
     {
-        if (action.Equals("Lights go out"))
+        /*if (action.Equals("Lights go out"))
             lightsOut = true;
-        else
+        else*/
             Debug.Log("DialogAction: " + action);
     }
 

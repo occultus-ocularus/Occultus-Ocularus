@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 320941298907745520}
   - component: {fileID: 320941298907745523}
   - component: {fileID: 320941298907745522}
+  - component: {fileID: 4620318151496036490}
   m_Layer: 18
   m_Name: NPC Ariel
   m_TagString: Untagged
@@ -342,3 +343,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4620318151496036490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320941298907745516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fa62c1854b34a7ea7eb08deac52baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 4900000, guid: 36199744cde04490da6de324b291a17b, type: 3}
+  dialogueSetup: {fileID: 0}
+  samson: {fileID: 0}
+  fadeEffect: {fileID: 0}
+  textBlips:
+  - {fileID: 8300000, guid: 0a8b7cc85373a46459e8bac925ef1fe4, type: 3}
+  - {fileID: 8300000, guid: 6f2f0d3e8098144fb9c469f262a1708e, type: 3}
+  - {fileID: 8300000, guid: 7f4eb68ddb62c43a28fca02fd3115e5a, type: 3}
+  - {fileID: 8300000, guid: de8174a74cf3c4e0f87f484aa9a6fd88, type: 3}
+  - {fileID: 8300000, guid: 6506521151cef4f02ad98f2cb8b81386, type: 3}
+  samsonTextBlips:
+  - {fileID: 8300000, guid: 8444dafa8ea4a4a8fbf2753e5664ddf4, type: 3}
+  - {fileID: 8300000, guid: 193504d2afcad43288285117ef41d5c3, type: 3}
+  - {fileID: 8300000, guid: 5dd080b225f084910befa5d43af7255c, type: 3}
+  - {fileID: 8300000, guid: df686e1e9184d4522a23b422ca08289a, type: 3}
+  - {fileID: 8300000, guid: 79c311b148247407888a3483cddc5efe, type: 3}

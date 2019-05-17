@@ -18,6 +18,8 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     public Text text;
     public PlayerController player;
     public GameObject dialogueBox;
+    public Color samsonColor;
+    public Color arielColor;
 
     private string[] phrases;
     private string[] actions;
@@ -61,7 +63,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     // Input action: user pressed space, "A" (gamepad), etc.
     public void OnNext(InputAction.CallbackContext context) {
         if (context.performed && text != null) {
-            // Skip to end of line if button is pressed while text is still appearing
+            // Skip to end of phrase if button is pressed while text is still appearing
             if (!awaitingUser)
                 skipToEndOfPhrase = true;
 
@@ -97,13 +99,18 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                 string phrase = phrases[phraseIndex];
                 lastUpdateTime = Time.time;
 
-                // Output name of character
+                // Output name of character who's speaking
                 int nameDelimiterPoint = phrases[phraseIndex].IndexOf(':');
                 if (!foundName && nameDelimiterPoint != -1) {
                     characterName.text = phrases[phraseIndex].Substring(0, phrases[phraseIndex].IndexOf(':'));
                     phrases[phraseIndex] = phrases[phraseIndex].Substring(phrases[phraseIndex].IndexOf(':') + 2);
                     foundName = true;
                 }
+
+                if (characterName.text.Equals("SAMSON") || characterName.text.Equals("????"))
+                    transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = samsonColor;
+                else if (characterName.text.Equals("ARIEL") || characterName.text.Equals("???"))
+                    transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = arielColor;
 
                 // Fill in the rest of the current phrase
                 if (skipToEndOfPhrase) {

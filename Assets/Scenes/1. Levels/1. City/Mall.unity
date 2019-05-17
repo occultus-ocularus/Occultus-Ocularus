@@ -3983,6 +3983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueSetup
       objectReference: {fileID: 0}
+    - target: {fileID: 2880140856363401746, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5715629648138811321, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
         type: 3}
       propertyPath: dialogueFinished.m_PersistentCalls.m_Calls.Array.size
@@ -4023,11 +4028,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 960582976}
-    - target: {fileID: 2880140856363401746, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3605850141601055751, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4152,16 +4152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877368801990958882, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877368801990958882, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e7c45f2213e4ae28122e7684bdb7f4, type: 3}
@@ -4515,6 +4505,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC Samson
       objectReference: {fileID: 0}
+    - target: {fileID: 4225266728405370268, guid: 3d06d2a9e8fe94b888b94b55813ce853,
+        type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 4900000, guid: d47ec47d70d7c415ca96d3bd9315c8b5, type: 3}
+    - target: {fileID: 4225266728405370268, guid: 3d06d2a9e8fe94b888b94b55813ce853,
+        type: 3}
+      propertyPath: dialogueSetup
+      value: 
+      objectReference: {fileID: 2055078989}
     - target: {fileID: 2208987476646451528, guid: 3d06d2a9e8fe94b888b94b55813ce853,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4575,16 +4575,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4225266728405370268, guid: 3d06d2a9e8fe94b888b94b55813ce853,
-        type: 3}
-      propertyPath: dialogueText
-      value: 
-      objectReference: {fileID: 4900000, guid: d47ec47d70d7c415ca96d3bd9315c8b5, type: 3}
-    - target: {fileID: 4225266728405370268, guid: 3d06d2a9e8fe94b888b94b55813ce853,
-        type: 3}
-      propertyPath: dialogueSetup
-      value: 
-      objectReference: {fileID: 2055078989}
     - target: {fileID: 2208987476646451525, guid: 3d06d2a9e8fe94b888b94b55813ce853,
         type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4887,11 +4877,6 @@ PrefabInstance:
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: set_enabled
       objectReference: {fileID: 0}
-    - target: {fileID: 3546765133345632773, guid: 1db867e681625471eb1971ad79647fae,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3546765133345632772, guid: 1db867e681625471eb1971ad79647fae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4946,6 +4931,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546765133345632773, guid: 1db867e681625471eb1971ad79647fae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3833634272882486530, guid: 1db867e681625471eb1971ad79647fae,
         type: 3}
