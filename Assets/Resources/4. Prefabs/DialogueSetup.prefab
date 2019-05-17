@@ -115,6 +115,7 @@ MonoBehaviour:
   playerInput:
     m_Asset: {fileID: -944628639613478452, guid: ee4c2916222b34839b9bbc2d01681605,
       type: 3}
+  characterName: {fileID: 0}
   text: {fileID: 0}
   player: {fileID: 0}
   dialogueBox: {fileID: 0}
@@ -128,6 +129,10 @@ PrefabInstance:
     - target: {fileID: 1824618624061054, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
       propertyPath: m_Name
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824618624061054, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604808185451342, guid: 20742b6a1e1d648a7b34ff886f1b1e3b, type: 3}
       propertyPath: m_LocalPosition.x
