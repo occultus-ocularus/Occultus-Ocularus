@@ -16523,6 +16523,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 540487708}
+    - target: {fileID: 2880140856363401746, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3605850141601055751, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16648,6 +16653,28 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 101
       objectReference: {fileID: 0}
+    - target: {fileID: 2767679606406435218, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 679b39c1190d04b969382e8c5c083052,
+        type: 3}
+    - target: {fileID: 2767679606406435218, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767679606406435218, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048168821426401439, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 679b39c1190d04b969382e8c5c083052,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e7c45f2213e4ae28122e7684bdb7f4, type: 3}
 --- !u!1 &1111630099
@@ -17990,6 +18017,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
+        type: 3}
+      propertyPath: dialogueSetup
+      value: 
+      objectReference: {fileID: 45777682}
+    - target: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
+        type: 3}
+      propertyPath: samson
+      value: 
+      objectReference: {fileID: 869414216}
+    - target: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
+        type: 3}
+      propertyPath: fadeEffect
+      value: 
+      objectReference: {fileID: 266221071}
     - target: {fileID: 320941298907745521, guid: 98a73476923074f2ea95a45e1f46ef41,
         type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
@@ -18035,21 +18077,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
-        type: 3}
-      propertyPath: dialogueSetup
-      value: 
-      objectReference: {fileID: 45777682}
-    - target: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
-        type: 3}
-      propertyPath: samson
-      value: 
-      objectReference: {fileID: 869414216}
-    - target: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
-        type: 3}
-      propertyPath: fadeEffect
-      value: 
-      objectReference: {fileID: 266221071}
     m_RemovedComponents:
     - {fileID: 320941298907745523, guid: 98a73476923074f2ea95a45e1f46ef41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 98a73476923074f2ea95a45e1f46ef41, type: 3}
