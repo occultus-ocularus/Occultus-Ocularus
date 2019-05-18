@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: OccOc Tileset Temp_36
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 3914789468652704047, guid: 0e1e5896364c640ccb7b15933d73df25,
+  m_Sprite: {fileID: -1422403574450429372, guid: 0e1e5896364c640ccb7b15933d73df25,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
