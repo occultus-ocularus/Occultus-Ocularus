@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Experimental.Input;
-using UnityEngine.Experimental.Input.Plugins.PlayerInput;
 using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour, IDialogActions {
@@ -82,7 +79,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     }
 
     void Update() {
-        if (text != null) {
+        if (text != null && phrases != null) {
             // Do dialogue action for this phrase if there is one
             if (phraseIndex < phrases.Length &&
                 actions[phraseIndex] != null &&

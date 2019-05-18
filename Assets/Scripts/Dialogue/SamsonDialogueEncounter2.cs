@@ -11,7 +11,6 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     //public Light cityLight;
     public AudioClip[] textBlips = new AudioClip[5];
 
-    private bool talkedToSamson;
     //private bool lightsOut;
 
     private AudioSource textBlip;
@@ -28,7 +27,6 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
 
     public void Talk()
     {
-        talkedToSamson = true;
         Dialogue dialogueInstance = dialogueSetup.ActivateDialogueBox();
         dialogueInstance.Setup(this);
         dialogueInstance.ParseMessage(dialogueText.ToString());
