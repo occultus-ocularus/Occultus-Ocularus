@@ -9,29 +9,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 11500000, guid: 4c779848d9dd029409ca676b49e10a18, type: 3}
   m_Name: CityTileGlassManual
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 2767340460252701345, guid: 0e1e5896364c640ccb7b15933d73df25,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Transform:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
-  m_InstancedGameObject: {fileID: 0}
-  m_Flags: 1
-  m_ColliderType: 1
+  m_Tile: {fileID: 11400000, guid: 1fba8e607c0824b9e8e4377be4a6eac7, type: 2}
+  m_OverrideSelf: 0
+  m_Advanced: 0
+  m_Sprites:
+  - m_OriginalSprite: {fileID: 7502524240001321012, guid: 0e1e5896364c640ccb7b15933d73df25,
+      type: 3}
+    m_OverrideSprite: {fileID: 2767340460252701345, guid: 0e1e5896364c640ccb7b15933d73df25,
+      type: 3}
+  - m_OriginalSprite: {fileID: 5324188766673694720, guid: 0e1e5896364c640ccb7b15933d73df25,
+      type: 3}
+    m_OverrideSprite: {fileID: 2767340460252701345, guid: 0e1e5896364c640ccb7b15933d73df25,
+      type: 3}
+  m_OverrideTilingRules: []
+  m_OverrideDefault:
+    m_Enabled: 0
+    m_TilingRule:
+      m_Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
+      m_Sprites:
+      - {fileID: 0}
+      m_GameObject: {fileID: 0}
+      m_AnimationSpeed: 1
+      m_PerlinScale: 0.5
+      m_RuleTransform: 0
+      m_Output: 0
+      m_ColliderType: 1
+      m_RandomTransform: 0
+  m_RuntimeTile: {fileID: 0}
