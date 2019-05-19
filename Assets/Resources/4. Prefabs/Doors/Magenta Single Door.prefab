@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1455755636150591992}
   - component: {fileID: 2100840739310258151}
   m_Layer: 18
-  m_Name: Purple Single Door
+  m_Name: Magenta Single Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ad71e4881ed397f42a8aea19feb8e74d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3fbb8f2841494f2794950cbbe81c583, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
