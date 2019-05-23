@@ -150,9 +150,11 @@ public class CameraScript : MonoBehaviour, ICameraActions {
                 //move the camera such that the player is within the radius focusAreaSize of the view center again:
                 transform.Translate((screenToPlayerVector - screenToPlayerVector.normalized * followRadius) * Time.deltaTime * followSpeed, Space.World);
             }
-            //player can control camera with arrow keys
         }
+		//player can control camera with arrow keys
         else if (mode == CameraMode.FreeCam) {
+			//
+			if (GetComponent<BoxCollider2D> ().enabled == false){GetComponent<BoxCollider2D> ().enabled = true;} 
             //move left and right
             if (Input.GetKey(KeyCode.RightArrow) && DistFromPlayer.x < MaxDistFromPlayer.x) {
                 this.transform.position = new Vector3(this.transform.position.x + freeMoveSpeed, this.transform.position.y, this.transform.position.z);
@@ -205,21 +207,25 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     public void OnToggleCamera(InputAction.CallbackContext context) {
         if (context.performed) {
             ToggleFixedCameraMode();
+			GetComponent<BoxCollider2D> ().enabled = false;
         }
     }
     public void OnSetCameraMode1(InputAction.CallbackContext context) {
         ToggleFixedCameraMode();
+		GetComponent<BoxCollider2D> ().enabled = false;
     }
 
     public void OnSetCameraMode2(InputAction.CallbackContext context) {
         if (context.performed) {
             SetCameraMode(CameraMode.FollowPlayerRadius);
+			GetComponent<BoxCollider2D> ().enabled = false;
         }
     }
 
     public void OnSetCameraMode3(InputAction.CallbackContext context) {
         if (context.performed) {
             SetCameraMode(CameraMode.FollowPlayerSmooth);
+			GetComponent<BoxCollider2D> ().enabled = false;
 //            DistFromPlayer = Vector2.zero;
 //            playerScript.canMove = true;
         }
@@ -228,6 +234,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     public void OnSetCameraMode4(InputAction.CallbackContext context) {
         if (context.performed) {
             SetCameraMode(CameraMode.FreeCam);
+			GetComponent<BoxCollider2D> ().enabled = true;
 //            playerScript.canMove = false;
         }
     }
