@@ -88,6 +88,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 
     private bool isPreviewingCamera = false;
     private CameraMode previewPreviousCameraMode;
+	public bool canFree = false;
 
     void Awake() {
         playerInput.Camera.SetCallbacks(this);
@@ -208,7 +209,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     }
 
     public void OnSetCameraMode4(InputAction.CallbackContext context) {
-        if (context.performed) {
+        if (context.performed && canFree) {
             SetCameraMode(CameraMode.FreeCam);
 			GetComponent<BoxCollider2D> ().enabled = true;
 //            playerScript.canMove = false;
@@ -401,24 +402,24 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 
         //player can control camera with arrow keys
         else if (mode == CameraMode.FreeCam) {
-            //
+            // 
             if (GetComponent<BoxCollider2D>().enabled == false) { GetComponent<BoxCollider2D>().enabled = true; }
+			
             //move left and right
-            if (Input.GetKey(KeyCode.RightArrow) && DistFromPlayer.x < MaxDistFromPlayer.x) {
+            if (Input.GetKey(KeyCode.RightArrow)) {
                 this.transform.position = new Vector3(this.transform.position.x + freeMoveSpeed, this.transform.position.y, this.transform.position.z);
                 DistFromPlayer.x += freeMoveSpeed;
             }
-            else if (Input.GetKey(KeyCode.LeftArrow) && DistFromPlayer.x > -MaxDistFromPlayer.x) {
+            else if (Input.GetKey(KeyCode.LeftArrow)) {
                 this.transform.position = new Vector3(this.transform.position.x - freeMoveSpeed, this.transform.position.y, this.transform.position.z);
                 DistFromPlayer.x -= freeMoveSpeed;
             }
 
-
-            if (Input.GetKey(KeyCode.UpArrow) && DistFromPlayer.y < MaxDistFromPlayer.y) {
+            if (Input.GetKey(KeyCode.UpArrow)) {
                 this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + freeMoveSpeed, this.transform.position.z);
                 DistFromPlayer.y += freeMoveSpeed;
             }
-            else if (Input.GetKey(KeyCode.DownArrow) && DistFromPlayer.y > -MaxDistFromPlayer.y) {
+            else if (Input.GetKey(KeyCode.DownArrow)) {
                 this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - freeMoveSpeed, this.transform.position.z);
                 DistFromPlayer.y -= freeMoveSpeed;
             }
