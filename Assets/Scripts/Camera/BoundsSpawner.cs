@@ -16,17 +16,21 @@ public class BoundsSpawner : MonoBehaviour
         //Create Right bounds
 		GameObject Right = Instantiate(prefab, transform.position + new Vector3(transform.localScale.x / 2, 0,0), Quaternion.identity);
 		Right.transform.localScale = new Vector3(thickness, transform.localScale.y, 1);
+        Right.transform.SetParent(transform);
 		
 		//Create Top bounds
 		GameObject Top = Instantiate(prefab, transform.position + new Vector3(0, transform.localScale.y / 2,0), Quaternion.identity);
 		Top.transform.localScale = new Vector3(transform.localScale.x, thickness, 1);
-		
-		//Create Left bounds
-		GameObject Left = Instantiate(prefab, transform.position - new Vector3(transform.localScale.x / 2, 0,0), Quaternion.identity);
+        Top.transform.SetParent(transform);
+
+        //Create Left bounds
+        GameObject Left = Instantiate(prefab, transform.position - new Vector3(transform.localScale.x / 2, 0,0), Quaternion.identity);
 		Left.transform.localScale = new Vector3(thickness, transform.localScale.y, 1);
-		
-		//Create Bottom bounds
-		GameObject Bottom = Instantiate(prefab, transform.position - new Vector3(0, transform.localScale.y / 2,0), Quaternion.identity);
+        Left.transform.SetParent(transform);
+
+        //Create Bottom bounds
+        GameObject Bottom = Instantiate(prefab, transform.position - new Vector3(0, transform.localScale.y / 2,0), Quaternion.identity);
 		Bottom.transform.localScale = new Vector3(transform.localScale.x, thickness, 1);
+        Bottom.transform.SetParent(transform);
     }
 }
