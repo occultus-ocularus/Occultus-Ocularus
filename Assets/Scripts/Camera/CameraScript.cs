@@ -151,30 +151,6 @@ public class CameraScript : MonoBehaviour, ICameraActions {
                 transform.Translate((screenToPlayerVector - screenToPlayerVector.normalized * followRadius) * Time.deltaTime * followSpeed, Space.World);
             }
         }
-		//player can control camera with arrow keys
-        else if (mode == CameraMode.FreeCam) {
-			//
-			if (GetComponent<BoxCollider2D> ().enabled == false){GetComponent<BoxCollider2D> ().enabled = true;} 
-            //move left and right
-            if (Input.GetKey(KeyCode.RightArrow) && DistFromPlayer.x < MaxDistFromPlayer.x) {
-                this.transform.position = new Vector3(this.transform.position.x + freeMoveSpeed, this.transform.position.y, this.transform.position.z);
-                DistFromPlayer.x += freeMoveSpeed;
-            }
-            else if (Input.GetKey(KeyCode.LeftArrow) && DistFromPlayer.x > -MaxDistFromPlayer.x) {
-                this.transform.position = new Vector3(this.transform.position.x - freeMoveSpeed, this.transform.position.y, this.transform.position.z);
-                DistFromPlayer.x -= freeMoveSpeed;
-            }
-
-
-            if (Input.GetKey(KeyCode.UpArrow) && DistFromPlayer.y < MaxDistFromPlayer.y) {
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + freeMoveSpeed, this.transform.position.z);
-                DistFromPlayer.y += freeMoveSpeed;
-            }
-            else if (Input.GetKey(KeyCode.DownArrow) && DistFromPlayer.y > -MaxDistFromPlayer.y) {
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - freeMoveSpeed, this.transform.position.z);
-                DistFromPlayer.y -= freeMoveSpeed;
-            }
-        }
         // This updates the Z(into screen) position of the camera when the player switches layers, 
         // which I think should happen for all camera modes, because it helps the player notice which layer they are on.
         if ((transform.position.z - player.transform.position.z) != CameraToPlayerZDistance) {//warning is ok, because we keep updating the camera z distance each frame to be closer to the correct one;
@@ -421,6 +397,31 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             transform.Translate(new Vector2(deltaX, deltaY), Space.World);
 
             //transform.Translate(new Vector2((player.transform.position.x + desiredCameraTargetX - screenCenterVector.x) * Time.deltaTime * (followSmoothSpeedX + Mathf.Abs(desiredCameraTargetX)), (player.transform.position.y - screenCenterVector.y) * Time.deltaTime * followSmoothSpeedY), Space.World);
+        }
+
+        //player can control camera with arrow keys
+        else if (mode == CameraMode.FreeCam) {
+            //
+            if (GetComponent<BoxCollider2D>().enabled == false) { GetComponent<BoxCollider2D>().enabled = true; }
+            //move left and right
+            if (Input.GetKey(KeyCode.RightArrow) && DistFromPlayer.x < MaxDistFromPlayer.x) {
+                this.transform.position = new Vector3(this.transform.position.x + freeMoveSpeed, this.transform.position.y, this.transform.position.z);
+                DistFromPlayer.x += freeMoveSpeed;
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow) && DistFromPlayer.x > -MaxDistFromPlayer.x) {
+                this.transform.position = new Vector3(this.transform.position.x - freeMoveSpeed, this.transform.position.y, this.transform.position.z);
+                DistFromPlayer.x -= freeMoveSpeed;
+            }
+
+
+            if (Input.GetKey(KeyCode.UpArrow) && DistFromPlayer.y < MaxDistFromPlayer.y) {
+                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + freeMoveSpeed, this.transform.position.z);
+                DistFromPlayer.y += freeMoveSpeed;
+            }
+            else if (Input.GetKey(KeyCode.DownArrow) && DistFromPlayer.y > -MaxDistFromPlayer.y) {
+                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - freeMoveSpeed, this.transform.position.z);
+                DistFromPlayer.y -= freeMoveSpeed;
+            }
         }
     }
 }
