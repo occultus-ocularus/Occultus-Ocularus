@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/Scenes/1. Levels/2. Suburbs/ArielIntro.unity
     guid: 5e51c3d96fe2f684092bfca9dbe4c8ce
   - enabled: 1
-    path: Assets/Scenes/1. Levels/2. Suburbs/LayersIntroPuzzles.unity
+    path: Assets/Scenes/1. Levels/Outdated Levels/LayersIntroPuzzles.unity
     guid: 9df7d5b0ceeac47d6aa54b3119661c85
   - enabled: 1
-    path: Assets/Scenes/1. Levels/2. Suburbs/secondLayerPuzzle.unity
+    path: Assets/Scenes/1. Levels/Outdated Levels/secondLayerPuzzle.unity
     guid: 17d555a9bf941094e94115540ac9f2e8
   - enabled: 1
-    path: Assets/Scenes/1. Levels/2. Suburbs/TwoLaserDoorLayer.unity
+    path: Assets/Scenes/1. Levels/Outdated Levels/TwoLaserDoorLayer.unity
     guid: f9ebb8acbe23644cf85fd0807d1d8fa3
   - enabled: 1
     path: Assets/Scenes/2. Menus/End Menu.unity
