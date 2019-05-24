@@ -8,8 +8,8 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     public static bool messageComplete = true;
 
     const char SPLIT_SYMBOL = '|';
-    const float NORMAL_SCROLL_RATE = 0.04f;
-    const float FAST_SCROLL_RATE = 0.015f;
+    const float NORMAL_SCROLL_RATE = 0.02f;
+    const float FAST_SCROLL_RATE = 0.01f;
 
     public Text characterName;
     public Text text;

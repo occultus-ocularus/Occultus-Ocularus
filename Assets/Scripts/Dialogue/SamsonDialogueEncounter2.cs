@@ -14,9 +14,11 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     //private bool lightsOut;
 
     private AudioSource textBlip;
+    private enable_lights foregroundDec;
 
     void Start() {
         textBlip = GetComponent<AudioSource>();
+        foregroundDec = GameObject.Find("Foreground Decorations").GetComponent<enable_lights>();
     }
 
     /*private void Update()
@@ -41,10 +43,10 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
 
     public void DialogueAction(string action)
     {
-        /*if (action.Equals("Lights go out"))
-            lightsOut = true;
-        else*/
-            Debug.Log("DialogAction: " + action);
+        if (action.Equals("Lights go out"))
+            foregroundDec.SetLightLevel(0);
+        else
+             Debug.Log("DialogAction: " + action);
     }
 
     public void PlayTextBlip(string characterName) {
