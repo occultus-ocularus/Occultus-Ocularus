@@ -10,19 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c779848d9dd029409ca676b49e10a18, type: 3}
-  m_Name: CityTileBricks ML
+  m_Name: SuburbTileBricks MM
   m_EditorClassIdentifier: 
-  m_Tile: {fileID: 11400000, guid: 1fba8e607c0824b9e8e4377be4a6eac7, type: 2}
+  m_Tile: {fileID: 11400000, guid: 64a77ce740759a94cb28cc6293a81120, type: 2}
   m_OverrideSelf: 0
   m_Advanced: 0
   m_Sprites:
   - m_OriginalSprite: {fileID: 7502524240001321012, guid: 0e1e5896364c640ccb7b15933d73df25,
       type: 3}
-    m_OverrideSprite: {fileID: -8811426664970946754, guid: 0e1e5896364c640ccb7b15933d73df25,
+    m_OverrideSprite: {fileID: 3842431212196680622, guid: 0e1e5896364c640ccb7b15933d73df25,
       type: 3}
   - m_OriginalSprite: {fileID: 5324188766673694720, guid: 0e1e5896364c640ccb7b15933d73df25,
       type: 3}
-    m_OverrideSprite: {fileID: -8811426664970946754, guid: 0e1e5896364c640ccb7b15933d73df25,
+    m_OverrideSprite: {fileID: 3842431212196680622, guid: 0e1e5896364c640ccb7b15933d73df25,
+      type: 3}
+  - m_OriginalSprite: {fileID: -7613504767082619072, guid: b27fadc44addd514e81dc386866465f4,
+      type: 3}
+    m_OverrideSprite: {fileID: 263358161281088934, guid: b27fadc44addd514e81dc386866465f4,
+      type: 3}
+  - m_OriginalSprite: {fileID: -4664090064768261305, guid: b27fadc44addd514e81dc386866465f4,
+      type: 3}
+    m_OverrideSprite: {fileID: 263358161281088934, guid: b27fadc44addd514e81dc386866465f4,
       type: 3}
   m_OverrideTilingRules: []
   m_OverrideDefault:
