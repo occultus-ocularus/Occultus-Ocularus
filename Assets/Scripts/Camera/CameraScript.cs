@@ -193,10 +193,10 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     }
 
     public void OnSetCameraMode2(InputAction.CallbackContext context) {
-        if (context.performed) {
-            SetCameraMode(CameraMode.FollowPlayerRadius);
-			GetComponent<BoxCollider2D> ().enabled = false;
-        }
+        //if (context.performed) {
+        //    SetCameraMode(CameraMode.FollowPlayerRadius);
+		//	GetComponent<BoxCollider2D> ().enabled = false;
+        //}
     }
 
     public void OnSetCameraMode3(InputAction.CallbackContext context) {
