@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 320941298907745523}
   - component: {fileID: 320941298907745522}
   - component: {fileID: 4620318151496036490}
+  - component: {fileID: 4476015746435054070}
   m_Layer: 18
   m_Name: NPC Ariel
   m_TagString: Untagged
@@ -371,3 +372,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5dd080b225f084910befa5d43af7255c, type: 3}
   - {fileID: 8300000, guid: df686e1e9184d4522a23b422ca08289a, type: 3}
   - {fileID: 8300000, guid: 79c311b148247407888a3483cddc5efe, type: 3}
+--- !u!95 &4476015746435054070
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320941298907745516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64271a17eaf5275469189e63b5a80902, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
