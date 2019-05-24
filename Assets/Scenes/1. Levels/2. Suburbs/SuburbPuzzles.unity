@@ -2108,6 +2108,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1058413301}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &412046196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
+    type: 3}
+  m_PrefabInstance: {fileID: 661923769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2ec56debba64ece88dd68cddbb6853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &413125542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2674,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeEffect
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 412046196}
     - target: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
         type: 3}
       propertyPath: dialogueText
@@ -61390,12 +61402,12 @@ PrefabInstance:
         type: 3}
       propertyPath: foreground
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 722340055}
     - target: {fileID: 7443616542632638076, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
       propertyPath: midground
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1172616247}
     - target: {fileID: 7443616542632638076, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
       propertyPath: background
