@@ -5009,7 +5009,7 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeOutUIImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1049177611}
     - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
         type: 3}
       propertyPath: nextScene
@@ -44543,6 +44543,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 158207508}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049177611 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8837726542047142419, guid: 2960dd19a0267450eb1cdba08b7845e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1640789263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1058413301
 PrefabInstance:
   m_ObjectHideFlags: 0
