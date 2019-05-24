@@ -53,7 +53,7 @@ public class UIDisplay : MonoBehaviour {
 
         // Display camera zoom controls if applicable to current level
         if (currentScene.name.Equals("Outside Mall+TTD, MPT") ||
-            currentScene.name.Equals("TwoLaserDoorLayer"))
+            currentScene.name.Equals("SuburbPuzzles"))
 
         {
             minCtrls.transform.GetChild(3).gameObject.SetActive(true);

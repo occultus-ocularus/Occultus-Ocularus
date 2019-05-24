@@ -52,9 +52,8 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     public AudioClip landSound;
 
 
-    [Header("Development Features")]
-    public bool allowResetting = true;
-    public bool allowFlying = true;
+    private bool allowResetting = true;
+    private bool allowFlying = true;
 
     private Vector3 startPoint;
     private SpriteRenderer spriterender;
@@ -95,6 +94,10 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
 
     // Use this for initialization
     void Start() {
+        if (Application.isEditor) {
+            allowResetting = true;
+            allowFlying = true;
+        }
         startPoint = this.transform.position;
         body = GetComponent<Rigidbody2D>();
         spriterender = GetComponent<SpriteRenderer>();

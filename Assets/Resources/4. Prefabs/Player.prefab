@@ -86,8 +86,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 28b236579400e4806b822f8b87725679, type: 3}
   jumpSound: {fileID: 8300000, guid: 1e34b503535a84aa9914c93823b7ab01, type: 3}
   landSound: {fileID: 8300000, guid: 0eedab9b60b4e48b4a3dfc3c9c5fcfe4, type: 3}
-  allowResetting: 1
-  allowFlying: 1
+  allowResetting: 0
+  allowFlying: 0
   body: {fileID: 0}
   touchingGround: 0
 --- !u!70 &3325430598761606428
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 7695f964a41064394838e90366717ba6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43069415dc62e46f9ada61f1afba44aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -403,7 +403,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6810526, y: 1.0255852}
+    oldSize: {x: 0.59090906, y: 1.0272727}
     newSize: {x: 0.65, y: 1.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

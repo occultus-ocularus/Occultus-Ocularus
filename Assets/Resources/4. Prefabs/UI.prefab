@@ -241,8 +241,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Main Menu
   fadeOutUIImage: {fileID: 8837726542047142419}
+  transitionSound: {fileID: 0}
   fadeSpeed: 0.8
-  player: {fileID: 0}
 --- !u!1 &1453334386754742214
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,10 +321,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "<size=20>Detailed Controls</size>\nMove: <b>A, D</b>\nJump: <b>Space</b>\nInteract:
-    <b>E</b>\nShift layers: <b>Left shift</b>\n\nZoom camera: <b>1</b>\nRadius follow
-    camera: <b>2</b>\nSmooth follow camera: <b>3</b> \nFree camera: <b>4</b>\n\nHUD
-    mode: <b>Tab</b>\n<size=10>Available modes: minimal, detailed, off</size>\n"
+  m_Text: "Move: <b>A, D</b>\nJump: <b>Space</b>\nInteract: <b>E</b>\nSwitch Layer:
+    <b>Left Shift</b>\n\n<b>Camera Mode:</b>\nZoom: <b>1</b>\nNormal: <b>3</b> \nFree
+    Look: <b>4</b>\n\nHUD mode: <b>Tab</b>\n<size=10>Available modes: minimal, detailed,
+    off</size>\n"
 --- !u!1 &1880057468518725066
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,24 +674,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '<size=20>Detailed Controls</size>
-
-    Move: <b>Left Stick</b>
+  m_Text: 'Move: <b>Left Stick</b>
 
     Jump: <b>A</b>
 
     Interact: <b>X</b>
 
-    Shift layers: <b>B, Left Trigger</b>
+    Switch Layers: <b>B, Left Trigger</b>
 
 
-    Zoom camera: <b>Right Trigger</b>
+    <b>Camera Mode</b>
 
-    Radius follow camera: <b>2</b> (on keyboard)
+    Zooma: <b>Right Trigger</b>
 
-    Smooth follow camera: <b>3</b> (on keyboard)
+    Normal: <b>3</b> (on keyboard)
 
-    Free camera: <b>4</b> (on keyboard)
+    Free Look: <b>4</b> (on keyboard)
 
 
     HUD mode: <b>Tab</b> (on keyboard)
@@ -909,7 +907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &639298791083605225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1231,8 +1229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -331.3, y: -15}
-  m_SizeDelta: {x: 110, y: 50}
+  m_AnchoredPosition: {x: -307.2, y: -15}
+  m_SizeDelta: {x: 158.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9015372783407671408
 CanvasRenderer:
@@ -1275,7 +1273,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Zoom Camera: <b>Right Trigger</b>'
+  m_Text: '<b>Camera Mode</b>
+
+    Zoom: <b>Right Trigger</b>
+
+    Free Look: <b>4</b> (on keyboard)'
 --- !u!1 &6287706489482582678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,8 +1312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -331.3, y: -15}
-  m_SizeDelta: {x: 110, y: 50}
+  m_AnchoredPosition: {x: -298.2, y: -11}
+  m_SizeDelta: {x: 226.5, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1574699770503270046
 CanvasRenderer:
@@ -1354,7 +1356,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Zoom Camera: <b>1</b>'
+  m_Text: '<b>Camera Mode:</b>
+
+    Zoom: <b>1</b>   Normal: <b>3</b>   Free Look: <b>4</b>'
 --- !u!1 &6349126595588596225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,7 +1669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &508781609815859632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1994,4 +1998,4 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Move:   <size=18><b>Left Stick</b></size>\t\tJump:  <size=18><b>A</b></size>\t\tInteract:
-    \ <size=18><b>X</b></size>\t\tSwitch Layers: <b>B, Left Trigger</B>    \t"
+    \ <size=18><b>X</b></size>\t\tSwitch Layer: <b>B, Left Trigger</B>    \t"
