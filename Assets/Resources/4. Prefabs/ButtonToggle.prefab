@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5246384068809405750}
   - component: {fileID: 5246384068809405751}
   - component: {fileID: 1319544400473933594}
+  - component: {fileID: 1817471626266465086}
   m_Layer: 18
   m_Name: ButtonToggle
   m_TagString: Untagged
@@ -257,3 +258,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1817471626266465086
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246384068809405744}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9949766c094584a86aa7408f1b50be31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
