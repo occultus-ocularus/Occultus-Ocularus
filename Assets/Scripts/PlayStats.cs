@@ -39,17 +39,11 @@ public class PlayStats : MonoBehaviour
             case "ArielIntro":
                 original = GameObject.Find("PlaytestStatsOutside").GetComponent<PlayStats>();
                 break;
-            case "LayersIntroPuzzles":
+            case "SuburbPuzzles":
                 original = GameObject.Find("PlaytestStatsAriel").GetComponent<PlayStats>();
                 break;
-            case "secondLayerPuzzle":
-                original = GameObject.Find("PlaytestStatsLayers").GetComponent<PlayStats>();
-                break;
-            case "TwoLaserDoorLayer":
-                original = GameObject.Find("PlaytestStatsSecond").GetComponent<PlayStats>();
-                break;
             case "End Menu":
-                original = GameObject.Find("PlaytestStatsTwo").GetComponent<PlayStats>();
+                original = GameObject.Find("PlaytestStatsSuburb").GetComponent<PlayStats>();
                 break;
             case "Main Menu":
                 original = GameObject.Find("PlaytestStatsEnd").GetComponent<PlayStats>();
@@ -67,6 +61,10 @@ public class PlayStats : MonoBehaviour
     // Adds name of checkpoint & time since last checkpoint to the lists
     public void CheckpointReached(string name)
     {
+        if (checkpointNames.IndexOf(name) != -1) {
+            return;
+        }
+
         checkpointNames.Add(name);
         if (checkpointTimes.Count > 0)
             checkpointTimes.Add(Time.timeSinceLevelLoad - prevCheckpointTime);
@@ -130,10 +128,10 @@ public class PlayStats : MonoBehaviour
         WWWForm form = new WWWForm();
 
         // Google Form field ids can be found by making a prefilled form and getting them out of the URL
-        form.AddField("entry.2017653870", gameOutput);
+        form.AddField("entry.914780793", gameOutput);
 
         // URL for the Google Form with "formResponse" after form id instead of "viewForm"
-        string url = "https://docs.google.com/forms/d/e/1FAIpQLSfLCcr5kvzjpgHrn5E8-c2soD_3kK5VCPqr_Pe6YpIVUb9mfw/formResponse";
+        string url = "https://docs.google.com/forms/d/e/1FAIpQLSeCbySxuHCaHT_G6gEsfeqsuGzFD1JdxetSlhVc4kuXjSJEeA/formResponse";
 
         // Post a request to the URL
         UnityWebRequest www = UnityWebRequest.Post(url, form);
