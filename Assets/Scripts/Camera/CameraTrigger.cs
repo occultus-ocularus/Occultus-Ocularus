@@ -59,6 +59,7 @@ public class CameraTrigger : MonoBehaviour {
             }
             onTriggerEnter.Invoke();
         }
+		activeCamera.canFree = true;
     }
     void OnTriggerExit2D(Collider2D other) {
         if (other.GetComponent<PlayerController>() != null) {
@@ -67,5 +68,6 @@ public class CameraTrigger : MonoBehaviour {
             }
             onTriggerExit.Invoke();
         }
+		activeCamera.canFree = false;
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8100220514163464090}
   - component: {fileID: 8100220514163464088}
   - component: {fileID: 8100220514163464089}
+  - component: {fileID: 637640072001294735}
   m_Layer: 18
   m_Name: CameraTrigger
   m_TagString: Untagged
@@ -93,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaCamera: {fileID: 0}
   cameraTriggerBehavior: 1
+  refocusOnPlayerOnTriggerExit: 1
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -129,3 +131,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &637640072001294735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100220514163464102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 302ba02862ab92a48a285f1bfe9af36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7079643938159556512, guid: 9dd7d75cf7c811142abf6500a7f12096, type: 3}
+  thickness: 0.25

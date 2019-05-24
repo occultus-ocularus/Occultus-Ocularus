@@ -290,7 +290,14 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
                         body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxWalkSpeed, body.velocity.y);
                 }
             }
-        }
+        }else{
+			// Copied and pasted from the "if touching ground". Needed to stop player from moving when freeCam is activated
+			stopLerpTime += 3.5f * Time.deltaTime;
+                    // slow down the x velocity by an value between the current x velocity and 0, determined by how far along stopLerpTime is, 
+                    body.velocity =
+                        new Vector2(Mathf.Lerp(body.velocity.x, 0, stopLerpTime),
+                            body.velocity.y);
+		}
     }
 
     void OnTriggerEnter2D(Collider2D otherCol) {
