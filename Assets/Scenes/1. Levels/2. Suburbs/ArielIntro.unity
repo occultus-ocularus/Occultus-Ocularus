@@ -496,8 +496,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484709578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.41, y: 0.09, z: -5}
-  m_LocalScale: {x: 5, y: 5, z: 3.6553}
+  m_LocalPosition: {x: 6.41, y: -0.86, z: -5}
+  m_LocalScale: {x: 4, y: 4, z: 3.6553}
   m_Children: []
   m_Father: {fileID: 348649825}
   m_RootOrder: 2
@@ -4167,12 +4167,12 @@ PrefabInstance:
     - target: {fileID: 2426558130871322758, guid: ad3293c9fee4045c9a81244841ff353a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.05
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 2426558130871322758, guid: ad3293c9fee4045c9a81244841ff353a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2426558130871322758, guid: ad3293c9fee4045c9a81244841ff353a,
         type: 3}
@@ -17776,6 +17776,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7443616542632638079, guid: b60b13e4510963741b833fd8f53ff0dc,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5475528219759084601, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -18156,6 +18161,11 @@ PrefabInstance:
       propertyPath: dialogueSetup
       value: 
       objectReference: {fileID: 45777682}
+    - target: {fileID: 320941298907745524, guid: 98a73476923074f2ea95a45e1f46ef41,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 320941298907745522, guid: 98a73476923074f2ea95a45e1f46ef41,
         type: 3}
       propertyPath: m_Enabled

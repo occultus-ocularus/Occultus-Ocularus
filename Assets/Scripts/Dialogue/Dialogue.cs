@@ -24,6 +24,9 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     private bool foundName;
 
     private IDialogueEncounter dialogueEncounter;
+    private bool playerPositionSet;
+    private Transform arielOrSamsonTransform;
+    private float lerpTimer;
 
     private float lastUpdateTime;
     private float currentScrollRate;
@@ -89,6 +92,44 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                 actionPerformed = true;
             }
 
+
+            // Position player at a set distance from the NPC
+            if (!playerPositionSet) {
+
+                if (dialogueEncounter is ArielDialogueEncounter2) {
+                    arielOrSamsonTransform = GameObject.Find("NPC Ariel").transform;
+                }
+                else {
+                    arielOrSamsonTransform = GameObject.Find("NPC Samson").transform;
+                }
+
+                if (System.Math.Abs(arielOrSamsonTransform.position.x - 1.8f - transform.position.x) < 0.05) {
+                    lerpTimer = 0;
+                    playerPositionSet = true;
+                }
+                else {
+                    player.transform.position = Vector2.Lerp(player.transform.position,
+                        new Vector2(arielOrSamsonTransform.position.x - 1.8f, player.transform.position.y),
+                        1.0f / 60 * lerpTimer++);
+                }
+            }
+
+            // Set text box color
+            if (characterName.text.Equals("SAMSON") || characterName.text.Equals("????")) {
+                transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = samsonColor;
+
+                if (dialogueEncounter is ArielDialogueEncounter2) {
+                    //player.GetComponent<SpriteRenderer>().flipX = false;
+                }
+            }
+            else if (characterName.text.Equals("ARIEL") || characterName.text.Equals("???")) {
+                transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = arielColor;
+
+                if (dialogueEncounter is ArielDialogueEncounter2) {
+                    //player.GetComponent<SpriteRenderer>().flipX = true;
+                }
+            }
+
             // Make a new letter appear after each interval defined by SCROLL_RATE
             while (Time.time - lastUpdateTime > currentScrollRate &&
                    phraseIndex < phrases.Length &&
@@ -103,11 +144,6 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                     phrases[phraseIndex] = phrases[phraseIndex].Substring(phrases[phraseIndex].IndexOf(':') + 2);
                     foundName = true;
                 }
-
-                if (characterName.text.Equals("SAMSON") || characterName.text.Equals("????"))
-                    transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = samsonColor;
-                else if (characterName.text.Equals("ARIEL") || characterName.text.Equals("???"))
-                    transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = arielColor;
 
                 // Fill in the rest of the current phrase
                 if (skipToEndOfPhrase) {
