@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     public AudioClip landSound;
 
 
-    private bool allowResetting = true;
-    private bool allowFlying = true;
+    private bool allowResetting;
+    private bool allowFlying;
 
     private Vector3 startPoint;
     private SpriteRenderer spriterender;
