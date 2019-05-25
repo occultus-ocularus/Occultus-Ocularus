@@ -52,6 +52,13 @@ public class Dialogue : MonoBehaviour, IDialogActions {
         charIndex = -1;
         awaitingUser = false;
         skipToEndOfPhrase = false;
+
+        if (dialogueEncounter is ArielDialogueEncounter2) {
+            arielOrSamsonTransform = GameObject.Find("NPC Ariel").transform;
+        }
+        else {
+            arielOrSamsonTransform = GameObject.Find("NPC Samson").transform;
+        }
     }
     public void EndDialog() {
         player.ExitUIOrDialog();
@@ -95,14 +102,6 @@ public class Dialogue : MonoBehaviour, IDialogActions {
 
             // Position player at a set distance from the NPC
             if (!playerPositionSet) {
-
-                if (dialogueEncounter is ArielDialogueEncounter2) {
-                    arielOrSamsonTransform = GameObject.Find("NPC Ariel").transform;
-                }
-                else {
-                    arielOrSamsonTransform = GameObject.Find("NPC Samson").transform;
-                }
-
                 if (System.Math.Abs(arielOrSamsonTransform.position.x - 1.8f - transform.position.x) < 0.05) {
                     lerpTimer = 0;
                     playerPositionSet = true;
@@ -117,17 +116,9 @@ public class Dialogue : MonoBehaviour, IDialogActions {
             // Set text box color
             if (characterName.text.Equals("SAMSON") || characterName.text.Equals("????")) {
                 transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = samsonColor;
-
-                if (dialogueEncounter is ArielDialogueEncounter2) {
-                    //player.GetComponent<SpriteRenderer>().flipX = false;
-                }
             }
             else if (characterName.text.Equals("ARIEL") || characterName.text.Equals("???")) {
                 transform.parent.GetChild(0).GetChild(0).GetComponent<Image>().color = arielColor;
-
-                if (dialogueEncounter is ArielDialogueEncounter2) {
-                    //player.GetComponent<SpriteRenderer>().flipX = true;
-                }
             }
 
             // Make a new letter appear after each interval defined by SCROLL_RATE

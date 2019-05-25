@@ -47,10 +47,12 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     }
 
     public void PlayTextBlip(string characterName) {
+        textBlip = gameObject.AddComponent<AudioSource>();
         if (characterName.Equals("ARIEL") || characterName.Equals("???"))
             textBlip.clip = textBlips[Random.Range(0, 4)];
         else if (characterName.Equals("SAMSON"))
             textBlip.clip = samsonTextBlips[Random.Range(0, 4)];
         textBlip.Play();
+        Destroy(GetComponent<AudioSource>());
     }
 }

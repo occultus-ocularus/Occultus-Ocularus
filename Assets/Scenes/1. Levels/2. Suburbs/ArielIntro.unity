@@ -3843,7 +3843,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 862657022}
+      objectReference: {fileID: 0}
     - target: {fileID: 2208987476646451525, guid: 3d06d2a9e8fe94b888b94b55813ce853,
         type: 3}
       propertyPath: m_Enabled
@@ -3879,7 +3879,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2208987476646451526, guid: 3d06d2a9e8fe94b888b94b55813ce853, type: 3}
+    - {fileID: 2208987476646451527, guid: 3d06d2a9e8fe94b888b94b55813ce853, type: 3}
+    - {fileID: 2208987476646451525, guid: 3d06d2a9e8fe94b888b94b55813ce853, type: 3}
+    - {fileID: -3651133275813887633, guid: 3d06d2a9e8fe94b888b94b55813ce853, type: 3}
+    - {fileID: 4225266728405370268, guid: 3d06d2a9e8fe94b888b94b55813ce853, type: 3}
+    - {fileID: 2208987476646451524, guid: 3d06d2a9e8fe94b888b94b55813ce853, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d06d2a9e8fe94b888b94b55813ce853, type: 3}
 --- !u!4 &673977234 stripped
 Transform:
@@ -4306,18 +4312,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &862657022 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4225266728405370268, guid: 3d06d2a9e8fe94b888b94b55813ce853,
-    type: 3}
-  m_PrefabInstance: {fileID: 673977233}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7028fab7d0648c794212d41769c8f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &869414216 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2208987476646451529, guid: 3d06d2a9e8fe94b888b94b55813ce853,
