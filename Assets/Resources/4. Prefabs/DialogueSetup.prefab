@@ -202,9 +202,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114860611884569664, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
+    - target: {fileID: 1545108112755205987, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
         type: 3}
-      propertyPath: m_Color.a
+      propertyPath: m_ShowMaskGraphic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7057309295310011635, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
@@ -227,9 +227,15 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontStyle
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1545108112755205987, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
+    - target: {fileID: 7057309295310011635, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
         type: 3}
-      propertyPath: m_ShowMaskGraphic
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e056542ec310e4fa4b16f7e2ec8f131c,
+        type: 3}
+    - target: {fileID: 114860611884569664, guid: 20742b6a1e1d648a7b34ff886f1b1e3b,
+        type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

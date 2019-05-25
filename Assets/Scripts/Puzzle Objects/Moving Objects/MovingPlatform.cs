@@ -192,8 +192,8 @@ public class MovingPlatform : MonoBehaviour
     private void PositionDoorTrigger() {
         if (!startWithDoorOpen)
             doorOpening.offset =
-                new Vector2((origPos.x - transform.position.x) / distance,
-                            (origPos.y - transform.position.y) / distance);
+                new Vector2(origPos.x - transform.position.x,
+                            origPos.y - transform.position.y);
         else {
             doorOpening.offset =
                 new Vector2(horizontal ? 
