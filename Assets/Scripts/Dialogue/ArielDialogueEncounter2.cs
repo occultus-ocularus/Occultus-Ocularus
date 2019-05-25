@@ -14,9 +14,11 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     public AudioClip[] samsonTextBlips = new AudioClip[5];
 
     private AudioSource textBlip;
+    private ParticleSystem playerParticles;
 
     void Start() {
         textBlip = GetComponent<AudioSource>();
+        playerParticles = GameObject.Find("Player").GetComponent<ParticleSystem>();
     }
 
     public void Talk()
@@ -32,6 +34,8 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
             fadeEffect.FadeAppear(samson);
         else if (action.Equals("Samson disappears"))
             fadeEffect.FadeAway(samson);
+        else if (action.Equals("Player grows eyes on shoulders") || action.Equals("Player grows new set of eyes, on knees"))
+            playerParticles.Play();
         else
             Debug.Log("DialogAction: " + action);
     }
