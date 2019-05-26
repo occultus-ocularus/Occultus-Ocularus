@@ -10,6 +10,17 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
     public SpriteRenderer samson;
     public LevelTransition fadeEffect;
 
+    public AudioClip[] textBlips = new AudioClip[5];
+    public AudioClip[] samsonTextBlips = new AudioClip[5];
+
+    private AudioSource textBlip;
+    private ParticleSystem playerParticles;
+
+    void Start() {
+        textBlip = GetComponent<AudioSource>();
+        playerParticles = GameObject.Find("Player").GetComponent<ParticleSystem>();
+    }
+
     public void Talk()
     {
         Dialogue dialogueInstance = dialogueSetup.ActivateDialogueBox();
@@ -23,9 +34,25 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
             fadeEffect.FadeAppear(samson);
         else if (action.Equals("Samson disappears"))
             fadeEffect.FadeAway(samson);
+        else if (action.Equals("Player grows eyes on shoulders") || action.Equals("Player grows new set of eyes, on knees"))
+            playerParticles.Play();
         else
             Debug.Log("DialogAction: " + action);
     }
 
-    public void DialogueFinished() {}
+    public void DialogueFinished()
+    {
+        foreach (BoxCollider2D bc in GetComponents<BoxCollider2D>())
+            bc.enabled = false;
+    }
+
+    public void PlayTextBlip(string characterName) {
+        textBlip = gameObject.AddComponent<AudioSource>();
+        if (characterName.Equals("ARIEL") || characterName.Equals("???"))
+            textBlip.clip = textBlips[Random.Range(0, 4)];
+        else if (characterName.Equals("SAMSON"))
+            textBlip.clip = samsonTextBlips[Random.Range(0, 4)];
+        textBlip.Play();
+        Destroy(GetComponent<AudioSource>());
+    }
 }

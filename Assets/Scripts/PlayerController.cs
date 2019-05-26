@@ -46,9 +46,14 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     public AudioSource backgroundAudio;
     public AudioSource footsteps;
 
-    [Header("Development Features")]
-    public bool allowResetting = true;
-    public bool allowFlying = true;
+    public AudioClip initialFootstepSound;
+    public AudioClip[] footstepsSound = new AudioClip[7];
+    public AudioClip jumpSound;
+    public AudioClip landSound;
+
+
+    private bool allowResetting;
+    private bool allowFlying;
 
     private Vector3 startPoint;
     private SpriteRenderer spriterender;
@@ -89,6 +94,10 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
 
     // Use this for initialization
     void Start() {
+        if (Application.isEditor) {
+            allowResetting = true;
+            allowFlying = true;
+        }
         startPoint = this.transform.position;
         body = GetComponent<Rigidbody2D>();
         spriterender = GetComponent<SpriteRenderer>();
@@ -147,21 +156,27 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     }
 
     void PlayHardFootstep() {
-        footsteps.clip =
-            Resources.Load<AudioClip>("Audio/SFX/Characters/Hard Footsteps/footsteps_" + Random.Range(1, 8));
+        footsteps.clip = footstepsSound[Random.Range(0, 6)];
+        footsteps.pitch = Random.Range(0.7f, 1.0f);
+        footsteps.volume = Random.Range(0.3f, 0.4f);
+        footsteps.Play();
+    }
+
+    void PlayInitialFootstep() {
+        footsteps.clip = initialFootstepSound;
         footsteps.pitch = Random.Range(0.7f, 1.0f);
         footsteps.volume = Random.Range(0.3f, 0.4f);
         footsteps.Play();
     }
 
     void PlayJumpSound() {
-        footsteps.clip = Resources.Load<AudioClip>("Audio/SFX/Characters/jump");
+        footsteps.clip = jumpSound;
         footsteps.volume = 0.6f;
         footsteps.Play();
     }
 
     void PlayLandSound() {
-        footsteps.clip = Resources.Load<AudioClip>("Audio/SFX/Characters/land");
+        footsteps.clip = landSound;
         footsteps.volume = 0.5f;
         footsteps.Play();
     }
@@ -278,7 +293,14 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
                         body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * maxWalkSpeed, body.velocity.y);
                 }
             }
-        }
+        }else{
+			// Copied and pasted from the "if touching ground". Needed to stop player from moving when freeCam is activated
+			stopLerpTime += 3.5f * Time.deltaTime;
+                    // slow down the x velocity by an value between the current x velocity and 0, determined by how far along stopLerpTime is, 
+                    body.velocity =
+                        new Vector2(Mathf.Lerp(body.velocity.x, 0, stopLerpTime),
+                            body.velocity.y);
+		}
     }
 
     void OnTriggerEnter2D(Collider2D otherCol) {

@@ -1,0 +1,1530 @@
+fileFormatVersion: 2
+guid: b27fadc44addd514e81dc386866465f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7817032071619063952
+    second: OccOc Tileset recolored_0
+  - first:
+      213: 4640910112344082734
+    second: OccOc Tileset recolored_1
+  - first:
+      213: -723204830308790871
+    second: OccOc Tileset recolored_2
+  - first:
+      213: 6055297255322148214
+    second: OccOc Tileset recolored_3
+  - first:
+      213: -76281399742446312
+    second: OccOc Tileset recolored_4
+  - first:
+      213: 8750427817677868812
+    second: OccOc Tileset recolored_5
+  - first:
+      213: 4720570649338982614
+    second: OccOc Tileset recolored_6
+  - first:
+      213: 6169784702305290850
+    second: OccOc Tileset recolored_7
+  - first:
+      213: 670816889204172789
+    second: OccOc Tileset recolored_8
+  - first:
+      213: 7827803899490347797
+    second: OccOc Tileset recolored_9
+  - first:
+      213: -727728799847569352
+    second: OccOc Tileset recolored_10
+  - first:
+      213: 3305644677167476550
+    second: OccOc Tileset recolored_11
+  - first:
+      213: -6259233744227292582
+    second: OccOc Tileset recolored_12
+  - first:
+      213: -134551174251395636
+    second: OccOc Tileset recolored_13
+  - first:
+      213: -7553614913968465515
+    second: OccOc Tileset recolored_14
+  - first:
+      213: -3789353140397259966
+    second: OccOc Tileset recolored_15
+  - first:
+      213: -6250358062225331050
+    second: OccOc Tileset recolored_16
+  - first:
+      213: 63870083812417059
+    second: OccOc Tileset recolored_17
+  - first:
+      213: -6064030722744355650
+    second: OccOc Tileset recolored_18
+  - first:
+      213: 4750656234343670648
+    second: OccOc Tileset recolored_19
+  - first:
+      213: 2213759962442651721
+    second: OccOc Tileset recolored_20
+  - first:
+      213: 9046437349290072066
+    second: OccOc Tileset recolored_21
+  - first:
+      213: 8486122712014228083
+    second: OccOc Tileset recolored_22
+  - first:
+      213: -711638396577176206
+    second: OccOc Tileset recolored_23
+  - first:
+      213: 1323467518120296588
+    second: OccOc Tileset recolored_24
+  - first:
+      213: -5825780820988013163
+    second: OccOc Tileset recolored_25
+  - first:
+      213: 6985171773431052290
+    second: OccOc Tileset recolored_26
+  - first:
+      213: -2056702636350924840
+    second: OccOc Tileset recolored_27
+  - first:
+      213: 3215518907323614835
+    second: OccOc Tileset recolored_28
+  - first:
+      213: -2921704294617948646
+    second: OccOc Tileset recolored_29
+  - first:
+      213: 7266622782118176909
+    second: OccOc Tileset recolored_30
+  - first:
+      213: 7741215243037289907
+    second: OccOc Tileset recolored_31
+  - first:
+      213: 6318700379466436485
+    second: OccOc Tileset recolored_32
+  - first:
+      213: -45747587483993790
+    second: OccOc Tileset recolored_33
+  - first:
+      213: 4470427057367015923
+    second: OccOc Tileset recolored_34
+  - first:
+      213: -2478114114379932046
+    second: OccOc Tileset recolored_35
+  - first:
+      213: 2407716384344807820
+    second: OccOc Tileset recolored_36
+  - first:
+      213: -1940849240741101648
+    second: OccOc Tileset recolored_37
+  - first:
+      213: 351637766205614682
+    second: OccOc Tileset recolored_38
+  - first:
+      213: 4450617078616374352
+    second: OccOc Tileset recolored_39
+  - first:
+      213: -5840669218419358272
+    second: OccOc Tileset recolored_40
+  - first:
+      213: 9146063141201200690
+    second: OccOc Tileset recolored_41
+  - first:
+      213: -4792260964186164489
+    second: OccOc Tileset recolored_42
+  - first:
+      213: -8722422593763862390
+    second: OccOc Tileset recolored_43
+  - first:
+      213: -5886035617533506380
+    second: OccOc Tileset recolored_44
+  - first:
+      213: -6179019790459886014
+    second: OccOc Tileset recolored_45
+  - first:
+      213: -7908726922856509442
+    second: OccOc Tileset recolored_46
+  - first:
+      213: 4918815579127792728
+    second: OccOc Tileset recolored_47
+  - first:
+      213: -2701840328756706291
+    second: OccOc Tileset recolored_48
+  - first:
+      213: 5680089666264865016
+    second: OccOc Tileset recolored_49
+  - first:
+      213: -2974851226532918044
+    second: OccOc Tileset recolored_50
+  - first:
+      213: 2461985028285635197
+    second: OccOc Tileset recolored_51
+  - first:
+      213: -8992815225032074154
+    second: OccOc Tileset recolored_52
+  - first:
+      213: -4167245144230705307
+    second: OccOc Tileset recolored_53
+  - first:
+      213: 8994565290052895446
+    second: OccOc Tileset recolored_54
+  - first:
+      213: -3106463193799500960
+    second: OccOc Tileset recolored_55
+  - first:
+      213: -3292772578532255299
+    second: Suburb Tiles_0
+  - first:
+      213: -2706314255102625456
+    second: Suburb Tiles_1
+  - first:
+      213: 155044635100599086
+    second: Suburb Tiles_2
+  - first:
+      213: -5948160227775638706
+    second: Suburb Tiles_3
+  - first:
+      213: -5201079957508862054
+    second: Suburb Tiles_4
+  - first:
+      213: 7185631113922346927
+    second: Suburb Tiles_5
+  - first:
+      213: -7613504767082619072
+    second: Suburb Tiles_6
+  - first:
+      213: 2310505775571882475
+    second: Suburb Tiles_7
+  - first:
+      213: 9080649896236506163
+    second: Suburb Tiles_8
+  - first:
+      213: -8752878382216739772
+    second: Suburb Tiles_9
+  - first:
+      213: 3572926292244433111
+    second: Suburb Tiles_10
+  - first:
+      213: 7155354636370115266
+    second: Suburb Tiles_11
+  - first:
+      213: -4760749493541287952
+    second: Suburb Tiles_12
+  - first:
+      213: 1529183904166294704
+    second: Suburb Tiles_13
+  - first:
+      213: -3686686271076444552
+    second: Suburb Tiles_14
+  - first:
+      213: 1017764702508563170
+    second: Suburb Tiles_15
+  - first:
+      213: 6458773862580266475
+    second: Suburb Tiles_16
+  - first:
+      213: -7953138405497922544
+    second: Suburb Tiles_17
+  - first:
+      213: -9207045117920474693
+    second: Suburb Tiles_18
+  - first:
+      213: -2773943941880072937
+    second: Suburb Tiles_19
+  - first:
+      213: 6716935789341999205
+    second: Suburb Tiles_20
+  - first:
+      213: -167743236006138953
+    second: Suburb Tiles_21
+  - first:
+      213: -4664090064768261305
+    second: Suburb Tiles_22
+  - first:
+      213: -4685802993120632755
+    second: Suburb Tiles_23
+  - first:
+      213: -6933646444229555106
+    second: Suburb Tiles_24
+  - first:
+      213: -5643153656755589589
+    second: Suburb Tiles_25
+  - first:
+      213: 1923604281784404343
+    second: Suburb Tiles_26
+  - first:
+      213: -1292960349028704508
+    second: Suburb Tiles_27
+  - first:
+      213: 6843450881172580838
+    second: Suburb Tiles_28
+  - first:
+      213: -3051472445223962701
+    second: Suburb Tiles_29
+  - first:
+      213: -8870076836185301688
+    second: Suburb Tiles_30
+  - first:
+      213: -1111259407491296100
+    second: Suburb Tiles_31
+  - first:
+      213: 1101392778790926231
+    second: Suburb Tiles_32
+  - first:
+      213: -1028396020055015854
+    second: Suburb Tiles_33
+  - first:
+      213: -9146048219336688281
+    second: Suburb Tiles_34
+  - first:
+      213: -5282908653070335212
+    second: Suburb Tiles_35
+  - first:
+      213: -939638083714953196
+    second: Suburb Tiles_36
+  - first:
+      213: -6269915240878867098
+    second: Suburb Tiles_37
+  - first:
+      213: -1539220934636717078
+    second: Suburb Tiles_38
+  - first:
+      213: 1131938770246770788
+    second: Suburb Tiles_39
+  - first:
+      213: -1287340185769469570
+    second: Suburb Tiles_40
+  - first:
+      213: -8246962012530676668
+    second: Suburb Tiles_41
+  - first:
+      213: 263358161281088934
+    second: Suburb Tiles_42
+  - first:
+      213: 1404873279393714812
+    second: Suburb Tiles_43
+  - first:
+      213: -2098619562433415531
+    second: Suburb Tiles_44
+  - first:
+      213: -1757253823601489213
+    second: Suburb Tiles_45
+  - first:
+      213: -7972145665226542792
+    second: Suburb Tiles_46
+  - first:
+      213: 2700784129331147621
+    second: Suburb Tiles_47
+  - first:
+      213: 1976409421920786338
+    second: Suburb Tiles_48
+  - first:
+      213: 5286644210228649470
+    second: Suburb Tiles_49
+  - first:
+      213: 5303267397512456657
+    second: Suburb Tiles_50
+  - first:
+      213: 1920935837785849726
+    second: Suburb Tiles_51
+  - first:
+      213: 2321670041581768532
+    second: Suburb Tiles_52
+  - first:
+      213: -4117502967469504006
+    second: Suburb Tiles_53
+  - first:
+      213: 8380914158289751510
+    second: Suburb Tiles_54
+  - first:
+      213: -2665692796203353965
+    second: Suburb Tiles_55
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Suburb Tiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607c0b7d48b7745e9a0c9d3f7babfeb6
+      internalID: -3292772578532255299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34796baf122f641edb0c9a06776bf420
+      internalID: -2706314255102625456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a3616c6aeb64c11824581c2ea689e4
+      internalID: 155044635100599086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dad81707c8424de4b755efbd0be178b
+      internalID: -5948160227775638706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0068e1900534a14a344763155ad8d7
+      internalID: -5201079957508862054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa699da4f73914fbc98e4272083c8b47
+      internalID: 7185631113922346927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca8d11179ce946869ea8c278c81aca0
+      internalID: -7613504767082619072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3da5ac1b56b43aa9643e3e5dbe5d90
+      internalID: 2310505775571882475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd659257f6c9419f8fd835cf7e91a05
+      internalID: 9080649896236506163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4cb1811c9bd450485bf6619f263707
+      internalID: -8752878382216739772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ad0702d83d346e9b23456eff453f76
+      internalID: -4760749493541287952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac49d77ce6914f3e8abddfd1224cea3
+      internalID: 1529183904166294704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d5d63fe033246c59737836d3272553
+      internalID: -3686686271076444552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ce0621375b145a887891d8ce9d79bd
+      internalID: 1017764702508563170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb55a1d481d944edb908f8de247ace9c
+      internalID: 6458773862580266475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6193b2af5eb409b92ea0d914c1c76d
+      internalID: -7953138405497922544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780cf856e949b4342b3157adac9e4a92
+      internalID: -9207045117920474693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3ea8e6f902d4dbfba02079547affa1
+      internalID: 6716935789341999205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b92552484038427194f2c88916ab4f9
+      internalID: -167743236006138953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13adefd12db8a42c0bbb3d5faa39d819
+      internalID: -4664090064768261305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa002966f1c9a41bba9a5192d808deb0
+      internalID: -4685802993120632755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_24
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c409bf295b4f45d89ee8e0dda266c1f
+      internalID: -6933646444229555106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db09a87595954fec969acb010b305fd
+      internalID: -5643153656755589589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4555e034f4134243a09a2d45f5c7307
+      internalID: 1923604281784404343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabbabdcdb63049ceaf69c6b01ac92f6
+      internalID: 6843450881172580838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135fc2761809345babba20aa0cc466f2
+      internalID: -3051472445223962701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 502df68c7e93b4ae4a9ba2af8b3acd99
+      internalID: -8870076836185301688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d744b3351c614aae93716ff0e13f76a
+      internalID: -1111259407491296100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac057863f07f54dcd9bd3076263a597a
+      internalID: 1101392778790926231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51688f025f2447cea96b3466c73c332
+      internalID: -9146048219336688281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8472e310545324c99b2aa2241329dbb6
+      internalID: -5282908653070335212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320b2d0c3b24343978370c5e47aa4140
+      internalID: -939638083714953196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_37
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a6191468ad44713ab4ef3da9f438aa
+      internalID: -6269915240878867098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_38
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b408c5ef4a3347e8b8556e871f98f0e
+      internalID: -1539220934636717078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_39
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d71b78a1c7d43869ffb7dc8cca0a9a
+      internalID: 1131938770246770788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_40
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2468c89f5de0344d9a22cf806cb9e39d
+      internalID: -1287340185769469570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2936e9a4e4d59423aac34ebed6b43d47
+      internalID: -8246962012530676668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53575561f529f4421bb95aa90c25da01
+      internalID: 263358161281088934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a924e6a9c4c4a44d790dcd2ef3607724
+      internalID: 1404873279393714812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcca7ab7ed4004b239e27fc228379d1f
+      internalID: -2098619562433415531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_45
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff7e6f4a223847c8b8d87a9c4d3071a
+      internalID: -1757253823601489213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_46
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86f5ea15ddf04da6a9243aaab49156e
+      internalID: -7972145665226542792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_47
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fadb54c68c4a405ba6142161064036f
+      internalID: 2700784129331147621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c71b3c3e2f114593b21c03a3a950ec2
+      internalID: 1976409421920786338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c87df7d43364949a75e2255397a535
+      internalID: 5286644210228649470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbeb3f38fb2af4b2e8bdf9111d194420
+      internalID: 5303267397512456657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3a3871f16bb436c8f07fc38d2d8442
+      internalID: 1920935837785849726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc776a391c7c465da96fa7c38ad705e
+      internalID: 2321670041581768532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001bdd19de4db4087aa9e9254f263d27
+      internalID: -4117502967469504006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01bf2d44e0be4ce9bfa3461994ee56f
+      internalID: 8380914158289751510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Suburb Tiles_55
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72193a997b59347fab80d14114333822
+      internalID: -2665692796203353965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4fd06bd1faf28d3498a19d6e736e3c09
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
