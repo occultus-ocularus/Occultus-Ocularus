@@ -1,7 +1,7 @@
 ﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine;
 
 public class LevelTransition : MonoBehaviour
 {
@@ -9,7 +9,8 @@ public class LevelTransition : MonoBehaviour
     public string nextScene;
     [Tooltip("UI image that will bridge the transition")]
     public Image fadeOutUIImage;
-    [Tooltip("Audio clip to play instead of the level music during the transition")]
+    [Tooltip("Audio clip to play instead of the level music during the " +
+        "transition")]
     public AudioClip transitionSound;
 
     [HideInInspector]
@@ -31,10 +32,12 @@ public class LevelTransition : MonoBehaviour
     // player AudioSource to be used when exiting the scene
     void Start()
     {
-        if (GameObject.FindWithTag("Player") != null)
-            player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        if (GameObject.Find("Player") != null)
+            player =
+                GameObject.Find("Player").GetComponent<PlayerController>();
         if (GameObject.Find("MusicPlayer") != null)
-            musicPlayer = GameObject.Find("MusicPlayer").GetComponent<AudioSource>();
+            musicPlayer =
+                GameObject.Find("MusicPlayer").GetComponent<AudioSource>();
         fadeOutUIImage.enabled = true;
         StartCoroutine(Fade(FadeDirection.Out));
     }
@@ -137,7 +140,12 @@ public class LevelTransition : MonoBehaviour
 
     // Helper function for setting transparency on an Image (UI element)
     private void SetTransparencyImage(FadeDirection fadeDirection) {
-        fadeOutUIImage.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, fadeStartValue);
+        fadeOutUIImage.color = new Color(
+            fadeOutUIImage.color.r,
+            fadeOutUIImage.color.g,
+            fadeOutUIImage.color.b,
+            fadeStartValue
+            );
         if (fadeDirection == FadeDirection.Out)
             fadeStartValue -= Time.deltaTime / fadeSpeed;
         else
@@ -146,7 +154,12 @@ public class LevelTransition : MonoBehaviour
 
     // Helper function for setting transparency on a SpriteRenderer
     private void SetTransparencySR(FadeDirection fadeDirection) {
-        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, fadeStartValue);
+        spriteRenderer.color = new Color(
+            spriteRenderer.color.r,
+            spriteRenderer.color.g,
+            spriteRenderer.color.b,
+            fadeStartValue
+            );
         if (fadeDirection == FadeDirection.Out)
             fadeStartValue -= Time.deltaTime / fadeSpeed;
         else

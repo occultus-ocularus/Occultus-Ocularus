@@ -27,39 +27,62 @@ public class MovingPlatform : MonoBehaviour
     public enum MvDir { horizontal, vertical };
     [Tooltip("Make platform move side-to-side or up-and-down")]
     public MvDir direction;
-    [Tooltip("If set to true, platform will start moving on its own. If false, platform will only move upon StartMoving(), Extend(), Retract(), or ExtendOrRetract().")]
+    [Tooltip("If set to true, platform will start moving on its own. If " +
+        "false, platform will only move upon StartMoving(), Extend(), " +
+        "Retract(), or ExtendOrRetract().")]
     public bool moveOnStart;
-    [Tooltip("If set to true, door will start as open and close when extended instead of opening when extended")]
+    [Tooltip("If set to true, door will start as open and close when "
+        + "extended instead of opening when extended")]
     public bool startWithDoorOpen;
-    [Tooltip("If set to true, door will call extend and retract on all of its children instead of on itself.")]
+    [Tooltip("If set to true, door will call extend and retract on all of " +
+        "its children instead of on itself.")]
     public bool activateChildrenInstead;
-    [Tooltip("If moving continuously, will pause at each end for this many seconds")]
+    [Tooltip("If moving continuously, will pause at each end for this many " +
+        "seconds")]
     public float pauseTime;
 
     // UnityEvents for door traversal
     public UnityEvent DoorTraversedL;
     public UnityEvent DoorTraversedR;
 
-    private bool move;                // whether currently moving
-    private bool extendAndRetract;    // current mvmt. mode:    T = extend/retract       F = continuously move
-    private bool forwards;            // curr. mvmt. direction: T = towards back         F = towards front
-    private bool extend;              // desired mvmt. dir.:    T = away from orig. pos. F = towards orig. position
+    // whether currently moving
+    private bool move;
+    // current mvmt. mode:    T = extend/retract       F = continuously move
+    private bool extendAndRetract;
+    // curr. mvmt. direction: T = towards back         F = towards front   
+    private bool forwards;
+    // desired mvmt. dir.:    T = away from orig. pos. F = towards orig. pos.           
+    private bool extend;
 
-    private bool horizontal;          // T = horizontal axis of mvmt; F = vertical axis of mvmt
-    private float back;               // lower position value along axis of mvmt. (y-position if vertical, etc.)
-    private float front;              // higher pos. value along axis of movement
-    private bool inverted;            // T = back is the original position; F = front is the original position
-    private float displacement;       // distance to move per fixed update cycle
-    private Vector3 origPos;          // original position vector
+    // T = horizontal axis of mvmt;       F = vertical axis of mvmt
+    private bool horizontal;
+    // T = back is the original position; F = front is the original position
+    private bool inverted;
+    // lower position value along axis of mvmt. (y-position if vertical, etc.)
+    private float back;
+    // higher pos. value along axis of movement
+    private float front;
+    // distance to move per fixed update cycle            
+    private float displacement;
+    // original position vector
+    private Vector3 origPos;
+    // current position vector (inside FixedUpdate, may be incorrect elsewhere)
+    private Vector3 currPos;
 
-    private BoxCollider2D doorOpening; // collider to tell if the player walked through the door
+    // collider to tell if the player walked through the door
+    private BoxCollider2D doorOpening;
 
-    private float timePaused;          // current amount of time paused at front/back
-    private bool paused;               // whether currently paused
-    private bool canPause;             // whether allowed to pause
+    // current amount of time paused at front/back
+    private float timePaused;
+    // whether currently paused          
+    private bool paused;
+    // whether allowed to pause
+    private bool canPause;
 
-    float platformPosition;            // curr. position value along axis of movement
-    GameObject collidingPlayer;        // used for sticking/unsticking the player from a platform
+    // curr. position value along axis of movement
+    float platformPosition;
+    // used for sticking/unsticking the player from a platform
+    GameObject collidingPlayer;
 
     void Start() {
         // Set up collider that checks the door opening
@@ -75,6 +98,7 @@ public class MovingPlatform : MonoBehaviour
             move = moveOnStart;
             displacement = speed / 60;
             origPos = transform.position;
+
             if (distance < 0)
                 inverted = true;
 
@@ -97,29 +121,35 @@ public class MovingPlatform : MonoBehaviour
     }
 
     void FixedUpdate() {
+        currPos = transform.position;
+
         if (paused)
             PauseMoving();
 
         if (move && Mathf.Abs(distance) > 0)  {
             // If at bound, turn around or stop if in extendAndRetract mode
-            if ( (horizontal ? transform.position.x : transform.position.y)
+            if ( (horizontal ? currPos.x : currPos.y)
                  > (front - displacement + .001f) ) {
-                transform.position =
-                    new Vector3(horizontal ? front : transform.position.x,
-                                horizontal ? transform.position.y : front,
-                                transform.position.z);
+                currPos =
+                    new Vector3(
+                        horizontal ? front : currPos.x,
+                        horizontal ? currPos.y : front,
+                        currPos.z
+                        );
                 if (pauseTime > 0 && canPause)
                     PauseMoving();
                 forwards = false;
                 if (extendAndRetract && extend)
                     move = false;
             }
-            else if ( (horizontal ? transform.position.x : transform.position.y)
+            else if ( (horizontal ? currPos.x : currPos.y)
                       < (back + displacement - .001f) ) {
-                transform.position =
-                    new Vector3(horizontal ? back : transform.position.x,
-                                horizontal ? transform.position.y : back,
-                                transform.position.z);
+                currPos =
+                    new Vector3(
+                        horizontal ? back : currPos.x,
+                        horizontal ? currPos.y : back,
+                        currPos.z
+                        );
                 if (pauseTime > 0 && canPause)
                     PauseMoving();
                 forwards = true;
@@ -144,30 +174,38 @@ public class MovingPlatform : MonoBehaviour
                 if ( !inverted ?
                      forwards && (!extendAndRetract || extend) :
                      !(!forwards && (!extendAndRetract || !extend)) ) {
-                    transform.position =
-                        new Vector3(transform.position.x + (horizontal ? displacement : 0),
-                                    transform.position.y + (horizontal ? 0 : displacement),
-                                    transform.position.z);
+                    currPos =
+                        new Vector3(
+                            currPos.x + (horizontal ? displacement : 0),
+                            currPos.y + (horizontal ? 0 : displacement),
+                            currPos.z
+                            );
                 }
                 else {
-                    transform.position =
-                        new Vector3(transform.position.x - (horizontal ? displacement : 0),
-                                    transform.position.y - (horizontal ? 0 : displacement),
-                                    transform.position.z);
+                    currPos =
+                        new Vector3(
+                            currPos.x - (horizontal ? displacement : 0),
+                            currPos.y - (horizontal ? 0 : displacement),
+                            currPos.z
+                            );
                 }
 
                 // Move attached player
                 if (collidingPlayer != null) {
                     collidingPlayer.transform.Translate(
-                        new Vector3(horizontal ? transform.position.x - platformPosition : 0,
-                                    horizontal ? 0 : transform.position.y - platformPosition,
-                                    0));
-                    platformPosition = horizontal ? transform.position.x : transform.position.y;
+                        new Vector3(
+                            horizontal ? currPos.x - platformPosition : 0,
+                            horizontal ? 0 : currPos.y - platformPosition,
+                            0
+                            )
+                        );
+                    platformPosition =
+                        horizontal ? currPos.x : currPos.y;
                 }
             }
         }
-
-        PositionDoorTrigger();  
+        PositionDoorTrigger();
+        transform.position = currPos;
     }
 
     // Pauses platform for pauseTime seconds
@@ -192,17 +230,18 @@ public class MovingPlatform : MonoBehaviour
     private void PositionDoorTrigger() {
         if (!startWithDoorOpen)
             doorOpening.offset =
-                new Vector2(origPos.x - transform.position.x,
-                            origPos.y - transform.position.y);
+                new Vector2(origPos.x - currPos.x, origPos.y - currPos.y);
         else {
             doorOpening.offset =
-                new Vector2(horizontal ? 
-                            origPos.x + distance - transform.position.x / distance : 0,
-                            horizontal ? 0 : origPos.y + distance - transform.position.y / distance);
+                new Vector2(
+                    horizontal ? origPos.x + distance - currPos.x : 0,
+                    horizontal ? 0 : origPos.y + distance - currPos.y
+                    );
         }
     }
 
-    // Starts platform moving back and forth, pausing at each end if pauseTime is greater than zero
+    // Starts platform moving back and forth, pausing
+    // at each end if pauseTime is greater than zero
     public void StartMoving() {
         extendAndRetract = false;
         move = true;
@@ -214,12 +253,14 @@ public class MovingPlatform : MonoBehaviour
         move = false;
     }
 
-    // Starts platform moving towards the far end of its path, where it then stops
+    // Starts platform moving towards the far
+    // end of its path, where it then stops
     public void Extend() {
         if (activateChildrenInstead) {
-            MovingPlatform[] doors = transform.gameObject.GetComponentsInChildren<MovingPlatform>();
-            foreach (MovingPlatform platform in doors) {
-                platform.Extend();
+            MovingPlatform[] doors =
+                gameObject.GetComponentsInChildren<MovingPlatform>();
+            foreach (MovingPlatform childPlatform in doors) {
+                childPlatform.Extend();
             }
         }
         else {
@@ -234,12 +275,14 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    // Starts platform moving towards the beginning of its path, where it then stops
+    // Starts platform moving towards the
+    // beginning of its path, where it then stops
     public void Retract() {
         if (activateChildrenInstead) {
-            MovingPlatform[] doors  = transform.gameObject.GetComponentsInChildren<MovingPlatform>();
-            foreach (MovingPlatform platform in doors) {
-                platform.Retract();
+            MovingPlatform[] doors  =
+                gameObject.GetComponentsInChildren<MovingPlatform>();
+            foreach (MovingPlatform childPlatform in doors) {
+                childPlatform.Retract();
             }
         }
         else {
@@ -254,7 +297,8 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    // Starts platform moving towards the opposite end of the path from where it was last moving towards, then stops
+    // Starts platform moving towards the opposite end of the
+    // path from where it was last moving towards, then stops
     public void ExtendOrRetract() {
         extendAndRetract = true;
         move = true;
@@ -263,13 +307,16 @@ public class MovingPlatform : MonoBehaviour
         extend = !extend;
     }
 
-    // Called by player class when they jump or walk onto platform: Makes player stick to platform when they're standing on it.
+    // Called by player class when they jump or walk onto platform:
+    // Makes player stick to platform when they're standing on it
     public void StickPlayer(GameObject player) {
         collidingPlayer = player;
-        platformPosition = horizontal ? transform.position.x : transform.position.y;
+        platformPosition =
+            horizontal ? transform.position.x : transform.position.y;
     }
 
-    // Called by player class when they jump or walk off of platform: Unsticks player from platform
+    // Called by player class when they jump or walk off of platform:
+    // Unsticks player from platform
     public void UnstickPlayer() {
         collidingPlayer = null;
     }

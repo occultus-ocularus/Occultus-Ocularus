@@ -61,7 +61,7 @@ public class PlayStats : MonoBehaviour
     // Adds name of checkpoint & time since last checkpoint to the lists
     public void CheckpointReached(string name)
     {
-        if (checkpointNames.IndexOf(name) != -1) {
+        if (checkpointNames.IndexOf(name) != -1 || !enabled) {
             return;
         }
 
