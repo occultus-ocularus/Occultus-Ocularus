@@ -106,32 +106,9 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 
     void Update() {
         //Camera is a set a point and does not travel with player
-        if (mode == CameraMode.Fixed)
-        {
-            if (fixedCamera != null)
-            {
-                //remove this camera being parented to the child. Disables direct following
-                if (this.transform.parent == player.transform)
-                {
-                    this.transform.parent = null;
-                }
-                
-                destination = fixedCamera.transform.position;
-                destination.z = transform.position.z;
-                destFov = fixedCamera.fieldOfView;
-
-                Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, destFov, Time.deltaTime * 300);
-
-                if (destination == transform.position)
-                    lerpTimer = 0;
-                else
-                    transform.position = Vector3.Lerp(this.transform.position, destination, 1.0f / 30 * lerpTimer++);
-            }
-        }
 
         //Camera is set to follow player
         if (mode == CameraMode.FollowPlayer) {
-
             //So unity only makes it happen once for better performance
             if (this.transform.parent != player.transform) {
                 this.transform.parent = player.transform;
@@ -313,9 +290,32 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         if (playerScript.canMove && jumpDown)
             playerEverJumped = true;
 
+        if (mode == CameraMode.Fixed) {
+
+
+            if (fixedCamera != null) {
+                //remove this camera being parented to the child. Disables direct following
+                if (this.transform.parent == player.transform) {
+                    this.transform.parent = null;
+                }
+
+                destination = fixedCamera.transform.position;
+                destination.z = transform.position.z;
+                destFov = fixedCamera.fieldOfView;
+
+                Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, destFov, 0.002f * lerpTimer);
+
+                if (destination == transform.position)
+                    lerpTimer = 0;
+                else
+                    transform.position = Vector3.Lerp(this.transform.position, destination, 0.002f * lerpTimer++);
+            }
+        }
         // Putting the camera following in fixed update keeps jitter between the player and camera low.
         if (mode == CameraMode.FollowPlayerSmooth)
         {
+            lerpTimer = 0;
+
             // Get the center of the screen (mainCamera) in the unity world units:
             screenCenterVector = Camera.main.ScreenToWorldPoint(new Vector2((Screen.width / 2), (Screen.height / 2)));
             // Subtracts the center of the screen coordinates (2d) from the player's coordinates;
