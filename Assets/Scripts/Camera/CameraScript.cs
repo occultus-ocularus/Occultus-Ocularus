@@ -131,7 +131,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         }
         // This updates the Z(into screen) position of the camera when the player switches layers, 
         // which I think should happen for all camera modes, because it helps the player notice which layer they are on.
-        if ((transform.position.z - player.transform.position.z) != CameraToPlayerZDistance) {//warning is ok, because we keep updating the camera z distance each frame to be closer to the correct one;
+        if (mode != CameraMode.Fixed && (transform.position.z - player.transform.position.z) != CameraToPlayerZDistance) {//warning is ok, because we keep updating the camera z distance each frame to be closer to the correct one;
             transform.Translate(new Vector3(0, 0, CameraToPlayerZDistance - (transform.position.z - player.transform.position.z)) * Time.deltaTime * followSpeed, Space.World);
         }
     }
