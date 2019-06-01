@@ -17,8 +17,7 @@ using UnityEngine.Events;
  * for the amount of time specified in pauseTime.
  */
 
-public class MovingPlatform : MonoBehaviour
-{
+public class MovingPlatform : MonoBehaviour {
     // public fields
     [Tooltip("Distance platform moves, can be positive or negative")]
     public float distance;
@@ -80,7 +79,7 @@ public class MovingPlatform : MonoBehaviour
     private bool canPause;
 
     // curr. position value along axis of movement
-    float platformPosition;
+    float platformPosition; 
     // used for sticking/unsticking the player from a platform
     GameObject collidingPlayer;
 
@@ -91,45 +90,42 @@ public class MovingPlatform : MonoBehaviour
         doorOpening.size = new Vector2(0.5f, 1);
 
         // Disable FixedUpdate if activateChildrenInstead is true
-        if (activateChildrenInstead) {
-            enabled = false;
+        if (activateChildrenInstead) return;
+
+        move = moveOnStart;
+        displacement = speed / 60;
+        origPos = transform.position;
+
+        if (distance < 0)
+            inverted = true;
+
+        if (direction == MvDir.horizontal) {
+            horizontal = true;
         }
-        else {
-            move = moveOnStart;
-            displacement = speed / 60;
-            origPos = transform.position;
 
-            if (distance < 0)
-                inverted = true;
-
-            if (direction == MvDir.horizontal) {
-                horizontal = true;
-            }
-
-            // Set front and back bounds for movement
-            if (!inverted) {
-                back = horizontal ? origPos.x : origPos.y;
-                front = (horizontal ? origPos.x : origPos.y) + distance;    
-                extend = false;
-            }
-            else if (inverted) {
-                back = (horizontal ? origPos.x : origPos.y) + distance;
-                front = horizontal ? origPos.x : origPos.y;
-                extend = true;
-            }
+        // Set front and back bounds for movement
+        if (!inverted) {
+            back = horizontal ? origPos.x : origPos.y;
+            front = (horizontal ? origPos.x : origPos.y) + distance;
+            extend = false;
+        }
+        else if (inverted) {
+            back = (horizontal ? origPos.x : origPos.y) + distance;
+            front = horizontal ? origPos.x : origPos.y;
+            extend = true;
         }
     }
 
     void FixedUpdate() {
         currPos = transform.position;
-
+        if (activateChildrenInstead) return;
         if (paused)
             PauseMoving();
 
-        if (move && Mathf.Abs(distance) > 0)  {
+        if (move && Mathf.Abs(distance) > 0) {
             // If at bound, turn around or stop if in extendAndRetract mode
-            if ( (horizontal ? currPos.x : currPos.y)
-                 > (front - displacement + .001f) ) {
+            if ((horizontal ? currPos.x : currPos.y)
+                 > (front - displacement + .001f)) {
                 currPos =
                     new Vector3(
                         horizontal ? front : currPos.x,
@@ -142,8 +138,8 @@ public class MovingPlatform : MonoBehaviour
                 if (extendAndRetract && extend)
                     move = false;
             }
-            else if ( (horizontal ? currPos.x : currPos.y)
-                      < (back + displacement - .001f) ) {
+            else if ((horizontal ? currPos.x : currPos.y)
+                      < (back + displacement - .001f)) {
                 currPos =
                     new Vector3(
                         horizontal ? back : currPos.x,
@@ -171,9 +167,9 @@ public class MovingPlatform : MonoBehaviour
                     canPause = true;
 
                 // Set platform's transform to be at new position
-                if ( !inverted ?
+                if (!inverted ?
                      forwards && (!extendAndRetract || extend) :
-                     !(!forwards && (!extendAndRetract || !extend)) ) {
+                     !(!forwards && (!extendAndRetract || !extend))) {
                     currPos =
                         new Vector3(
                             currPos.x + (horizontal ? displacement : 0),
@@ -257,13 +253,18 @@ public class MovingPlatform : MonoBehaviour
     // end of its path, where it then stops
     public void Extend() {
         if (activateChildrenInstead) {
+
             MovingPlatform[] doors =
                 gameObject.GetComponentsInChildren<MovingPlatform>();
             foreach (MovingPlatform childPlatform in doors) {
-                childPlatform.Extend();
+                if (childPlatform.gameObject != gameObject) {
+                    Debug.Log("Extend1");
+                    childPlatform.Extend();
+                }
             }
         }
         else {
+            Debug.Log("Exten2");
             extendAndRetract = true;
             move = true;
             paused = false;
@@ -279,13 +280,18 @@ public class MovingPlatform : MonoBehaviour
     // beginning of its path, where it then stops
     public void Retract() {
         if (activateChildrenInstead) {
-            MovingPlatform[] doors  =
+
+            MovingPlatform[] doors =
                 gameObject.GetComponentsInChildren<MovingPlatform>();
             foreach (MovingPlatform childPlatform in doors) {
-                childPlatform.Retract();
+                if (childPlatform.gameObject != gameObject) {
+                    Debug.Log("Retract1");
+                    childPlatform.Retract();
+                }
             }
         }
         else {
+            Debug.Log("Retract2");
             extendAndRetract = true;
             move = true;
             paused = false;
