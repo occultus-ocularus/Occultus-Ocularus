@@ -101,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 35df3d950a49b45e6a63a52b04d0b808, type: 3}
   m_Color: {r: 0.41037738, g: 0.91264856, b: 1, a: 1}
   m_FlipX: 0
@@ -173,6 +173,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: 
   fadeOutUIImage: {fileID: 0}
+  transitionSound: {fileID: 8300000, guid: 6dfe17b8b45424bc9bde18d6e8930624, type: 3}
   fadeSpeed: 0.8
-  player: {fileID: 0}
-  transitionSound: {fileID: 8300000, guid: e2c85249fb76741a98f1853aa56dc665, type: 3}

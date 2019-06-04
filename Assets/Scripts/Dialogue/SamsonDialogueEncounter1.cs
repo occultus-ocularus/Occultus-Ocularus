@@ -39,8 +39,10 @@ public class SamsonDialogueEncounter1 : MonoBehaviour, IDialogueEncounter
     }
 
     public void PlayTextBlip(string characterName, float rate) {
+        textBlip = gameObject.AddComponent<AudioSource>();
         textBlip.clip = textBlips[Random.Range(0, 4)];
         textBlip.Play();
         StartCoroutine(AudioFadeOut.FadeOut(textBlip, 4 * rate - 0.001f));
+        Destroy(GetComponent<AudioSource>());
     }
 }

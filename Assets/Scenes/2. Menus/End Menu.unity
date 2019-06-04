@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: Main Menu
   fadeOutUIImage: {fileID: 858948057}
-  transitionSound: {fileID: 8300000, guid: e2c85249fb76741a98f1853aa56dc665, type: 3}
+  transitionSound: {fileID: 8300000, guid: 6dfe17b8b45424bc9bde18d6e8930624, type: 3}
   fadeSpeed: 0.8
 --- !u!114 &858948057
 MonoBehaviour:
