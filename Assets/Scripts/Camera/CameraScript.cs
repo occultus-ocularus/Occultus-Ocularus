@@ -300,7 +300,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
                 }
 
                 destination = fixedCamera.transform.position;
-                destination.z = transform.position.z;
+                // destination.z = transform.position.z;
                 destFov = fixedCamera.fieldOfView;
 
                 Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, destFov, 0.002f * lerpTimer);
