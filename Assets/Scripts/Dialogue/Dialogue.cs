@@ -151,9 +151,9 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                     charIndex++;
                 }
 
-                // Play text blip once every four characters
-                if (charIndex % 4 == 0)
-                    dialogueEncounter.PlayTextBlip(characterName.text);   
+                // Play text blip once every 3 characters
+                if (charIndex % 3 == 0)
+                    dialogueEncounter.PlayTextBlip(characterName.text, currentScrollRate);   
 
                 // Prep for next phrase when the end of current phrase is reached
                 if (charIndex == phrase.Length) {

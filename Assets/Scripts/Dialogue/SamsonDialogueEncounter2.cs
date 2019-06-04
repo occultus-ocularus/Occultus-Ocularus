@@ -49,8 +49,9 @@ public class SamsonDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
              Debug.Log("DialogAction: " + action);
     }
 
-    public void PlayTextBlip(string characterName) {
+    public void PlayTextBlip(string characterName, float rate) {
         textBlip.clip = textBlips[Random.Range(0, 4)];
         textBlip.Play();
+        StartCoroutine(AudioFadeOut.FadeOut(textBlip, 4 * rate - 0.001f));
     }
 }

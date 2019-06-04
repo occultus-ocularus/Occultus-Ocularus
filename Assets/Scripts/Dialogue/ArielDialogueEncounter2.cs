@@ -46,13 +46,14 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
             bc.enabled = false;
     }
 
-    public void PlayTextBlip(string characterName) {
+    public void PlayTextBlip(string characterName, float rate) {
         textBlip = gameObject.AddComponent<AudioSource>();
         if (characterName.Equals("ARIEL") || characterName.Equals("???"))
             textBlip.clip = textBlips[Random.Range(0, 4)];
         else if (characterName.Equals("SAMSON"))
             textBlip.clip = samsonTextBlips[Random.Range(0, 4)];
         textBlip.Play();
+        StartCoroutine(AudioFadeOut.FadeOut(textBlip, 4 * rate - 0.001f));
         Destroy(GetComponent<AudioSource>());
     }
 }
