@@ -260,6 +260,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 2426558130871322744, guid: ad3293c9fee4045c9a81244841ff353a,
+        type: 3}
+      propertyPath: mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2426558130871322758, guid: ad3293c9fee4045c9a81244841ff353a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -314,11 +319,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2426558130871322744, guid: ad3293c9fee4045c9a81244841ff353a,
-        type: 3}
-      propertyPath: mode
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad3293c9fee4045c9a81244841ff353a, type: 3}
@@ -4224,6 +4224,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 960582976}
+    - target: {fileID: 2881084489140527899, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
+        type: 3}
+      propertyPath: uIDisplay
+      value: 
+      objectReference: {fileID: 1506018829}
     - target: {fileID: 3605850141601055748, guid: 99e7c45f2213e4ae28122e7684bdb7f4,
         type: 3}
       propertyPath: m_PixelPerfect
@@ -4322,19 +4327,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443616542632638079, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 43069415dc62e46f9ada61f1afba44aa,
-        type: 3}
-    - target: {fileID: 7443616542632638079, guid: b60b13e4510963741b833fd8f53ff0dc,
-        type: 3}
       propertyPath: m_Size.x
-      value: 0.65
+      value: 0.27157894
       objectReference: {fileID: 0}
     - target: {fileID: 7443616542632638079, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.13
+      value: 0.9157895
       objectReference: {fileID: 0}
     - target: {fileID: 7443616542632638079, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
@@ -4434,12 +4433,12 @@ PrefabInstance:
     - target: {fileID: 5017325187385438540, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.59090906
+      value: 0.27157894
       objectReference: {fileID: 0}
     - target: {fileID: 5017325187385438540, guid: b60b13e4510963741b833fd8f53ff0dc,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.0272727
+      value: 0.9157895
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b60b13e4510963741b833fd8f53ff0dc, type: 3}
@@ -4572,18 +4571,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 210589949722588863, guid: 2960dd19a0267450eb1cdba08b7845e4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 210589949722588863, guid: 2960dd19a0267450eb1cdba08b7845e4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: RestartGame
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2960dd19a0267450eb1cdba08b7845e4, type: 3}
+--- !u!114 &1506018829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5316961704729641953, guid: 2960dd19a0267450eb1cdba08b7845e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1506018828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b359d32df26844bf9aceb8ca965a88f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1773496103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4873,6 +4874,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
+        type: 3}
+      propertyPath: fadeOutUIImage
+      value: 
+      objectReference: {fileID: 4594652}
+    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
+        type: 3}
+      propertyPath: nextScene
+      value: Outside Mall+TTD, MPT
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 960582976}
     - target: {fileID: 3929783599155801773, guid: 1db867e681625471eb1971ad79647fae,
         type: 3}
       propertyPath: m_RootOrder
@@ -4898,26 +4919,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3.19
       objectReference: {fileID: 0}
-    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
-        type: 3}
-      propertyPath: fadeOutUIImage
-      value: 
-      objectReference: {fileID: 4594652}
-    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
-        type: 3}
-      propertyPath: nextScene
-      value: Outside Mall+TTD, MPT
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3546765133345632795, guid: 1db867e681625471eb1971ad79647fae,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 960582976}
     - target: {fileID: 3546765133345632793, guid: 1db867e681625471eb1971ad79647fae,
         type: 3}
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.size
