@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535f8e525ff367c4ba67961e201a05ed, type: 3}
+  m_Name: SuburbFlowers
+  m_EditorClassIdentifier: 
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Transform:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_InstancedGameObject: {fileID: 0}
+  m_Flags: 1
+  m_ColliderType: 1
+  m_Sprites:
+  - {fileID: 21300000, guid: 324f54b3d9a841849bbbde659811af8c, type: 3}
+  - {fileID: 21300000, guid: a50a01a44405d034a95b5bbb0a4d5e94, type: 3}
+  - {fileID: 21300000, guid: 3a610e3d27054ba4785023588ec552d8, type: 3}
+  - {fileID: 21300000, guid: b1e040a522fc11846bf325aead351d7b, type: 3}
+  - {fileID: 21300000, guid: a4045d74d5563e4469f8423c69b68181, type: 3}
+  - {fileID: 21300000, guid: a2687f4e06d23a04fbb089f8bae039a5, type: 3}
+  - {fileID: 21300000, guid: 104650053159fe746baba40b13a1b9e4, type: 3}
+  - {fileID: 21300000, guid: 1d93be0e23e5dab46bf7cfd1ae6eae23, type: 3}
+  - {fileID: 21300000, guid: 81e23c670fa2a71429f22312dbfa0561, type: 3}
+  - {fileID: 21300000, guid: 37741575676461f4fb2fe364bccd45d9, type: 3}
+  - {fileID: 21300000, guid: 54b17b947f35dd94a8ee2b446e115377, type: 3}
+  - {fileID: 21300000, guid: c5322944fc0a79a4cbf83d4cdb2606b9, type: 3}

@@ -18,6 +18,8 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     public Color samsonColor;
     public Color arielColor;
 
+    public UIDisplay uIDisplay;
+
     private string[] phrases;
     private string[] actions;
     private bool actionPerformed;
@@ -39,11 +41,13 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     public void Awake() {
         playerInput.Dialog.SetCallbacks(this);
     }
+
     public void Setup(IDialogueEncounter de) {
         BeginDialog(de);
     }
     public void BeginDialog(IDialogueEncounter de) {
         player.EnterUIOrDialog();
+        uIDisplay.ShowDialogueControls();
         player.body.velocity = Vector2.zero;
         dialogueEncounter = de;
         lastUpdateTime = Time.time;
@@ -62,6 +66,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     }
     public void EndDialog() {
         player.ExitUIOrDialog();
+        uIDisplay.HideDialogueControls();
         dialogueEncounter.DialogueFinished();
         dialogueBox.SetActive(false);
         text.text = "";
