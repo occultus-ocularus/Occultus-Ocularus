@@ -76,7 +76,7 @@ public class PlayStats : MonoBehaviour
     // Called when the game is restarted: uploads checkpoint data & resets lists
     public void RestartGame()
     {
-        if (checkpointTimes.Count != 0 && !Application.isEditor)
+        if (checkpointTimes.Count != 0)
         {
             FormatOutput();
             PostToGoogleForm();
@@ -88,7 +88,7 @@ public class PlayStats : MonoBehaviour
     // When the game is quit, uploads the current checkpoint data
     private void OnApplicationQuit()
     {
-        if (checkpointTimes.Count != 0 && !Application.isEditor)
+        if (checkpointTimes.Count != 0)
         {
             FormatOutput();
             PostToGoogleForm();
@@ -128,10 +128,10 @@ public class PlayStats : MonoBehaviour
         WWWForm form = new WWWForm();
 
         // Google Form field ids can be found by making a prefilled form and getting them out of the URL
-        form.AddField("entry.1740890139", gameOutput);
+        form.AddField("entry.914780793", gameOutput);
 
         // URL for the Google Form with "formResponse" after form id instead of "viewForm"
-        string url = "https://docs.google.com/forms/d/e/1FAIpQLSd4kWrFGVorQFOsplGaWgBrCn5mdSfHLXNhkUMf7003FeNdnw/formResponse";
+        string url = "https://docs.google.com/forms/d/e/1FAIpQLSeCbySxuHCaHT_G6gEsfeqsuGzFD1JdxetSlhVc4kuXjSJEeA/formResponse";
 
         // Post a request to the URL
         UnityWebRequest www = UnityWebRequest.Post(url, form);

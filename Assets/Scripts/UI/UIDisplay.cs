@@ -5,9 +5,10 @@ using UnityEngine.Experimental.Input;
 using UnityEngine.SceneManagement;
 
 public class UIDisplay : MonoBehaviour {
-    //public PlayerInputMapping playerInput;
+    public PlayerInputMapping playerInput;
 
-    private GameObject controlsOverlay;
+    private GameObject minCtrls;
+    private GameObject detailedCtrls;
 
     private Scene currentScene;
 
@@ -25,28 +26,29 @@ public class UIDisplay : MonoBehaviour {
         if (Gamepad.current != null)
         {
             print(Gamepad.current);
-            controlsOverlay = gameObject.transform.GetChild(1).gameObject;
-            gameObject.transform.GetChild(2).gameObject.SetActive(false);
-            controlsOverlay.SetActive(true);
+            minCtrls = gameObject.transform.GetChild(1).GetChild(0).gameObject;
+            detailedCtrls = gameObject.transform.GetChild(1).GetChild(1).gameObject;
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.transform.GetChild(1).gameObject.SetActive(true);
         }
         else
         {
-            controlsOverlay = gameObject.transform.GetChild(0).gameObject;
+            minCtrls = gameObject.transform.GetChild(0).GetChild(0).gameObject;
+            detailedCtrls = gameObject.transform.GetChild(0).GetChild(1).gameObject;
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
-            controlsOverlay.SetActive(true);
         }
-        controlsOverlay.transform.GetChild(2).gameObject.SetActive(false);
 
         // Display layer switching controls if applicable to current level
-        if (currentScene.name.Equals("SuburbPuzzles"))
+        if (currentScene.path.Contains("Suburbs") && !currentScene.name.Equals("ArielIntro"))
         {
-            controlsOverlay.transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
-            controlsOverlay.transform.GetChild(1).GetChild(1).gameObject.SetActive(true);
+            minCtrls.transform.GetChild(1).gameObject.SetActive(false);
+            minCtrls.transform.GetChild(2).gameObject.SetActive(true);
         }
         else
         {
-            controlsOverlay.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
-            controlsOverlay.transform.GetChild(1).GetChild(1).gameObject.SetActive(false);
+            minCtrls.transform.GetChild(1).gameObject.SetActive(true);
+            minCtrls.transform.GetChild(2).gameObject.SetActive(false);
         }
 
         // Display camera zoom controls if applicable to current level
@@ -54,11 +56,11 @@ public class UIDisplay : MonoBehaviour {
             currentScene.name.Equals("SuburbPuzzles"))
 
         {
-            controlsOverlay.transform.GetChild(1).GetChild(2).gameObject.SetActive(true);
+            minCtrls.transform.GetChild(3).gameObject.SetActive(true);
         }
         else
         {
-            controlsOverlay.transform.GetChild(1).GetChild(2).gameObject.SetActive(false);
+            minCtrls.transform.GetChild(3).gameObject.SetActive(false);
         }
     }
 
@@ -73,21 +75,25 @@ public class UIDisplay : MonoBehaviour {
             UpdateControlsUI();
         }
         
-        // Toggle controls UI on or off when Tab is pressed
+        // Switch between minimalist and detailed controls UI when Tab is pressed
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            controlsOverlay.SetActive(!controlsOverlay.activeSelf);
+
+            if (!minCtrls.activeSelf && !detailedCtrls.activeSelf || minCtrls.activeSelf && detailedCtrls.activeSelf)
+            {
+                minCtrls.SetActive(true);
+                detailedCtrls.gameObject.SetActive(false);
+            }
+            else if (minCtrls.activeSelf && !detailedCtrls.activeSelf)
+            {
+                minCtrls.SetActive(false);
+                detailedCtrls.gameObject.SetActive(true);
+            }
+            else if (!minCtrls.activeSelf && detailedCtrls.activeSelf)
+            {
+                minCtrls.SetActive(false);
+                detailedCtrls.gameObject.SetActive(false);
+            }
         }
-    }
-
-    public void EnterDialogueMode() {
-        controlsOverlay.transform.GetChild(2).gameObject.SetActive(true);
-        controlsOverlay.transform.GetChild(1).gameObject.SetActive(false);
-
-    }
-
-    public void ExitDialogueMode() {
-        controlsOverlay.transform.GetChild(2).gameObject.SetActive(false);
-        controlsOverlay.transform.GetChild(1).gameObject.SetActive(true);
     }
 }
