@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour, IUIActions {
     public LevelTransition levelTransition;
     public PlayStats playStats;
     public MainMenuController mainMenuController;
+    
 
     private string currentScene;
 
@@ -26,9 +27,12 @@ public class UIController : MonoBehaviour, IUIActions {
     }
 
     public void OnOpenMenu(InputAction.CallbackContext context) {
-        if (currentScene.Equals("End Menu")) {
-            mainMenuController.QuitGame();
-        }
+        //if (currentScene.Equals("End Menu")) {
+        //mainMenuController.QuitGame();
+        if(canOpenMenu())
+            pauseMenu.gameObject.SetActive(true);
+
+        //}
     }
 
     public void OnPoint(InputAction.CallbackContext context) {
