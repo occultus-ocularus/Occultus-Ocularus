@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour, IUIActions {
         instance = this;
         if (!initializedInputCallbacks) {
             initializedInputCallbacks = true;
+            playerInput.Enable();
             playerInput.UI.SetCallbacks(this);
         }
     }
@@ -39,8 +40,6 @@ public class PauseMenu : MonoBehaviour, IUIActions {
     [FormerlySerializedAs("uiInput")] public PlayerInputMapping playerInput;
     public GameObject gameMenu;
     public GameObject uiSystem;
-    public GameObject dialogSystem;
-    public PlayerController player;
     private Selectable currentSelection;
     public Selectable initialSelectable;
     public bool onlyShowControlsWhenMenuOpen = false;
@@ -52,7 +51,8 @@ public class PauseMenu : MonoBehaviour, IUIActions {
         gameMenu.SetActive(true);
         if (onlyShowControlsWhenMenuOpen)
             uiSystem.SetActive(true);
-        dialogSystem.SetActive(false);
+        
+//        dialogSystem.SetActive(false);
         currentSelection = initialSelectable;
         currentSelection.Select();
         Time.timeScale = 0;
@@ -64,7 +64,7 @@ public class PauseMenu : MonoBehaviour, IUIActions {
         gameMenu.SetActive(false);
         if (onlyShowControlsWhenMenuOpen)
             uiSystem.SetActive(false);
-        dialogSystem.SetActive(true);
+//        dialogSystem.SetActive(true);
         Time.timeScale = 1;
     }
     public void ToggleMenu() {
