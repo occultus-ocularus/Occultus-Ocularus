@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Experimental.Input;
 using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Input.Plugins.PlayerInput;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour, IUIActions
 {    
@@ -39,10 +41,18 @@ public class PauseMenu : MonoBehaviour, IUIActions
     public GameObject gameMenu;
     public GameObject uiSystem;
     public GameObject dialogSystem;
+    private Selectable currentSelection;
+    public Selectable initialSelectable;
+    
 
+    public Button[] menuButtons;
+    private int activeMenuButton = 0;
+    
     private string currentScene;
 
     public void Pause() {
+//        currentSelection = Selectable.allSelectablesArray[0];
+        currentSelection = null;
         gameMenu.SetActive(true);
         uiSystem.SetActive(true);
         dialogSystem.SetActive(false);
@@ -62,9 +72,7 @@ public class PauseMenu : MonoBehaviour, IUIActions
         }
     }
     
-    public void OnClick(InputAction.CallbackContext context) {
-        throw new System.NotImplementedException();
-    }
+    public void OnClick(InputAction.CallbackContext context) {}
 
     public void OnOpenMenu(InputAction.CallbackContext context) {
         if (context.performed) {
@@ -73,18 +81,35 @@ public class PauseMenu : MonoBehaviour, IUIActions
     }
 
     public void OnCancel(InputAction.CallbackContext context) {
-        throw new System.NotImplementedException();
+        if (gameMenu.activeInHierarchy && context.performed) {
+            Resume();
+        }
     }
 
     public void OnPoint(InputAction.CallbackContext context) {
-        
     }
 
     public void OnNavigate(InputAction.CallbackContext context) {
-        throw new System.NotImplementedException();
+        if (gameMenu.activeInHierarchy && context.performed)
+        {
+            if (currentSelection == null) {
+                currentSelection = initialSelectable;
+                currentSelection.Select();
+                return;
+            }
+            var input = context.ReadValue<Vector2>();
+            var s = currentSelection.FindSelectable(new Vector3(input.x, input.y, 0.0f));
+            if (s) {
+                currentSelection = s;
+                currentSelection.Select();
+            }
+        }
     }
 
     public void OnSubmit(InputAction.CallbackContext context) {
-
+        if (gameMenu.activeInHierarchy && context.performed && currentSelection) {
+            var button = (Button) currentSelection;
+            if (button) { button.OnSubmit(null); }
+        }
     }
 }
