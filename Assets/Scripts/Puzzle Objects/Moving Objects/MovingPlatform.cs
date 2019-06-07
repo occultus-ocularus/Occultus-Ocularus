@@ -303,11 +303,23 @@ public class MovingPlatform : MonoBehaviour {
     // Starts platform moving towards the opposite end of the
     // path from where it was last moving towards, then stops
     public void ExtendOrRetract() {
-        extendAndRetract = true;
-        move = true;
-        paused = false;
-        canPause = false;
-        extend = !extend;
+        if (activateChildrenInstead) {
+
+            MovingPlatform[] doors =
+                gameObject.GetComponentsInChildren<MovingPlatform>();
+            foreach (MovingPlatform childPlatform in doors) {
+                if (childPlatform.gameObject != gameObject) {
+                    childPlatform.ExtendOrRetract();
+                }
+            }
+        }
+        else {
+            extendAndRetract = true;
+            move = true;
+            paused = false;
+            canPause = false;
+            extend = !extend;
+        }
     }
 
     // Called by player class when they jump or walk onto platform:

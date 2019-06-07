@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 7125993726162478831}
   - component: {fileID: 7777945279169626352}
   m_Layer: 18
-  m_Name: Blue Single Door
+  m_Name: Cyan Single Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
