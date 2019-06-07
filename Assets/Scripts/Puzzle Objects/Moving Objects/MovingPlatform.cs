@@ -264,6 +264,7 @@ public class MovingPlatform : MonoBehaviour {
             }
         }
         else {
+            Debug.Log("Exten2");
             extendAndRetract = true;
             move = true;
             paused = false;
@@ -284,11 +285,13 @@ public class MovingPlatform : MonoBehaviour {
                 gameObject.GetComponentsInChildren<MovingPlatform>();
             foreach (MovingPlatform childPlatform in doors) {
                 if (childPlatform.gameObject != gameObject) {
+                    Debug.Log("Retract1");
                     childPlatform.Retract();
                 }
             }
         }
         else {
+            Debug.Log("Retract2");
             extendAndRetract = true;
             move = true;
             paused = false;
