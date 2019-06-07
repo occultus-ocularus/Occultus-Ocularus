@@ -32,6 +32,7 @@ public class PlayerInputMapping : InputActionAssetReference
         m_UI_Point = m_UI.GetAction("Point");
         m_UI_Click = m_UI.GetAction("Click");
         m_UI_OpenMenu = m_UI.GetAction("OpenMenu");
+        m_UI_CloseMenu = m_UI.GetAction("CloseMenu");
         // Camera
         m_Camera = asset.GetActionMap("Camera");
         m_Camera_ToggleCamera = m_Camera.GetAction("ToggleCamera");
@@ -72,6 +73,7 @@ public class PlayerInputMapping : InputActionAssetReference
         m_UI_Point = null;
         m_UI_Click = null;
         m_UI_OpenMenu = null;
+        m_UI_CloseMenu = null;
         if (m_CameraActionsCallbackInterface != null)
         {
             Camera.SetCallbacks(null);
@@ -197,6 +199,7 @@ public class PlayerInputMapping : InputActionAssetReference
     private InputAction m_UI_Point;
     private InputAction m_UI_Click;
     private InputAction m_UI_OpenMenu;
+    private InputAction m_UI_CloseMenu;
     public struct UIActions
     {
         private PlayerInputMapping m_Wrapper;
@@ -207,6 +210,7 @@ public class PlayerInputMapping : InputActionAssetReference
         public InputAction @Point { get { return m_Wrapper.m_UI_Point; } }
         public InputAction @Click { get { return m_Wrapper.m_UI_Click; } }
         public InputAction @OpenMenu { get { return m_Wrapper.m_UI_OpenMenu; } }
+        public InputAction @CloseMenu { get { return m_Wrapper.m_UI_CloseMenu; } }
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -235,6 +239,9 @@ public class PlayerInputMapping : InputActionAssetReference
                 OpenMenu.started -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenMenu;
                 OpenMenu.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenMenu;
                 OpenMenu.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenMenu;
+                CloseMenu.started -= m_Wrapper.m_UIActionsCallbackInterface.OnCloseMenu;
+                CloseMenu.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnCloseMenu;
+                CloseMenu.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnCloseMenu;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -257,6 +264,9 @@ public class PlayerInputMapping : InputActionAssetReference
                 OpenMenu.started += instance.OnOpenMenu;
                 OpenMenu.performed += instance.OnOpenMenu;
                 OpenMenu.cancelled += instance.OnOpenMenu;
+                CloseMenu.started += instance.OnCloseMenu;
+                CloseMenu.performed += instance.OnCloseMenu;
+                CloseMenu.cancelled += instance.OnCloseMenu;
             }
         }
     }
@@ -496,6 +506,7 @@ public interface IUIActions
     void OnPoint(InputAction.CallbackContext context);
     void OnClick(InputAction.CallbackContext context);
     void OnOpenMenu(InputAction.CallbackContext context);
+    void OnCloseMenu(InputAction.CallbackContext context);
 }
 public interface ICameraActions
 {

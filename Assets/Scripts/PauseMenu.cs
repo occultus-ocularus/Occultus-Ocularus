@@ -10,14 +10,9 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour, IUIActions
 {    
     // Start is called before the first frame update
-    public void Awake()
-    {
-        uiInput.Enable();
-        uiInput.UI.SetCallbacks(this);
-    }
     public void Start()
     {
-        
+        uiInput.UI.SetCallbacks(this);
     }
 
     // Update is called once per frame
@@ -35,32 +30,26 @@ public class PauseMenu : MonoBehaviour, IUIActions
         Application.Quit();
     }
     public PlayerInputMapping uiInput;
-    public LevelTransition levelTransition;
-    public PlayStats playStats;
-    public MainMenuController mainMenuController;
     public GameObject gameMenu;
     public GameObject uiSystem;
     public GameObject dialogSystem;
     private Selectable currentSelection;
     public Selectable initialSelectable;
-    
-
-    public Button[] menuButtons;
-    private int activeMenuButton = 0;
-    
-    private string currentScene;
+    public bool onlyShowControlsWhenMenuOpen = false;
 
     public void Pause() {
-//        currentSelection = Selectable.allSelectablesArray[0];
-        currentSelection = null;
+        currentSelection = initialSelectable;
+        currentSelection.Select();
         gameMenu.SetActive(true);
-        uiSystem.SetActive(true);
+        if (onlyShowControlsWhenMenuOpen)
+            uiSystem.SetActive(true);
         dialogSystem.SetActive(false);
         Time.timeScale = 0;
     }
     public void Resume() {
         gameMenu.SetActive(false);
-        uiSystem.SetActive(false);
+        if (onlyShowControlsWhenMenuOpen)
+            uiSystem.SetActive(false);
         dialogSystem.SetActive(true);
         Time.timeScale = 1;
     }
@@ -78,6 +67,12 @@ public class PauseMenu : MonoBehaviour, IUIActions
         if (context.performed) {
             ToggleMenu();
         }
+    }
+
+    public void OnCloseMenu(InputAction.CallbackContext context) {
+//        if (context.performed && gameMenu.activeInHierarchy) {
+//            Resume();
+//        }
     }
 
     public void OnCancel(InputAction.CallbackContext context) {
@@ -101,8 +96,8 @@ public class PauseMenu : MonoBehaviour, IUIActions
             var s = currentSelection.FindSelectable(new Vector3(input.x, input.y, 0.0f));
             if (s) {
                 currentSelection = s;
-                currentSelection.Select();
             }
+            currentSelection.Select();
         }
     }
 

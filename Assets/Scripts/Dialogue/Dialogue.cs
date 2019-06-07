@@ -36,7 +36,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     private bool awaitingUser;
     private bool skipToEndOfPhrase;
 
-    public void Awake() {
+    public void Start() {
         playerInput.Dialog.SetCallbacks(this);
     }
     public void Setup(IDialogueEncounter de) {
@@ -79,7 +79,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
             currentScrollRate = FAST_SCROLL_RATE;
 
             // End dialogue if it all has already appeared
-            if (phraseIndex >= phrases.Length && charIndex == -1) {
+            if (phrases != null && phraseIndex >= phrases.Length && charIndex == -1) {
                 EndDialog();
             }
         } else if (!context.performed) {
