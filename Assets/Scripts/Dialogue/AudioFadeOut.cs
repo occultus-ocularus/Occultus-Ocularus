@@ -12,14 +12,15 @@ public static class AudioFadeOut {
 
         FadeTime *= 0.5f;
 
-        while (audioSource.volume > 0) {
+        while (audioSource != null && audioSource.volume > 0) {
             audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
 
             yield return null;
         }
 
-        audioSource.Stop();
-        audioSource.volume = startVolume;
+        if (audioSource != null) {
+            audioSource.Stop();
+            audioSource.volume = startVolume;
+        }
     }
-
 }

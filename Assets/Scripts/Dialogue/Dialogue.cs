@@ -84,7 +84,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
             currentScrollRate = FAST_SCROLL_RATE;
 
             // End dialogue if it all has already appeared
-            if (phraseIndex >= phrases.Length && charIndex == -1) {
+            if (phrases != null && phraseIndex >= phrases.Length && charIndex == -1) {
                 EndDialog();
             }
         } else if (!context.performed) {
