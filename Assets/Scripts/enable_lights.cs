@@ -15,6 +15,7 @@ public class enable_lights : MonoBehaviour
 
    void Start() {
         foregroundDec = GetComponent<Tilemap>();
+        foregroundDec.RefreshAllTiles();
         foregroundDec.color = lightEffectColors[4];
     }
 

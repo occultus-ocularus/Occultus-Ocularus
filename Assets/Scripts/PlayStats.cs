@@ -31,7 +31,7 @@ public class PlayStats : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Mall":
-                original = GameObject.Find("PlaytestStatsMain").GetComponent<PlayStats>();
+                original = FindObjectOfType<PlayStats>();
                 break;
             case "Outside Mall+TTD, MPT":
                 original = GameObject.Find("PlaytestStatsMall").GetComponent<PlayStats>();
@@ -46,11 +46,11 @@ public class PlayStats : MonoBehaviour
                 original = GameObject.Find("PlaytestStatsSuburb").GetComponent<PlayStats>();
                 break;
             case "Main Menu":
-                original = GameObject.Find("PlaytestStatsEnd").GetComponent<PlayStats>();
+                original = FindObjectOfType<PlayStats>();
                 break;
         }
 
-        if (original != null)
+        if (original != null && original != this)
         {
             checkpointTimes = original.checkpointTimes;
             checkpointNames = original.checkpointNames;
