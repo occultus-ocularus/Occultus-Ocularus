@@ -37,15 +37,21 @@ public class PauseMenu : MonoBehaviour, IUIActions
     public PlayStats playStats;
     public MainMenuController mainMenuController;
     public GameObject gameMenu;
+    public GameObject uiSystem;
+    public GameObject dialogSystem;
 
     private string currentScene;
 
     public void Pause() {
         gameMenu.SetActive(true);
+        uiSystem.SetActive(true);
+        dialogSystem.SetActive(false);
         Time.timeScale = 0;
     }
     public void Resume() {
         gameMenu.SetActive(false);
+        uiSystem.SetActive(false);
+        dialogSystem.SetActive(true);
         Time.timeScale = 1;
     }
     public void ToggleMenu() {
