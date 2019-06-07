@@ -28,11 +28,13 @@ public class PauseMenu : MonoBehaviour, IUIActions {
     public GameObject gameMenu;
     public GameObject uiSystem;
     public GameObject dialogSystem;
+    public PlayerController player;
     private Selectable currentSelection;
     public Selectable initialSelectable;
     public bool onlyShowControlsWhenMenuOpen = false;
 
     public void Pause() {
+        player.OnMenuOpened();
         gameMenu.SetActive(true);
         if (onlyShowControlsWhenMenuOpen)
             uiSystem.SetActive(true);
@@ -42,6 +44,7 @@ public class PauseMenu : MonoBehaviour, IUIActions {
         Time.timeScale = 0;
     }
     public void Resume() {
+        player.OnMenuClosed();
         gameMenu.SetActive(false);
         if (onlyShowControlsWhenMenuOpen)
             uiSystem.SetActive(false);

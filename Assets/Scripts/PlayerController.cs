@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     
     [Header("Movement")]
     [Tooltip("On/Off for player movement input")] public bool canMove;
+
+    // Things that can further disable player movement
+    private bool menuOpen = false;
+    private bool dialogOpen = false;
+    
     [Tooltip("Freeze all movement IE no gravity")] public bool frozen;
     [Tooltip("Whether to allow the player to fly freely")] public bool antiGrav = false;
     public float maxWalkSpeed = 1;
@@ -91,7 +96,10 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
         playerInput.Enable();
         playerInput.Player.SetCallbacks(this);
     }
-
+    
+    public bool playerCanMove {
+        get { return canMove && !menuOpen && !dialogOpen; }
+    }
     // Use this for initialization
     void Start() {
         if (Application.isEditor) {
@@ -110,7 +118,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     void Update() {
         if (this.transform.position.y < -50) { ResetPlayer(); print("RESPAWN"); }
 
-        if (canMove)
+        if (playerCanMove)
         {
             // Flips sprite depending on direction of movement
             h = movement.x;
@@ -124,6 +132,10 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
         anim.SetBool("grounded", touchingGround);
         anim.SetFloat("vertical velocity", body.velocity.y);
     }
+
+    public void OnMenuOpened() { menuOpen = true; }
+    public void OnMenuClosed() { menuOpen = false; }
+    
     public void EnterUIOrDialog() {
         PlayerInputModel.instance.enterUI();
 //        playerInput.Player.Disable();
@@ -131,7 +143,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
 //        playerInput.Camera.Disable();
 //        playerInput.UI.Enable();
 //        playerInput.Dialog.Enable();
-        canMove = false;
+        dialogOpen = true;
     }
     public void ExitUIOrDialog() {
         PlayerInputModel.instance.exitUI();
@@ -140,7 +152,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
 //        playerInput.Camera.Enable();
 //        playerInput.UI.Disable();
 //        playerInput.Dialog.Disable();
-        canMove = true;
+        dialogOpen = false;
     }
 
     #region FootstepAudio
@@ -191,7 +203,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     public Vector2 movement { get; set; } = Vector2.zero;
     
     public void OnMove(InputAction.CallbackContext context) {
-        movement = context.ReadValue<Vector2>();
+        movement = playerCanMove ? context.ReadValue<Vector2>() : Vector2.zero;
     }
     public void OnResetPlayer(InputAction.CallbackContext context) {        
         // Reset position
@@ -213,7 +225,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     }
     public void OnToggleFlying(InputAction.CallbackContext context) {
         // Shift between flying and grounded modes
-        if (allowFlying && context.performed) {
+        if (allowFlying && playerCanMove && context.performed) {
             if (antiGrav) {
                 this.GetComponent<Renderer>().material.color = Color.white;
                 antiGrav = false;
@@ -227,7 +239,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
         }
     }
     public void OnJump(InputAction.CallbackContext context) {
-        if (context.performed && canMove) {
+        if (context.performed && playerCanMove) {
             // Signal jump pressed
             jump = jumpStart = true;
             
@@ -250,7 +262,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     #endregion
     
     void FixedUpdate() {
-        if (canMove) {
+        if (playerCanMove) {
             // If you are allowed free flight
             if (antiGrav)
             {
