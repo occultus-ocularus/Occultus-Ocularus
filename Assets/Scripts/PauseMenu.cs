@@ -7,19 +7,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Input.Plugins.PlayerInput;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour, IUIActions
-{    
-    // Start is called before the first frame update
-    public void Start()
-    {
-        uiInput.UI.SetCallbacks(this);
-    }
+public class PauseMenu : MonoBehaviour, IUIActions {
 
-    // Update is called once per frame
-
-    public void Update()
-    {
-        
+    private bool initializedInputCallbacks = false;
+    public void Awake() {
+        if (!initializedInputCallbacks) {
+            initializedInputCallbacks = true;
+            uiInput.UI.SetCallbacks(this);
+        }
     }
     public void QuitToMenu()
     {
@@ -38,12 +33,12 @@ public class PauseMenu : MonoBehaviour, IUIActions
     public bool onlyShowControlsWhenMenuOpen = false;
 
     public void Pause() {
-        currentSelection = initialSelectable;
-        currentSelection.Select();
         gameMenu.SetActive(true);
         if (onlyShowControlsWhenMenuOpen)
             uiSystem.SetActive(true);
         dialogSystem.SetActive(false);
+        currentSelection = initialSelectable;
+        currentSelection.Select();
         Time.timeScale = 0;
     }
     public void Resume() {
