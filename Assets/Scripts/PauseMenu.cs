@@ -19,22 +19,35 @@ public class PauseMenu : MonoBehaviour, IUIActions {
             return instance != null && instance.paused;
         }
     }
-    
-    private bool initializedInputCallbacks = false;
-    public void Awake() {
-        instance = this;
-        if (!initializedInputCallbacks) {
-            initializedInputCallbacks = true;
-            playerInput.Enable();
+
+    private PauseMenu currentCallbackInstance = null;
+    private void SetInputCallbacks() {
+        if (currentCallbackInstance != this) {
+            currentCallbackInstance = this;
             playerInput.UI.SetCallbacks(this);
         }
     }
+    private void ClearInputCallbacks() {
+        if (currentCallbackInstance == this) {
+            currentCallbackInstance = null;
+            playerInput.UI.SetCallbacks(null);
+        }   
+    }
+    public void Awake() {
+        instance = this;
+        SetInputCallbacks();
+    }
+    public void OnDestroy() {
+        ClearInputCallbacks();
+    }
     public void QuitToMenu()
     {
+        Resume();
         SceneManager.LoadScene("Main Menu");
     }
     public void QuitToDesktop()
     {
+        Resume();
         Application.Quit();
     }
     [FormerlySerializedAs("uiInput")] public PlayerInputMapping playerInput;
@@ -69,12 +82,15 @@ public class PauseMenu : MonoBehaviour, IUIActions {
     }
     public void ToggleMenu() {
         if (gameMenu.activeInHierarchy) {
-            Resume();
+            ResumeNextFrame();
         } else {
             Pause();
         }
     }
-    
+    IEnumerable ResumeNextFrame() {
+        yield return new WaitForFixedUpdate();
+        Resume();
+    }
     public void OnClick(InputAction.CallbackContext context) {}
 
     public void OnOpenMenu(InputAction.CallbackContext context) {
@@ -85,13 +101,13 @@ public class PauseMenu : MonoBehaviour, IUIActions {
 
     public void OnCloseMenu(InputAction.CallbackContext context) {
 //        if (context.performed && gameMenu.activeInHierarchy) {
-//            Resume();
+//            ResumeNextFrame();
 //        }
     }
 
     public void OnCancel(InputAction.CallbackContext context) {
         if (gameMenu.activeInHierarchy && context.performed) {
-            Resume();
+            ResumeNextFrame();
         }
     }
 
@@ -116,8 +132,12 @@ public class PauseMenu : MonoBehaviour, IUIActions {
     }
 
     public void OnSubmit(InputAction.CallbackContext context) {
+        if (context.performed)
+//            Debug.Log("Submit? "+gameMenu.activeInHierarchy+" "+currentSelection);
+      
         if (gameMenu.activeInHierarchy && context.performed && currentSelection) {
             var button = (Button) currentSelection;
+//            Debug.Log("Submit! "+button+" "+button.IsActive());
             if (button) { button.OnSubmit(null); }
         }
     }

@@ -91,11 +91,27 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     private string currentScene;
     private Animator anim;
 
-    void Awake() {
+    private PlayerController currentCallbackInstance = null;
+    private void SetInputCallbacks() {
         playerInput.Enable();
-        playerInput.Player.SetCallbacks(this);
+        if (currentCallbackInstance != this) {
+            currentCallbackInstance = this;
+            playerInput.Player.SetCallbacks(this);
+        }
     }
-    
+    private void ClearInputCallbacks() {
+        if (currentCallbackInstance == this) {
+            currentCallbackInstance = null;
+            playerInput.Player.SetCallbacks(null);
+        }   
+    }
+
+    public void Awake() {
+        SetInputCallbacks();
+    }
+    public void OnDestroy() {
+        ClearInputCallbacks();
+    }
     public bool playerCanMove {
         get { return canMove && !dialogOpen && !PauseMenu.isPaused; }
     }
