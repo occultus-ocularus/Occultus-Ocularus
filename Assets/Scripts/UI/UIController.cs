@@ -27,12 +27,12 @@ public class UIController : MonoBehaviour, IUIActions {
     }
 
     public void OnOpenMenu(InputAction.CallbackContext context) {
-        //if (currentScene.Equals("End Menu")) {
-        //mainMenuController.QuitGame();
-        if(canOpenMenu())
-            pauseMenu.gameObject.SetActive(true);
-
-        //}
+//        //if (currentScene.Equals("End Menu")) {
+//        //mainMenuController.QuitGame();
+////        if(canOpenMenu())
+////            pauseMenu.gameObject.SetActive(true);
+//
+//        //}
     }
 
     public void OnPoint(InputAction.CallbackContext context) {

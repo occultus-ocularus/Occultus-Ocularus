@@ -6,14 +6,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Input.Plugins.PlayerInput;
 
 public class PauseMenu : MonoBehaviour, IUIActions
-{
-    //GameObject gameObject;
-    [SerializeField] public PlayerInputMapping playerInput;
+{    
     // Start is called before the first frame update
     public void Awake()
     {
-        playerInput.Enable();
-        playerInput.UI.SetCallbacks(this);
+        uiInput.Enable();
+        uiInput.UI.SetCallbacks(this);
     }
     public void Start()
     {
@@ -26,11 +24,6 @@ public class PauseMenu : MonoBehaviour, IUIActions
     {
         
     }
-    public void Resume()
-    {
-        gameObject.SetActive(false);
-        Time.timeScale = 1;
-    }
     public void QuitToMenu()
     {
         SceneManager.LoadScene("Main Menu");
@@ -39,39 +32,50 @@ public class PauseMenu : MonoBehaviour, IUIActions
     {
         Application.Quit();
     }
-    void OnMove(InputAction.CallbackContext context){}
-    void OnJump(InputAction.CallbackContext context){}
-    void OnResetPlayer(InputAction.CallbackContext context){}
-    void OnToggleFlying(InputAction.CallbackContext context){}
     public PlayerInputMapping uiInput;
     public LevelTransition levelTransition;
     public PlayStats playStats;
     public MainMenuController mainMenuController;
+    public GameObject gameMenu;
 
     private string currentScene;
 
-    public void OnCancel(InputAction.CallbackContext context) {
-
+    public void Pause() {
+        gameMenu.SetActive(true);
+        Time.timeScale = 0;
     }
-
+    public void Resume() {
+        gameMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+    public void ToggleMenu() {
+        if (gameMenu.activeInHierarchy) {
+            Resume();
+        } else {
+            Pause();
+        }
+    }
+    
     public void OnClick(InputAction.CallbackContext context) {
-
-    }
-
-    public void OnNavigate(InputAction.CallbackContext context) {
-
+        throw new System.NotImplementedException();
     }
 
     public void OnOpenMenu(InputAction.CallbackContext context) {
-        //if (currentScene.Equals("End Menu")) {
-        //    mainMenuController.QuitGame();
-        //}
-        this.gameObject.SetActive(true);
-        Time.timeScale = 0;
+        if (context.performed) {
+            ToggleMenu();
+        }
+    }
+
+    public void OnCancel(InputAction.CallbackContext context) {
+        throw new System.NotImplementedException();
     }
 
     public void OnPoint(InputAction.CallbackContext context) {
+        
+    }
 
+    public void OnNavigate(InputAction.CallbackContext context) {
+        throw new System.NotImplementedException();
     }
 
     public void OnSubmit(InputAction.CallbackContext context) {
