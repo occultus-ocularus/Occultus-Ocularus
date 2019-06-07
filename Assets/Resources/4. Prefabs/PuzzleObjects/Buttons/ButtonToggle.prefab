@@ -160,8 +160,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   interactSound: {fileID: 0}
-  anim: {fileID: 0}
-  toggleAnimation: 0
+  anim: {fileID: 1817471626266465086}
+  toggleAnimation: 1
 --- !u!82 &1319544400473933594
 AudioSource:
   m_ObjectHideFlags: 0
