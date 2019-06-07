@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     [Tooltip("On/Off for player movement input")] public bool canMove;
 
     // Things that can further disable player movement
-    private bool menuOpen = false;
     private bool dialogOpen = false;
     
     [Tooltip("Freeze all movement IE no gravity")] public bool frozen;
@@ -98,7 +97,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     }
     
     public bool playerCanMove {
-        get { return canMove && !menuOpen && !dialogOpen; }
+        get { return canMove && !dialogOpen && !PauseMenu.isPaused; }
     }
     // Use this for initialization
     void Start() {
@@ -132,10 +131,6 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
         anim.SetBool("grounded", touchingGround);
         anim.SetFloat("vertical velocity", body.velocity.y);
     }
-
-    public void OnMenuOpened() { menuOpen = true; }
-    public void OnMenuClosed() { menuOpen = false; }
-    
     public void EnterUIOrDialog() {
         PlayerInputModel.instance.enterUI();
 //        playerInput.Player.Disable();

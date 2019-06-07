@@ -1,19 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Experimental.Input;
 using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Input.Plugins.PlayerInput;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour, IUIActions {
-
+    private static PauseMenu instance;
+    private bool paused = false;
+    public static bool isPaused {
+        get {
+//            Debug.Log(""+instance+" "+instance.paused);
+            return instance != null && instance.paused;
+        }
+    }
+    
     private bool initializedInputCallbacks = false;
     public void Awake() {
+        instance = this;
         if (!initializedInputCallbacks) {
             initializedInputCallbacks = true;
-            uiInput.UI.SetCallbacks(this);
+            playerInput.UI.SetCallbacks(this);
         }
     }
     public void QuitToMenu()
@@ -24,7 +36,7 @@ public class PauseMenu : MonoBehaviour, IUIActions {
     {
         Application.Quit();
     }
-    public PlayerInputMapping uiInput;
+    [FormerlySerializedAs("uiInput")] public PlayerInputMapping playerInput;
     public GameObject gameMenu;
     public GameObject uiSystem;
     public GameObject dialogSystem;
@@ -34,7 +46,9 @@ public class PauseMenu : MonoBehaviour, IUIActions {
     public bool onlyShowControlsWhenMenuOpen = false;
 
     public void Pause() {
-        player.OnMenuOpened();
+        instance = this;
+        paused = true;
+//        Debug.Log("paused: "+isPaused);
         gameMenu.SetActive(true);
         if (onlyShowControlsWhenMenuOpen)
             uiSystem.SetActive(true);
@@ -44,7 +58,9 @@ public class PauseMenu : MonoBehaviour, IUIActions {
         Time.timeScale = 0;
     }
     public void Resume() {
-        player.OnMenuClosed();
+        instance = this;
+        paused = false;
+//        Debug.Log("resumed: "+isPaused);
         gameMenu.SetActive(false);
         if (onlyShowControlsWhenMenuOpen)
             uiSystem.SetActive(false);
