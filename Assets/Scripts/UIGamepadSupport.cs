@@ -31,12 +31,21 @@ public class UIGamepadSupport : MonoBehaviour {
             if (compositeInput.magnitude > navigationInputThreshold &&
                 Time.time > timeOfLastNavigationEvent + repeatingInputDelay
             ) {
-                timeOfLastNavigationEvent = Time.time;
-                if (!currentSelection) currentSelection = startingSelection;
-                var nextSelection = currentSelection.FindSelectable(compositeInput);
-                if (nextSelection) currentSelection = nextSelection;
-                currentSelection.Select();
                 Debug.Log("directional nav input in game menu! " + compositeInput);
+                timeOfLastNavigationEvent = Time.time;
+                
+                // if nothing selected, select the starting item
+                if (!currentSelection) {
+                    currentSelection = startingSelection;
+                    
+                // otherwise, try selecting something in the given direction, iff this returns a selectable
+                } else {
+                    var nextSelection = currentSelection.FindSelectable(compositeInput);
+                    if (nextSelection) currentSelection = nextSelection;
+                }
+                
+                // select the current (updated) selection
+                currentSelection.Select();
             }
             
             // Handle confirm

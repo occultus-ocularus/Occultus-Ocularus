@@ -587,6 +587,7 @@ GameObject:
   - component: {fileID: 2874774098741844751}
   - component: {fileID: 2874774098741844748}
   - component: {fileID: 2874774098741844749}
+  - component: {fileID: 3946808172956423825}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -678,6 +679,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3946808172956423825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874774098741844747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d26f2b450964e89b7f53cac47e387a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingSelection: {fileID: 2874774098087958210}
+  repeatingInputDelay: 0.15
+  navigationInputThreshold: 0.1
 --- !u!1 &2874774098843293680
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +706,6 @@ GameObject:
   - component: {fileID: 2874774098843293684}
   - component: {fileID: 2874774098843293685}
   - component: {fileID: 2874774098843293682}
-  - component: {fileID: 2874774098843293687}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -811,24 +826,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &2874774098843293687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2874774098843293680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0afba5fcfde5c44a86d9ba59c0559aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput:
-    m_Asset: {fileID: 0}
-  gameMenu: {fileID: 0}
-  uiSystem: {fileID: 0}
-  initialSelectable: {fileID: 0}
-  onlyShowControlsWhenMenuOpen: 0
 --- !u!1 &2874774099130021113
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,5 +954,4 @@ MonoBehaviour:
       type: 3}
   gameMenu: {fileID: 2874774098741844747}
   uiSystem: {fileID: 0}
-  initialSelectable: {fileID: 2874774098087958210}
   onlyShowControlsWhenMenuOpen: 0
