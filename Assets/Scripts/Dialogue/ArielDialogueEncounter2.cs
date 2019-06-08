@@ -15,10 +15,15 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
 
     private AudioSource textBlip;
     private ParticleSystem playerParticles;
+    private AnimSpriteSwap playerAnim;
+    private AudioSource levelUpSound;
 
     void Start() {
+        GameObject player = GameObject.Find("Player");
         textBlip = GetComponent<AudioSource>();
-        playerParticles = GameObject.Find("Player").GetComponent<ParticleSystem>();
+        playerParticles = player.GetComponent<ParticleSystem>();
+        playerAnim = player.GetComponent<AnimSpriteSwap>();
+        levelUpSound = player.GetComponent<AudioSource>();
     }
 
     public void Talk()
@@ -34,8 +39,16 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
             fadeEffect.FadeAppear(samson);
         else if (action.Equals("Samson disappears"))
             fadeEffect.FadeAway(samson);
-        else if (action.Equals("Player grows eyes on shoulders") || action.Equals("Player grows new set of eyes, on knees"))
+        else if (action.Equals("Player grows eyes on shoulders")) {
             playerParticles.Play();
+            playerAnim.spritesheetName = "1. Art/2. Characters/1. Player/PlayerLvl2";
+            levelUpSound.Play();
+
+        }
+        else if (action.Equals("Player grows new set of eyes, on knees")) {
+            playerParticles.Play();
+            levelUpSound.Play();
+        }
         else
             Debug.Log("DialogAction: " + action);
     }
@@ -46,13 +59,14 @@ public class ArielDialogueEncounter2 : MonoBehaviour, IDialogueEncounter
             bc.enabled = false;
     }
 
-    public void PlayTextBlip(string characterName) {
+    public void PlayTextBlip(string characterName, float rate) {
         textBlip = gameObject.AddComponent<AudioSource>();
         if (characterName.Equals("ARIEL") || characterName.Equals("???"))
             textBlip.clip = textBlips[Random.Range(0, 4)];
         else if (characterName.Equals("SAMSON"))
             textBlip.clip = samsonTextBlips[Random.Range(0, 4)];
         textBlip.Play();
+        StartCoroutine(AudioFadeOut.FadeOut(textBlip, 4 * rate - 0.001f));
         Destroy(GetComponent<AudioSource>());
     }
 }

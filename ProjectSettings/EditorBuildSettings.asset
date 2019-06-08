@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/2. Menus/Main Menu.unity
+    path: Assets/Scenes (Build)/1. Main Menu.unity
     guid: ae2e43377d4104ac1bca7a9af4609b9b
   - enabled: 1
-    path: Assets/Scenes/1. Levels/1. City/Mall.unity
+    path: Assets/Scenes (Build)/2. Mall.unity
     guid: 5191489791667437a913d9e4f6eabfd0
   - enabled: 1
-    path: Assets/Scenes/1. Levels/1. City/Outside Mall+TTD, MPT.unity
+    path: Assets/Scenes (Build)/3. Outside Mall.unity
     guid: 5c0bd879bb0604cfe9d6922180cee5e1
   - enabled: 1
-    path: Assets/Scenes/1. Levels/2. Suburbs/ArielIntro.unity
+    path: Assets/Scenes (Build)/4. Ariel Intro.unity
     guid: 5e51c3d96fe2f684092bfca9dbe4c8ce
   - enabled: 1
-    path: Assets/Scenes/1. Levels/2. Suburbs/SuburbPuzzles.unity
+    path: Assets/Scenes (Build)/5. Suburb Puzzles.unity
     guid: d54196674aa126b469c7781c4cab4113
   - enabled: 1
-    path: Assets/Scenes/2. Menus/End Menu.unity
+    path: Assets/Scenes (Build)/6. End Menu.unity
     guid: d416b22350f224398a704adbd1ab5dbe
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 33a80d10617944d11844cb3bab88aa60,

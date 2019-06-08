@@ -30,27 +30,27 @@ public class PlayStats : MonoBehaviour
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "Mall":
-                original = GameObject.Find("PlaytestStatsMain").GetComponent<PlayStats>();
+            case "1. Main Menu":
+                original = FindObjectOfType<PlayStats>();
                 break;
-            case "Outside Mall+TTD, MPT":
-                original = GameObject.Find("PlaytestStatsMall").GetComponent<PlayStats>();
+            case "2. Mall":
+                original = FindObjectOfType<PlayStats>();
                 break;
-            case "ArielIntro":
-                original = GameObject.Find("PlaytestStatsOutside").GetComponent<PlayStats>();
+            case "3. Outside Mall":
+                original = GameObject.Find("PlaytestStatsMall")?.GetComponent<PlayStats>();
                 break;
-            case "SuburbPuzzles":
-                original = GameObject.Find("PlaytestStatsAriel").GetComponent<PlayStats>();
+            case "3. Ariel Intro":
+                original = GameObject.Find("PlaytestStatsOutside")?.GetComponent<PlayStats>();
                 break;
-            case "End Menu":
-                original = GameObject.Find("PlaytestStatsSuburb").GetComponent<PlayStats>();
+            case "4. Suburb Puzzles":
+                original = GameObject.Find("PlaytestStatsAriel")?.GetComponent<PlayStats>();
                 break;
-            case "Main Menu":
-                original = GameObject.Find("PlaytestStatsEnd").GetComponent<PlayStats>();
+            case "5. End Menu":
+                original = GameObject.Find("PlaytestStatsSuburb")?.GetComponent<PlayStats>();
                 break;
         }
 
-        if (original != null)
+        if (original != null && original != this)
         {
             checkpointTimes = original.checkpointTimes;
             checkpointNames = original.checkpointNames;
@@ -76,7 +76,7 @@ public class PlayStats : MonoBehaviour
     // Called when the game is restarted: uploads checkpoint data & resets lists
     public void RestartGame()
     {
-        if (checkpointTimes.Count != 0)
+        if (checkpointTimes.Count != 0 && !Application.isEditor)
         {
             FormatOutput();
             PostToGoogleForm();
@@ -88,7 +88,7 @@ public class PlayStats : MonoBehaviour
     // When the game is quit, uploads the current checkpoint data
     private void OnApplicationQuit()
     {
-        if (checkpointTimes.Count != 0)
+        if (checkpointTimes.Count != 0 && !Application.isEditor)
         {
             FormatOutput();
             PostToGoogleForm();
@@ -98,6 +98,9 @@ public class PlayStats : MonoBehaviour
     // Formats text output before it is posted to the Google Form
     void FormatOutput()
     {
+
+        gameOutput += SystemInfo.deviceName + "\n\n";
+
         // Makes a line of comma-separated values (CSV) for checkpoint names
         for (int i = 0; i < checkpointNames.Count; i++)
         {
@@ -128,10 +131,10 @@ public class PlayStats : MonoBehaviour
         WWWForm form = new WWWForm();
 
         // Google Form field ids can be found by making a prefilled form and getting them out of the URL
-        form.AddField("entry.914780793", gameOutput);
+        form.AddField("entry.1740890139", gameOutput);
 
         // URL for the Google Form with "formResponse" after form id instead of "viewForm"
-        string url = "https://docs.google.com/forms/d/e/1FAIpQLSeCbySxuHCaHT_G6gEsfeqsuGzFD1JdxetSlhVc4kuXjSJEeA/formResponse";
+        string url = "https://docs.google.com/forms/d/e/1FAIpQLSd4kWrFGVorQFOsplGaWgBrCn5mdSfHLXNhkUMf7003FeNdnw/formResponse";
 
         // Post a request to the URL
         UnityWebRequest www = UnityWebRequest.Post(url, form);
