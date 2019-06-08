@@ -14,6 +14,7 @@ using UnityEngine.Networking;
 
 public class PlayStats : MonoBehaviour
 {
+    public static PlayStats instance { get; private set; }
     public List<float> checkpointTimes = new List<float>();
     public List<string> checkpointNames = new List<string>();
 
@@ -24,8 +25,8 @@ public class PlayStats : MonoBehaviour
     /* At the start of the scene, sees if there's an older
      * PlayStats instance from the previous scene, and if there
      * is, takes its data and destroys its GameObject */
-    private void Start()
-    {
+    private void Start() {
+        instance = this;
         DontDestroyOnLoad(this.gameObject);
 
         switch (SceneManager.GetActiveScene().name)
@@ -86,7 +87,7 @@ public class PlayStats : MonoBehaviour
     }
 
     // When the game is quit, uploads the current checkpoint data
-    private void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
         if (checkpointTimes.Count != 0 && !Application.isEditor)
         {

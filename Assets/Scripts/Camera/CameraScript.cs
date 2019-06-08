@@ -93,8 +93,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 	public bool canFree = false;
 
     void Awake() {
-        // if you want free cam to work, uncomment this...
-//        playerInput.Camera.SetCallbacks(this);
+        playerInput.Camera.SetCallbacks(this);
     }
 
     void Start() {

@@ -39,11 +39,13 @@ public class PauseMenu : MonoBehaviour {
     public void QuitToMenu()
     {
         Resume();
+        PlayStats.instance.RestartGame();
         SceneManager.LoadScene("1. Main Menu");
     }
     public void QuitToDesktop()
     {
         Resume();
+        PlayStats.instance.OnApplicationQuit();
         Application.Quit();
     }
     [FormerlySerializedAs("uiInput")] public PlayerInputMapping playerInput;
