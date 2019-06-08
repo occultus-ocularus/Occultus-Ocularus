@@ -82,27 +82,32 @@ public class PauseMenu : MonoBehaviour {
         // handle dpad / stick input
         if (!gameMenu)
         {
-            Debug.Log(""+gameMenu);
+//            Debug.Log(""+gameMenu);
         }
         if (gameMenu.activeInHierarchy) {
-            var input = new Vector3(0f, 0f, 0f);
-            input.x += gamepad.dpad.x.ReadValue();
-            input.y += gamepad.dpad.y.ReadValue();
+//            var input = new Vector3(0f, 0f, 0f);
+//            input.x += gamepad.dpad.x.ReadValue();
+//            input.y += gamepad.dpad.y.ReadValue();
 //            input.x += gamepad.leftStick.x.ReadValue();
 //            input.y += gamepad.leftStick.y.ReadValue();
-
-            if (input.magnitude < 0.1) input = Vector3.zero;
-            else if (input.y > 0.1) input.y = 1.0f;
-            else input.y = -1.0f;
-            Debug.Log("directional input in game menu! "+ input);
-
-            if (!currentSelection) { currentSelection = initialSelectable; currentSelection.Select(); }
-            if (input.y != lastNavInputY && input.y != 0f) {
-                if (input.y > 0.0f) currentSelection = currentSelection.FindSelectableOnUp();
-                else currentSelection = currentSelection.FindSelectableOnDown();
-                currentSelection.Select();
-            }
-            lastNavInputY = input.y;
+//            if (input.magnitude > 0.1f) {
+//                if (!currentSelection) currentSelection = initialSelectable;
+//                var nextSelection = currentSelection.FindSelectable(input);
+//                if (nextSelection) currentSelection = nextSelection;
+//                currentSelection.Select();
+//                Debug.Log("directional input in game menu! "+ input);
+//            }
+//            if (input.magnitude < 0.1) input = Vector3.zero;
+//            else if (input.y > 0.1) input.y = 1.0f;
+//            else input.y = -1.0f;
+            
+//            if (!currentSelection) { currentSelection = initialSelectable; currentSelection.Select(); }
+//            if (input.y != lastNavInputY && input.y != 0f) {
+//                if (input.y > 0.0f) currentSelection = currentSelection.FindSelectableOnUp();
+//                else currentSelection = currentSelection.FindSelectableOnDown();
+//                currentSelection.Select();
+//            }
+//            lastNavInputY = input.y;
         }
     }
     public void Pause() {
