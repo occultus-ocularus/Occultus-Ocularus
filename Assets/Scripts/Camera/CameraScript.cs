@@ -210,17 +210,17 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             previewPreviousCameraMode = newMode;
         } else {
             mode = newMode;
-            if (mode != CameraMode.FreeCam)
-            {
-                DistFromPlayer = Vector2.zero;
-                playerScript.canMove = false;
-//                GetComponent<BoxCollider2D>().enabled = true;
-            }
-            else
-            {
-                playerScript.canMove = true;
+//            if (mode != CameraMode.FreeCam)
+//            {
+//                DistFromPlayer = Vector2.zero;
+//                playerScript.canMove = true;
+////                GetComponent<BoxCollider2D>().enabled = true;
+//            }
+//            else
+//            {
+//                playerScript.canMove = true;
 //                GetComponent<BoxCollider2D>().enabled = false;
-            }
+//            }
         }
     }
 
