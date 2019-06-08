@@ -779,7 +779,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '<b>Camera Mode</b>
 
-    Zoom: <b>Right Trigger</b> Free: <b>4</b>'
+    Zoom: <b>Right Trigger</b>'
 --- !u!1 &6287706489482582678
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '<b>Camera Mode:</b>
 
-    Zoom: <b>1</b>    Free: <b>4</b>'
+    Zoom: <b>1</b>'
 --- !u!1 &6349126595588596225
 GameObject:
   m_ObjectHideFlags: 0
