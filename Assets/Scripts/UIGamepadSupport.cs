@@ -85,7 +85,7 @@ public class UIGamepadSupport : MonoBehaviour {
         }
         if (gamepad != null && gamepad.enabled) {
             compositeInput.x += gamepad.dpad.x.ReadValue() + gamepad.leftStick.x.ReadValue();
-            compositeInput.y += gamepad.dpad.y.ReadValue() + gamepad.rightStick.y.ReadValue();
+            compositeInput.y += gamepad.dpad.y.ReadValue() + gamepad.leftStick.y.ReadValue();
         }
         xNav.Update(compositeInput.x, navigationInputThreshold, navInputRepeatDelay, navInputInitialRepeatDelay);
         yNav.Update(compositeInput.y, navigationInputThreshold, navInputRepeatDelay, navInputInitialRepeatDelay);

@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1722140747}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &141528118
@@ -4260,6 +4260,12 @@ PrefabInstance:
       objectReference: {fileID: 141528117}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f68761c0dcbd4e78bcc8b62b7ba6b29, type: 3}
+--- !u!1 &1722140747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2874774098087958208, guid: 1f68761c0dcbd4e78bcc8b62b7ba6b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1722140746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1735651477 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4620318151496036490, guid: 98a73476923074f2ea95a45e1f46ef41,
