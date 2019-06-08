@@ -93,7 +93,8 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 	public bool canFree = false;
 
     void Awake() {
-        playerInput.Camera.SetCallbacks(this);
+        // if you want free cam to work, uncomment this...
+//        playerInput.Camera.SetCallbacks(this);
     }
 
     void Start() {
@@ -106,7 +107,6 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         CameraToPlayerZDistance = transform.position.z - player.transform.position.z;
         cameraMovingTarget = player.transform.position;
     }
-
     void Update() {
         //Camera is a set a point and does not travel with player
 
@@ -167,6 +167,13 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 			GetComponent<BoxCollider2D> ().enabled = false;
         }
     }
+
+    
+    private Vector2 cameraMovementInput = Vector2.zero;
+    public void OnMove(InputAction.CallbackContext context) {
+        cameraMovementInput = context.ReadValue<Vector2>();
+    }
+
     public void OnSetCameraMode1(InputAction.CallbackContext context) {
         ToggleFixedCameraMode();
 		GetComponent<BoxCollider2D> ().enabled = false;
@@ -277,10 +284,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     }
     
     #endregion
-
     
-    
-
     private bool jumpLastPressed = false;
 
     public void FixedUpdate() {
@@ -409,27 +413,27 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         else if (mode == CameraMode.FreeCam) {
 
             //move left and right
-            if (Input.GetAxis("Horizontal") > 0.01) {
-                body.velocity = new Vector2(body.velocity.x + freeMoveSpeed, body.velocity.y);
-                DistFromPlayer.x += freeMoveSpeed * 0.02f;
-            }
-            else if (Input.GetAxis("Horizontal") < -0.01) {
-                body.velocity = new Vector2(body.velocity.x - freeMoveSpeed, body.velocity.y);
-                DistFromPlayer.x -= freeMoveSpeed * 0.02f;
-            }
-            else
-                body.velocity = new Vector2(0, body.velocity.y);
-
-            if (Input.GetAxis("Vertical") > 0.01) {
-                body.velocity = new Vector2(body.velocity.x, body.velocity.y + freeMoveSpeed);
-                DistFromPlayer.y += freeMoveSpeed * 0.02f;
-            }
-            else if (Input.GetAxis("Vertical") < -0.01) {
-                body.velocity = new Vector2(body.velocity.x, body.velocity.y - freeMoveSpeed);
-                DistFromPlayer.y -= freeMoveSpeed * 0.02f;
-            }
-            else
-                body.velocity = new Vector2(body.velocity.x, 0);
+//            if (cameraMovementInput.x > 0.01) {
+//                body.velocity = new Vector2(body.velocity.x + freeMoveSpeed, body.velocity.y);
+//                DistFromPlayer.x += freeMoveSpeed * 0.02f;
+//            }
+//            else if (cameraMovementInput.x < -0.01) {
+//                body.velocity = new Vector2(body.velocity.x - freeMoveSpeed, body.velocity.y);
+//                DistFromPlayer.x -= freeMoveSpeed * 0.02f;
+//            }
+//            else
+//                body.velocity = new Vector2(0, body.velocity.y);
+//
+//            if (cameraMovementInput.y > 0.01) {
+//                body.velocity = new Vector2(body.velocity.x, body.velocity.y + freeMoveSpeed);
+//                DistFromPlayer.y += freeMoveSpeed * 0.02f;
+//            }
+//            else if (cameraMovementInput.y < -0.01) {
+//                body.velocity = new Vector2(body.velocity.x, body.velocity.y - freeMoveSpeed);
+//                DistFromPlayer.y -= freeMoveSpeed * 0.02f;
+//            }
+//            else
+//                body.velocity = new Vector2(body.velocity.x, 0);
         }
     }
 }

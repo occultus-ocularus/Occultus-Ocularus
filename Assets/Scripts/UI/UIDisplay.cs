@@ -73,7 +73,7 @@ public class UIDisplay : MonoBehaviour {
         }
 
         // Toggle controls UI on or off when Tab is pressed
-        if (Input.GetKeyDown(KeyCode.Tab)) {
+        if (Keyboard.current.tabKey.wasPressedThisFrame) {
             controlsOverlay.SetActive(!controlsOverlay.activeSelf);
         }
     }

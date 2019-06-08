@@ -27,6 +27,7 @@ public class PlayerInputMapping : InputActionAssetReference
         // Camera
         m_Camera = asset.GetActionMap("Camera");
         m_Camera_ToggleCamera = m_Camera.GetAction("ToggleCamera");
+        m_Camera_Move = m_Camera.GetAction("Move");
         m_Camera_SetCameraMode1 = m_Camera.GetAction("SetCameraMode1");
         m_Camera_SetCameraMode2 = m_Camera.GetAction("SetCameraMode2");
         m_Camera_SetCameraMode3 = m_Camera.GetAction("SetCameraMode3");
@@ -59,6 +60,7 @@ public class PlayerInputMapping : InputActionAssetReference
         }
         m_Camera = null;
         m_Camera_ToggleCamera = null;
+        m_Camera_Move = null;
         m_Camera_SetCameraMode1 = null;
         m_Camera_SetCameraMode2 = null;
         m_Camera_SetCameraMode3 = null;
@@ -171,6 +173,7 @@ public class PlayerInputMapping : InputActionAssetReference
     private InputActionMap m_Camera;
     private ICameraActions m_CameraActionsCallbackInterface;
     private InputAction m_Camera_ToggleCamera;
+    private InputAction m_Camera_Move;
     private InputAction m_Camera_SetCameraMode1;
     private InputAction m_Camera_SetCameraMode2;
     private InputAction m_Camera_SetCameraMode3;
@@ -180,6 +183,7 @@ public class PlayerInputMapping : InputActionAssetReference
         private PlayerInputMapping m_Wrapper;
         public CameraActions(PlayerInputMapping wrapper) { m_Wrapper = wrapper; }
         public InputAction @ToggleCamera { get { return m_Wrapper.m_Camera_ToggleCamera; } }
+        public InputAction @Move { get { return m_Wrapper.m_Camera_Move; } }
         public InputAction @SetCameraMode1 { get { return m_Wrapper.m_Camera_SetCameraMode1; } }
         public InputAction @SetCameraMode2 { get { return m_Wrapper.m_Camera_SetCameraMode2; } }
         public InputAction @SetCameraMode3 { get { return m_Wrapper.m_Camera_SetCameraMode3; } }
@@ -197,6 +201,9 @@ public class PlayerInputMapping : InputActionAssetReference
                 ToggleCamera.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnToggleCamera;
                 ToggleCamera.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnToggleCamera;
                 ToggleCamera.cancelled -= m_Wrapper.m_CameraActionsCallbackInterface.OnToggleCamera;
+                Move.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnMove;
+                Move.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnMove;
+                Move.cancelled -= m_Wrapper.m_CameraActionsCallbackInterface.OnMove;
                 SetCameraMode1.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnSetCameraMode1;
                 SetCameraMode1.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnSetCameraMode1;
                 SetCameraMode1.cancelled -= m_Wrapper.m_CameraActionsCallbackInterface.OnSetCameraMode1;
@@ -216,6 +223,9 @@ public class PlayerInputMapping : InputActionAssetReference
                 ToggleCamera.started += instance.OnToggleCamera;
                 ToggleCamera.performed += instance.OnToggleCamera;
                 ToggleCamera.cancelled += instance.OnToggleCamera;
+                Move.started += instance.OnMove;
+                Move.performed += instance.OnMove;
+                Move.cancelled += instance.OnMove;
                 SetCameraMode1.started += instance.OnSetCameraMode1;
                 SetCameraMode1.performed += instance.OnSetCameraMode1;
                 SetCameraMode1.cancelled += instance.OnSetCameraMode1;
@@ -390,6 +400,7 @@ public interface IPlayerActions
 public interface ICameraActions
 {
     void OnToggleCamera(InputAction.CallbackContext context);
+    void OnMove(InputAction.CallbackContext context);
     void OnSetCameraMode1(InputAction.CallbackContext context);
     void OnSetCameraMode2(InputAction.CallbackContext context);
     void OnSetCameraMode3(InputAction.CallbackContext context);
