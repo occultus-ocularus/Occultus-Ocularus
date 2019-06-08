@@ -40,6 +40,13 @@ public class UIGamepadSupport : MonoBehaviour {
             }
             
             // Handle confirm
+            if (gamepad.buttonSouth.wasPressedThisFrame) {
+                var button = (Button) currentSelection;
+                if (button) {
+                    // OnSubmit does not do anything with its event data, so... this is okay. I think.
+                    button.OnSubmit(null);
+                }
+            }
         }
     }
 }

@@ -94,16 +94,16 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     private PlayerController currentCallbackInstance = null;
     private void SetInputCallbacks() {
         playerInput.Enable();
-        if (currentCallbackInstance != this) {
-            currentCallbackInstance = this;
+//        if (currentCallbackInstance != this) {
+//            currentCallbackInstance = this;
             playerInput.Player.SetCallbacks(this);
-        }
+//        }
     }
     private void ClearInputCallbacks() {
-        if (currentCallbackInstance == this) {
-            currentCallbackInstance = null;
+//        if (currentCallbackInstance == this) {
+//            currentCallbackInstance = null;
 //            playerInput.Player.SetCallbacks(null);
-        }   
+//        }   
     }
 
     public void Awake() {
