@@ -10,7 +10,7 @@ using UnityEngine.Experimental.Input.Plugins.PlayerInput;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour, IUIActions {
+public class PauseMenu : MonoBehaviour {
     private static PauseMenu instance;
     private bool paused = false;
     public static bool isPaused {
@@ -24,17 +24,19 @@ public class PauseMenu : MonoBehaviour, IUIActions {
     private void SetInputCallbacks() {
         if (currentCallbackInstance != this) {
             currentCallbackInstance = this;
-            playerInput.UI.SetCallbacks(this);
+//            playerInput.UI.SetCallbacks(this);
         }
     }
     private void ClearInputCallbacks() {
         if (currentCallbackInstance == this) {
             currentCallbackInstance = null;
-            playerInput.UI.SetCallbacks(null);
+//            playerInput.UI.SetCallbacks(null);
         }   
     }
     public void Awake() {
+        Debug.Log("Awake: "+this);
         instance = this;
+        gameMenu = initialGameMenu;
         SetInputCallbacks();
     }
     public void OnDestroy() {
@@ -51,12 +53,58 @@ public class PauseMenu : MonoBehaviour, IUIActions {
         Application.Quit();
     }
     [FormerlySerializedAs("uiInput")] public PlayerInputMapping playerInput;
-    public GameObject gameMenu;
-    public GameObject uiSystem;
+    [SerializeField] public GameObject initialGameMenu;
+    private GameObject gameMenu;
+    [SerializeField] public GameObject uiSystem;
     private Selectable currentSelection;
     public Selectable initialSelectable;
     public bool onlyShowControlsWhenMenuOpen = false;
 
+
+    private float lastNavInputY = 0.0f;
+    
+    public void Update() {
+        var gamepad = Gamepad.current;
+        var keyboard = Keyboard.current;
+        if (!gamepad.enabled) return;
+        
+        // start / select buttons
+        if (gamepad.startButton.wasPressedThisFrame || gamepad.selectButton.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame) {
+            Debug.Log("start / select pressed, gameMenu = "+gameMenu);
+            if (isPaused) Resume();
+            else Pause();
+        }
+        // back (B) button
+        if (isPaused && gamepad.buttonEast.wasPressedThisFrame) {
+            Debug.Log("B pressed");
+            Resume();
+        }
+        // handle dpad / stick input
+        if (!gameMenu)
+        {
+            Debug.Log(""+gameMenu);
+        }
+        if (gameMenu.activeInHierarchy) {
+            var input = new Vector3(0f, 0f, 0f);
+            input.x += gamepad.dpad.x.ReadValue();
+            input.y += gamepad.dpad.y.ReadValue();
+//            input.x += gamepad.leftStick.x.ReadValue();
+//            input.y += gamepad.leftStick.y.ReadValue();
+
+            if (input.magnitude < 0.1) input = Vector3.zero;
+            else if (input.y > 0.1) input.y = 1.0f;
+            else input.y = -1.0f;
+            Debug.Log("directional input in game menu! "+ input);
+
+            if (!currentSelection) { currentSelection = initialSelectable; currentSelection.Select(); }
+            if (input.y != lastNavInputY && input.y != 0f) {
+                if (input.y > 0.0f) currentSelection = currentSelection.FindSelectableOnUp();
+                else currentSelection = currentSelection.FindSelectableOnDown();
+                currentSelection.Select();
+            }
+            lastNavInputY = input.y;
+        }
+    }
     public void Pause() {
         instance = this;
         paused = true;
