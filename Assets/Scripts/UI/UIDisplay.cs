@@ -27,7 +27,7 @@ public class UIDisplay : MonoBehaviour {
         if (Gamepad.current != null) {
             print(Gamepad.current);
             controlsOverlay = gameObject.transform.GetChild(1).gameObject;
-            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
             controlsOverlay.SetActive(true);
         }
         else {
