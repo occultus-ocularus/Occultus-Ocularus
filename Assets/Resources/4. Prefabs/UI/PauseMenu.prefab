@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d26f2b450964e89b7f53cac47e387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
   startingSelection: {fileID: 2874774098087958210}
   navInputInitialRepeatDelay: 0.35
   navInputRepeatDelay: 0.15
@@ -906,7 +907,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Restart Level
 --- !u!1 &2874774099189681582
 GameObject:
   m_ObjectHideFlags: 0
