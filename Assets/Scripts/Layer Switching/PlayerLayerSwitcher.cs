@@ -142,7 +142,7 @@ public class PlayerLayerSwitcher : MonoBehaviour, ILayerSwitchingActions
     }
 
     public void OnToggleLayerSwitching(InputAction.CallbackContext context) {
-        if (context.performed)
+        if (context.performed && !PauseMenu.isPaused)
         {
             if (currentPlayerLayer == foregroundLayer.value) {
                 SwitchPlayerLayer(midgroundLayer.value);

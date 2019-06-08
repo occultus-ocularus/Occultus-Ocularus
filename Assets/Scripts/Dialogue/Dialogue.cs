@@ -38,8 +38,12 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     private bool awaitingUser;
     private bool skipToEndOfPhrase;
 
+    private bool initializedInputCallbacks = false;
     public void Awake() {
-        playerInput.Dialog.SetCallbacks(this);
+        if (!initializedInputCallbacks) {
+            initializedInputCallbacks = true;
+            playerInput.Dialog.SetCallbacks(this);
+        }
     }
 
     public void Setup(IDialogueEncounter de) {

@@ -179,7 +179,6 @@ public class PlayerInputModel {
     
     // button to open (and toggle) the game menu
     // 'esc' (same as ui-cancel) on keyboard. gamepad: 'select'
-    
     private bool isMenuPressed => keyboardMenuPressed || gamepadMenuPressed;
 
     private bool keyboardMenuPressed => useLegacyKeyboardInput
