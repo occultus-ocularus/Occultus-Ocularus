@@ -74,9 +74,11 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     // float yOffset = 0;
 
     [Header("FreeCam")]
-    public float freeMoveSpeed = 0.2f;
+    public float freeMoveSpeed = 10;
     public Vector2 DistFromPlayer;
     public Vector2 MaxDistFromPlayer = new Vector2(10, 10);
+    private Rigidbody2D body;
+
     float desiredCameraTargetX;
     float desiredCameraTargetY;
 
@@ -99,6 +101,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         player = GameObject.Find("Player");
         playerRigidbody = player.GetComponent<Rigidbody2D>();
         playerScript = player.GetComponent<PlayerController>();
+        body = GetComponent<Rigidbody2D>();
         start = destination = transform.position;
         CameraToPlayerZDistance = transform.position.z - player.transform.position.z;
         cameraMovingTarget = player.transform.position;
@@ -211,10 +214,12 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             {
                 DistFromPlayer = Vector2.zero;
                 playerScript.canMove = true;
+                GetComponent<BoxCollider2D>().enabled = false;
             }
             else
             {
                 playerScript.canMove = false;
+                GetComponent<BoxCollider2D>().enabled = true;
             }
         }
     }
@@ -400,29 +405,31 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             //transform.Translate(new Vector2((player.transform.position.x + desiredCameraTargetX - screenCenterVector.x) * Time.deltaTime * (followSmoothSpeedX + Mathf.Abs(desiredCameraTargetX)), (player.transform.position.y - screenCenterVector.y) * Time.deltaTime * followSmoothSpeedY), Space.World);
         }
 
-        //player can control camera with arrow keys
+        //player can control camera with input
         else if (mode == CameraMode.FreeCam) {
-            // 
-            if (GetComponent<BoxCollider2D>().enabled == false) { GetComponent<BoxCollider2D>().enabled = true; }
-			
-            //move left and right
-            if (Input.GetKey(KeyCode.RightArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x + freeMoveSpeed, this.transform.position.y, this.transform.position.z);
-                DistFromPlayer.x += freeMoveSpeed;
-            }
-            else if (Input.GetKey(KeyCode.LeftArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x - freeMoveSpeed, this.transform.position.y, this.transform.position.z);
-                DistFromPlayer.x -= freeMoveSpeed;
-            }
 
-            if (Input.GetKey(KeyCode.UpArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + freeMoveSpeed, this.transform.position.z);
-                DistFromPlayer.y += freeMoveSpeed;
+            //move left and right
+            if (Input.GetAxis("Horizontal") > 0.01) {
+                body.velocity = new Vector2(body.velocity.x + freeMoveSpeed, body.velocity.y);
+                DistFromPlayer.x += freeMoveSpeed * 0.02f;
             }
-            else if (Input.GetKey(KeyCode.DownArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - freeMoveSpeed, this.transform.position.z);
-                DistFromPlayer.y -= freeMoveSpeed;
+            else if (Input.GetAxis("Horizontal") < -0.01) {
+                body.velocity = new Vector2(body.velocity.x - freeMoveSpeed, body.velocity.y);
+                DistFromPlayer.x -= freeMoveSpeed * 0.02f;
             }
+            else
+                body.velocity = new Vector2(0, body.velocity.y);
+
+            if (Input.GetAxis("Vertical") > 0.01) {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y + freeMoveSpeed);
+                DistFromPlayer.y += freeMoveSpeed * 0.02f;
+            }
+            else if (Input.GetAxis("Vertical") < -0.01) {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y - freeMoveSpeed);
+                DistFromPlayer.y -= freeMoveSpeed * 0.02f;
+            }
+            else
+                body.velocity = new Vector2(body.velocity.x, 0);
         }
     }
 }

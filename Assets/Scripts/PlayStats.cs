@@ -30,23 +30,23 @@ public class PlayStats : MonoBehaviour
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "Mall":
+            case "1. Main Menu":
                 original = FindObjectOfType<PlayStats>();
                 break;
-            case "Outside Mall+TTD, MPT":
-                original = GameObject.Find("PlaytestStatsMall").GetComponent<PlayStats>();
-                break;
-            case "ArielIntro":
-                original = GameObject.Find("PlaytestStatsOutside").GetComponent<PlayStats>();
-                break;
-            case "SuburbPuzzles":
-                original = GameObject.Find("PlaytestStatsAriel").GetComponent<PlayStats>();
-                break;
-            case "End Menu":
-                original = GameObject.Find("PlaytestStatsSuburb").GetComponent<PlayStats>();
-                break;
-            case "Main Menu":
+            case "2. Mall":
                 original = FindObjectOfType<PlayStats>();
+                break;
+            case "3. Outside Mall":
+                original = GameObject.Find("PlaytestStatsMall")?.GetComponent<PlayStats>();
+                break;
+            case "3. Ariel Intro":
+                original = GameObject.Find("PlaytestStatsOutside")?.GetComponent<PlayStats>();
+                break;
+            case "4. Suburb Puzzles":
+                original = GameObject.Find("PlaytestStatsAriel")?.GetComponent<PlayStats>();
+                break;
+            case "5. End Menu":
+                original = GameObject.Find("PlaytestStatsSuburb")?.GetComponent<PlayStats>();
                 break;
         }
 
@@ -98,6 +98,9 @@ public class PlayStats : MonoBehaviour
     // Formats text output before it is posted to the Google Form
     void FormatOutput()
     {
+
+        gameOutput += SystemInfo.deviceName + "\n\n";
+
         // Makes a line of comma-separated values (CSV) for checkpoint names
         for (int i = 0; i < checkpointNames.Count; i++)
         {

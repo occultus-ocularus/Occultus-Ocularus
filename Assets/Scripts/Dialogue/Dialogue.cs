@@ -79,9 +79,9 @@ public class Dialogue : MonoBehaviour, IDialogActions {
             if (!awaitingUser)
                 skipToEndOfPhrase = true;
 
-            // Resume text scroll & increase scroll rate if space key is down
+            // Resume text scroll if space key is down
             awaitingUser = false;
-            currentScrollRate = FAST_SCROLL_RATE;
+            //currentScrollRate = FAST_SCROLL_RATE;
 
             // End dialogue if it all has already appeared
             if (phrases != null && phraseIndex >= phrases.Length && charIndex == -1) {

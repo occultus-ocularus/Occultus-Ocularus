@@ -1,6 +1,9 @@
-ARIEL: Well? How is it, seeing the world in multiple layers? Do you feel acquainted with your new powers?
+ARIEL: Well? How is it, seeing the world in multiple layers?
+Do you feel acquainted with your new powers?
 |
-It's actually impressive how fast you're mastering your abilities. You're a natural! A genius, some would even say.
+It's actually impressive how fast you're mastering
+your abilities. You're a natural! A genius, some would
+even say.
 |
 {Player grows new set of eyes, on knees}
 |
@@ -8,33 +11,49 @@ And look! You're already ascending!
 |
 {Samson appears}
 |
-SAMSON: Look at you, growing up so fast. You're like a mini-me. I think I'm gonna tear up.
+SAMSON: Look at you, growing up so fast. You're like a mini-me.
+I think I'm gonna tear up.
 |
-ARIEL: Don't mind him; grow at your own pace. There's no need to rush.
+ARIEL: Don't mind him; grow at your own pace. There's no
+need to rush.
 |
-SAMSON: Well, I'm rushing you. At this rate, you'll quickly graduate from Apprentice and maybe even surpass me. Hell, you might...you might even reach the Order.
+SAMSON: Well, I'm rushing you. At this rate, you'll quickly
+graduate from Apprentice and maybe even surpass
+me. Hell, you might...you might even reach the Order.
 |
-ARIEL: He's talking about the Ocular Order. They're the greatest of us. They're the strongest, the smartest, the Enlightened.
+ARIEL: He's talking about the Ocular Order. They're the
+greatest of us. They're the strongest, the smartest,
+the Enlightened.
 |
-SAMSON: Please. Those fools trip over one another trying to get things done. I wouldn't be surprised if one of them shoots their own foot with their laser eyes one day.
+SAMSON: Please. Those fools trip over one another trying to
+get things done. I wouldn't be surprised if one of them
+shoots their own foot with their laser eyes one day.
 |
-ARIEL: Samson, don't call them fools. You used to be one of them. Why you gave all that up, I'll never understand. It'd be an honor to be a part of the Order.
+ARIEL: Samson, don't call them fools. You used to be one of
+them. Why you gave all that up, I'll never understand.
+It'd be an honor to be a part of the Order.
 |
-SAMSON: There's nothing to understand. Just because you want to be part of the Order doesn't mean you can.
+SAMSON: There's nothing to understand. Just because you want
+to be part of the Order doesn't mean you can.
 |
-SAMSON: What makes you think you can ascend to the Order when you've been stuck as Priestess for decades?
+SAMSON: What makes you think you can ascend to the Order
+when you've been stuck as Priestess for decades?
 |
 ARIEL: That's- That's not fair.
 |
-SAMSON: God didn't make life fair. He may have created us Oculi, but Ascension is all up to us and our actions.
+SAMSON: God didn't make life fair. He may have created us
+Oculi, but Ascension is all up to us and our actions.
 |
-ARIEL: But I've given everything, done everything I could to ascend but nothing's changed.
+ARIEL: But I've given everything, done everything I could to
+ascend, and yet nothing's changed.
 |
-SAMSON: Well, that's the problem, isn't it? You're putting in too much effort.
+SAMSON: Well, that's the problem, isn't it? You're putting in too
+much effort.
 |
 Oh, and kid?
 |
-I'm looking forward to seeing how far you can go. Maybe, just maybe...Hmm...
+I'm looking forward to seeing how far you can go.
+Maybe, just maybe...Hmm...
 |
 Don't let me down, kid.
 |

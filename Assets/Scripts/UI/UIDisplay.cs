@@ -38,7 +38,7 @@ public class UIDisplay : MonoBehaviour {
         controlsOverlay.transform.GetChild(2).gameObject.SetActive(false);
 
         // Display layer switching controls if applicable to current level
-        if (currentScene.name.Equals("SuburbPuzzles")) {
+        if (currentScene.name.Equals("5. Suburb Puzzles")) {
             controlsOverlay.transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
             controlsOverlay.transform.GetChild(1).GetChild(1).gameObject.SetActive(true);
         }
