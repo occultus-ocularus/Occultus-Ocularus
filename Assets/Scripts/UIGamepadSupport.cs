@@ -29,10 +29,10 @@ public class UIGamepadSupport : MonoBehaviour {
             var leftStickInput = new Vector3(gamepad.leftStick.x.ReadValue(), gamepad.leftStick.y.ReadValue(), 0f);
             var compositeInput = dpadInput + leftStickInput;
             if (compositeInput.magnitude > navigationInputThreshold &&
-                Time.time > timeOfLastNavigationEvent + repeatingInputDelay
+                Time.unscaledTime > timeOfLastNavigationEvent + repeatingInputDelay
             ) {
                 Debug.Log("directional nav input in game menu! " + compositeInput);
-                timeOfLastNavigationEvent = Time.time;
+                timeOfLastNavigationEvent = Time.unscaledTime;
                 
                 // if nothing selected, select the starting item
                 if (!currentSelection) {
