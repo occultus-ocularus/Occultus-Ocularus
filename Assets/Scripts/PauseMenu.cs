@@ -56,15 +56,17 @@ public class PauseMenu : MonoBehaviour {
     public void Update() {
         var gamepad = Gamepad.current;
         var keyboard = Keyboard.current;
-        if (!gamepad.enabled) return;
         
         // start / select buttons
-        if (gamepad.startButton.wasPressedThisFrame || gamepad.selectButton.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame) {
+        if (gamepad?.startButton.wasPressedThisFrame == true || 
+            gamepad?.selectButton.wasPressedThisFrame == true || 
+            keyboard?.escapeKey.wasPressedThisFrame == true
+        ) {
             if (isPaused) Resume();
             else Pause();
         }
         // back (B) button
-        if (isPaused && gamepad.buttonEast.wasPressedThisFrame) {
+        if (isPaused && gamepad?.buttonEast.wasPressedThisFrame == true) {
             Resume();
         }
     }

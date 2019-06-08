@@ -175,7 +175,6 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 
     public void OnSetCameraMode1(InputAction.CallbackContext context) {
         ToggleFixedCameraMode();
-		GetComponent<BoxCollider2D> ().enabled = false;
     }
 
     public void OnSetCameraMode2(InputAction.CallbackContext context) {
@@ -188,17 +187,12 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     public void OnSetCameraMode3(InputAction.CallbackContext context) {
         if (context.performed) {
             SetCameraMode(CameraMode.FollowPlayerSmooth);
-			GetComponent<BoxCollider2D> ().enabled = false;
-//            DistFromPlayer = Vector2.zero;
-//            playerScript.canMove = true;
         }
     }
 
     public void OnSetCameraMode4(InputAction.CallbackContext context) {
         if (context.performed && canFree) {
             SetCameraMode(CameraMode.FreeCam);
-			GetComponent<BoxCollider2D> ().enabled = true;
-//            playerScript.canMove = false;
         }
     }
     
@@ -219,13 +213,13 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             if (mode != CameraMode.FreeCam)
             {
                 DistFromPlayer = Vector2.zero;
-                playerScript.canMove = true;
-                GetComponent<BoxCollider2D>().enabled = false;
+                playerScript.canMove = false;
+//                GetComponent<BoxCollider2D>().enabled = true;
             }
             else
             {
-                playerScript.canMove = false;
-                GetComponent<BoxCollider2D>().enabled = true;
+                playerScript.canMove = true;
+//                GetComponent<BoxCollider2D>().enabled = false;
             }
         }
     }
@@ -412,27 +406,27 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         else if (mode == CameraMode.FreeCam) {
 
             //move left and right
-//            if (cameraMovementInput.x > 0.01) {
-//                body.velocity = new Vector2(body.velocity.x + freeMoveSpeed, body.velocity.y);
-//                DistFromPlayer.x += freeMoveSpeed * 0.02f;
-//            }
-//            else if (cameraMovementInput.x < -0.01) {
-//                body.velocity = new Vector2(body.velocity.x - freeMoveSpeed, body.velocity.y);
-//                DistFromPlayer.x -= freeMoveSpeed * 0.02f;
-//            }
-//            else
-//                body.velocity = new Vector2(0, body.velocity.y);
-//
-//            if (cameraMovementInput.y > 0.01) {
-//                body.velocity = new Vector2(body.velocity.x, body.velocity.y + freeMoveSpeed);
-//                DistFromPlayer.y += freeMoveSpeed * 0.02f;
-//            }
-//            else if (cameraMovementInput.y < -0.01) {
-//                body.velocity = new Vector2(body.velocity.x, body.velocity.y - freeMoveSpeed);
-//                DistFromPlayer.y -= freeMoveSpeed * 0.02f;
-//            }
-//            else
-//                body.velocity = new Vector2(body.velocity.x, 0);
+            if (cameraMovementInput.x > 0.01) {
+                body.velocity = new Vector2(body.velocity.x + freeMoveSpeed, body.velocity.y);
+                DistFromPlayer.x += freeMoveSpeed * 0.02f;
+            }
+            else if (cameraMovementInput.x < -0.01) {
+                body.velocity = new Vector2(body.velocity.x - freeMoveSpeed, body.velocity.y);
+                DistFromPlayer.x -= freeMoveSpeed * 0.02f;
+            }
+            else
+                body.velocity = new Vector2(0, body.velocity.y);
+
+            if (cameraMovementInput.y > 0.01) {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y + freeMoveSpeed);
+                DistFromPlayer.y += freeMoveSpeed * 0.02f;
+            }
+            else if (cameraMovementInput.y < -0.01) {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y - freeMoveSpeed);
+                DistFromPlayer.y -= freeMoveSpeed * 0.02f;
+            }
+            else
+                body.velocity = new Vector2(body.velocity.x, 0);
         }
     }
 }

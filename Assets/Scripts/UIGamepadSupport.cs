@@ -73,51 +73,58 @@ public class UIGamepadSupport : MonoBehaviour {
 
     private float lastInputEventTime = 0f;
     void Update() {
+        var keyboard = Keyboard.current;
         var gamepad = Gamepad.current;
-        if (gamepad.enabled) {
-            // Handle menu navigation
-            var dpadInput = new Vector3(gamepad.dpad.x.ReadValue(), gamepad.dpad.y.ReadValue(), 0f);
-            var leftStickInput = new Vector3(gamepad.leftStick.x.ReadValue(), gamepad.leftStick.y.ReadValue(), 0f);
-            var compositeInput = dpadInput + leftStickInput;
-            xNav.Update(compositeInput.x, navigationInputThreshold, navInputRepeatDelay, navInputInitialRepeatDelay);
-            yNav.Update(compositeInput.y, navigationInputThreshold, navInputRepeatDelay, navInputInitialRepeatDelay);
-            if (xNav.dir != Direction.None || yNav.dir != Direction.None) {
+        // Handle menu navigation
+        var compositeInput = new Vector3(0f, 0f, 0f);
+        if (keyboard != null) {
+            if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) compositeInput.y += 1f;
+            if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) compositeInput.y -= 1f;
+            if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) compositeInput.x += 1f;
+            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) compositeInput.x -= 1f;
+        }
+        if (gamepad != null && gamepad.enabled) {
+            compositeInput.x += gamepad.dpad.x.ReadValue() + gamepad.leftStick.x.ReadValue();
+            compositeInput.y += gamepad.dpad.y.ReadValue() + gamepad.rightStick.y.ReadValue();
+        }
+        xNav.Update(compositeInput.x, navigationInputThreshold, navInputRepeatDelay, navInputInitialRepeatDelay);
+        yNav.Update(compositeInput.y, navigationInputThreshold, navInputRepeatDelay, navInputInitialRepeatDelay);
+        if (xNav.dir != Direction.None || yNav.dir != Direction.None) {
 //                Debug.Log("x nav dir: " + xNav.dir + ", y nav dir: " + yNav.dir + "after "+(Time.unscaledTime - lastInputEventTime));
-                lastInputEventTime = Time.unscaledTime;
-                if (eventSystem) {
-                    var selected = eventSystem.currentSelectedGameObject?.GetComponent<Button>();
-                    if (selected) currentSelection = selected;
-                }
-                if (!currentSelection) {
-                    currentSelection = startingSelection;
-                } else {
-                    var nextSelection = currentSelection.FindSelectable(compositeInput);
-                    if (nextSelection) currentSelection = nextSelection;
-                }
-                currentSelection.Select();
-                if (eventSystem)
-                    eventSystem.SetSelectedGameObject(currentSelection.gameObject);
+            lastInputEventTime = Time.unscaledTime;
+            if (eventSystem) {
+                var selected = eventSystem.currentSelectedGameObject?.GetComponent<Button>();
+                if (selected) currentSelection = selected;
+            }
+            if (!currentSelection) {
+                currentSelection = startingSelection;
+            } else {
+                var nextSelection = currentSelection.FindSelectable(compositeInput);
+                if (nextSelection) currentSelection = nextSelection;
+            }
+            currentSelection.Select();
+            if (eventSystem)
+                eventSystem.SetSelectedGameObject(currentSelection.gameObject);
+        }
+        
+        // Handle confirm
+        if (gamepad?.buttonSouth.wasPressedThisFrame == true || keyboard?.enterKey.wasPressedThisFrame == true) {
+            if (eventSystem) {
+                var selected = eventSystem.currentSelectedGameObject?.GetComponent<Button>();
+                if (selected) currentSelection = selected;
             }
             
-            // Handle confirm
-            if (gamepad.buttonSouth.wasPressedThisFrame) {
-                if (eventSystem) {
-                    var selected = eventSystem.currentSelectedGameObject?.GetComponent<Button>();
-                    if (selected) currentSelection = selected;
-                }
-                
-                // if no selection, select the default thing
-                if (!currentSelection || !currentSelection.enabled) {
-                    currentSelection = startingSelection;
-                    currentSelection.Select();
-                }
-                
-                // if selected thing is a button, click it
-                var button = (Button) currentSelection;
-                if (button) {
-                    // OnSubmit does not do anything with its event data, so... this is okay. I think.
-                    button.OnSubmit(null);
-                }
+            // if no selection, select the default thing
+            if (!currentSelection || !currentSelection.enabled) {
+                currentSelection = startingSelection;
+                currentSelection.Select();
+            }
+            
+            // if selected thing is a button, click it
+            var button = (Button) currentSelection;
+            if (button) {
+                // OnSubmit does not do anything with its event data, so... this is okay. I think.
+                button.OnSubmit(null);
             }
         }
     }
