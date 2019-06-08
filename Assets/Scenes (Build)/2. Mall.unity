@@ -320,6 +320,11 @@ PrefabInstance:
       propertyPath: uiSystem
       value: 
       objectReference: {fileID: 1506018830}
+    - target: {fileID: 3946808172956423825, guid: 1f68761c0dcbd4e78bcc8b62b7ba6b29,
+        type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 959850234}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f68761c0dcbd4e78bcc8b62b7ba6b29, type: 3}
 --- !u!1001 &414085356

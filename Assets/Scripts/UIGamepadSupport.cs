@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Experimental.Input;
 using UnityEngine.UI;
 
@@ -11,6 +12,9 @@ using UnityEngine.UI;
 // Note: this expects legacy input to be turned off!!!
 // If UI ever gets full gamepad suppport, remove this
 public class UIGamepadSupport : MonoBehaviour {
+
+    public EventSystem eventSystem;
+    
     [Tooltip("Element to select iff none selected")]
     public Selectable startingSelection;
     private Selectable currentSelection;
@@ -80,6 +84,10 @@ public class UIGamepadSupport : MonoBehaviour {
             if (xNav.dir != Direction.None || yNav.dir != Direction.None) {
 //                Debug.Log("x nav dir: " + xNav.dir + ", y nav dir: " + yNav.dir + "after "+(Time.unscaledTime - lastInputEventTime));
                 lastInputEventTime = Time.unscaledTime;
+                if (eventSystem) {
+                    var selected = eventSystem.currentSelectedGameObject?.GetComponent<Button>();
+                    if (selected) currentSelection = selected;
+                }
                 if (!currentSelection) {
                     currentSelection = startingSelection;
                 } else {
@@ -87,10 +95,16 @@ public class UIGamepadSupport : MonoBehaviour {
                     if (nextSelection) currentSelection = nextSelection;
                 }
                 currentSelection.Select();
+                if (eventSystem)
+                    eventSystem.SetSelectedGameObject(currentSelection.gameObject);
             }
             
             // Handle confirm
             if (gamepad.buttonSouth.wasPressedThisFrame) {
+                if (eventSystem) {
+                    var selected = eventSystem.currentSelectedGameObject?.GetComponent<Button>();
+                    if (selected) currentSelection = selected;
+                }
                 
                 // if no selection, select the default thing
                 if (!currentSelection || !currentSelection.enabled) {

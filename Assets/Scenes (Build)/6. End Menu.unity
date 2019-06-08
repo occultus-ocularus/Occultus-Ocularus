@@ -1855,6 +1855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d26f2b450964e89b7f53cac47e387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 374523667}
   startingSelection: {fileID: 2056361591}
   navInputInitialRepeatDelay: 0.35
   navInputRepeatDelay: 0.15
