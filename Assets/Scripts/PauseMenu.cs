@@ -19,6 +19,8 @@ public class PauseMenu : MonoBehaviour {
             return instance != null && instance.paused;
         }
     }
+    private PlayerController player;
+    
     private void SetInputCallbacks() {
 //        playerInput.UI.SetCallbacks(this);
     }
@@ -26,6 +28,13 @@ public class PauseMenu : MonoBehaviour {
         Debug.Log("Awake: "+this);
         instance = this;
         SetInputCallbacks();
+        player = GameObject.FindObjectsOfType<PlayerController>()[0];
+    }
+    public void RestartLevel() {
+        foreach (var player in GameObject.FindObjectsOfType<PlayerController>()) {
+            player.ResetPlayer();
+        }
+        Resume();
     }
     public void QuitToMenu()
     {

@@ -358,7 +358,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
         }
     }
 
-    private void ResetPlayer() {
+    public void ResetPlayer() {
         this.transform.position = startPoint;
         this.GetComponent<PlayerLayerSwitcher>().SwitchPlayerLayer(LayerMask.NameToLayer("Foreground"));
     }
