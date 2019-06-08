@@ -31,10 +31,12 @@ public class PauseMenu : MonoBehaviour {
         player = GameObject.FindObjectsOfType<PlayerController>()[0];
     }
     public void RestartLevel() {
-        foreach (var player in GameObject.FindObjectsOfType<PlayerController>()) {
-            player.ResetPlayer();
-        }
         Resume();
+        PlayStats.instance.RestartGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+//        foreach (var player in GameObject.FindObjectsOfType<PlayerController>()) {
+//            player.ResetPlayer();
+//        }
     }
     public void QuitToMenu()
     {
