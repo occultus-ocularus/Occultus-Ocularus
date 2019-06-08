@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     private void ClearInputCallbacks() {
         if (currentCallbackInstance == this) {
             currentCallbackInstance = null;
-            playerInput.Player.SetCallbacks(null);
+//            playerInput.Player.SetCallbacks(null);
         }   
     }
 
