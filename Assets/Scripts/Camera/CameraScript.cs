@@ -406,20 +406,21 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             if (GetComponent<BoxCollider2D>().enabled == false) { GetComponent<BoxCollider2D>().enabled = true; }
 			
             //move left and right
-            if (Input.GetKey(KeyCode.RightArrow)) {
+            var keyboard = Keyboard.current;
+            if (keyboard.rightArrowKey.isPressed) {
                 this.transform.position = new Vector3(this.transform.position.x + freeMoveSpeed, this.transform.position.y, this.transform.position.z);
                 DistFromPlayer.x += freeMoveSpeed;
             }
-            else if (Input.GetKey(KeyCode.LeftArrow)) {
+            else if (keyboard.leftArrowKey.isPressed) {
                 this.transform.position = new Vector3(this.transform.position.x - freeMoveSpeed, this.transform.position.y, this.transform.position.z);
                 DistFromPlayer.x -= freeMoveSpeed;
             }
 
-            if (Input.GetKey(KeyCode.UpArrow)) {
+            if (keyboard.upArrowKey.isPressed) {
                 this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + freeMoveSpeed, this.transform.position.z);
                 DistFromPlayer.y += freeMoveSpeed;
             }
-            else if (Input.GetKey(KeyCode.DownArrow)) {
+            else if (keyboard.downArrowKey.isPressed) {
                 this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - freeMoveSpeed, this.transform.position.z);
                 DistFromPlayer.y -= freeMoveSpeed;
             }

@@ -30,6 +30,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Input;
 
 
 public class AudioScript : MonoBehaviour {
@@ -283,17 +284,16 @@ public class AudioScript : MonoBehaviour {
         //Debug.Log("src2: "+src2.time);
         //these do things based upon keys pressed
         //https://docs.unity3d.com/ScriptReference/KeyCode.html
-        if (Input.GetKeyDown(KeyCode.Backspace)){  
-        resetAllAudio();
-      }else if(  (Input.GetKeyDown(KeyCode.Equals)) || (Input.GetKeyDown(KeyCode.Plus)) ){
-        src.volume+=0.1F;
-      }else if(Input.GetKeyDown(KeyCode.Minus)){
-        src.volume-=0.1F;
-      }else if(Input.GetKeyDown(KeyCode.Alpha0)){
-        if(src.mute){src.mute = false;}else{src.mute = true;} 
-      }
-      
-      
+        var keyboard = Keyboard.current;
+        if (keyboard.backspaceKey.wasPressedThisFrame) {
+            resetAllAudio();
+        } else if (keyboard.equalsKey.wasPressedThisFrame || keyboard.numpadPlusKey.wasPressedThisFrame) {
+            src.volume+=0.1F;
+        } else if (keyboard.minusKey.wasPressedThisFrame || keyboard.numpadMinusKey.wasPressedThisFrame) {
+            src.volume-=0.1F;
+        } else if (keyboard.digit0Key.wasPressedThisFrame) {
+            if(src.mute){src.mute = false;}else{src.mute = true;} 
+        }
    }//end Update
    
 }//end Class Audio_Script

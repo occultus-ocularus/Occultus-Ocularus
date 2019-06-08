@@ -76,9 +76,8 @@ public class UIDisplay : MonoBehaviour {
         }
         
         // Switch between minimalist and detailed controls UI when Tab is pressed
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-
+        var keyboard = Keyboard.current;
+        if (keyboard.tabKey.wasPressedThisFrame) {
             if (!minCtrls.activeSelf && !detailedCtrls.activeSelf || minCtrls.activeSelf && detailedCtrls.activeSelf)
             {
                 minCtrls.SetActive(true);
