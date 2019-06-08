@@ -127,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802539061}
     m_Modifications:
-    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
-        type: 3}
-      propertyPath: m_Name
-      value: CreditsButton
-      objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660184, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -236,6 +231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
+        type: 3}
+      propertyPath: m_Name
+      value: CreditsButton
       objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660191, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
@@ -632,11 +632,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802539061}
     m_Modifications:
-    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
-        type: 3}
-      propertyPath: m_Name
-      value: QuitButton
-      objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660184, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -741,6 +736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
+        type: 3}
+      propertyPath: m_Name
+      value: QuitButton
       objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660191, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
@@ -1186,6 +1186,7 @@ GameObject:
   - component: {fileID: 2024002235}
   - component: {fileID: 2024002234}
   - component: {fileID: 2024002238}
+  - component: {fileID: 2024002239}
   m_Layer: 5
   m_Name: Menus
   m_TagString: Untagged
@@ -1372,6 +1373,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2024002239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024002233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d26f2b450964e89b7f53cac47e387a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingSelection: {fileID: 6697776827457385116}
+  navInputInitialRepeatDelay: 0.35
+  navInputRepeatDelay: 0.15
+  navigationInputThreshold: 0.5
 --- !u!1 &2127455813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,11 +1749,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802539061}
     m_Modifications:
-    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayButton
-      objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660184, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1832,6 +1844,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayButton
+      objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660191, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
@@ -1859,3 +1876,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec46f2cf1397491587b01ab56c9206c, type: 3}
+--- !u!114 &6697776827457385116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6697776827479660191, guid: dec46f2cf1397491587b01ab56c9206c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6697776827457385115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62137346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
