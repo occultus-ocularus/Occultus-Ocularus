@@ -99,7 +99,12 @@ public class UIGamepadSupport : MonoBehaviour {
             if (!currentSelection) {
                 currentSelection = startingSelection;
             } else {
-                var nextSelection = currentSelection.FindSelectable(compositeInput);
+                Selectable nextSelection = null;
+                if (compositeInput.y < 0) nextSelection = currentSelection.FindSelectableOnDown();
+                else if (compositeInput.y > 0) nextSelection = currentSelection.FindSelectableOnUp();
+                else if (compositeInput.x < 0) nextSelection = currentSelection.FindSelectableOnLeft();
+                else if (compositeInput.x > 0) nextSelection = currentSelection.FindSelectableOnRight();
+
                 if (nextSelection) currentSelection = nextSelection;
             }
             currentSelection.Select();
@@ -108,7 +113,7 @@ public class UIGamepadSupport : MonoBehaviour {
         }
         
         // Handle confirm
-        if (gamepad?.buttonSouth.wasPressedThisFrame == true || keyboard?.enterKey.wasPressedThisFrame == true) {
+        if (gamepad?.buttonSouth.wasPressedThisFrame == true || keyboard?.enterKey.wasPressedThisFrame == true || keyboard?.spaceKey.wasPressedThisFrame == true || keyboard?.eKey.wasPressedThisFrame == true) {
             if (eventSystem) {
                 var selected = eventSystem.currentSelectedGameObject?.GetComponent<Button>();
                 if (selected) currentSelection = selected;

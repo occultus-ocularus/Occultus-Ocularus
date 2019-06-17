@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     [Tooltip("On/Off for player movement input")] public bool canMove;
 
     // Things that can further disable player movement
-    private bool dialogOpen = false;
+    private bool dialogueOpen = false;
     
     [Tooltip("Freeze all movement IE no gravity")] public bool frozen;
     [Tooltip("Whether to allow the player to fly freely")] public bool antiGrav = false;
@@ -64,10 +64,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     private CapsuleCollider2D playerCollider;
     private BoxCollider2D playerBottomTrigger;
 
-    private float h; //stores the horizontal axis input value
-    //private float prevh; //stores the previous horizontal axis reading
-    private bool jump = false;
-    private bool prevJump = false;
+    private float horizontalInput; //stores the horizontal axis input value
     private bool jumpStart;
 
     [HideInInspector]
@@ -99,7 +96,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
         SetInputCallbacks();
     }
     public bool playerCanMove {
-        get { return canMove && !dialogOpen && !PauseMenu.isPaused; }
+        get { return canMove && !dialogueOpen && !PauseMenu.isPaused; }
     }
     // Use this for initialization
     void Start() {
@@ -117,15 +114,18 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
         currentScene = SceneManager.GetActiveScene().name;
     }
     void Update() {
-        if (this.transform.position.y < -50) { ResetPlayer(); print("RESPAWN"); }
+        if (this.transform.position.y < -50) { 
+            ResetPlayer();
+            print("RESPAWN");
+        }
 
         if (playerCanMove)
         {
             // Flips sprite depending on direction of movement
-            h = movement.x;
-            if (h > 0)
+            horizontalInput = movement.x;
+            if (horizontalInput > 0)
                 spriterender.flipX = true;
-            else if (h < 0)
+            else if (horizontalInput < 0)
                 spriterender.flipX = false;
         }
         // Sets animation variables
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
 //        playerInput.Camera.Disable();
 //        playerInput.UI.Enable();
 //        playerInput.Dialog.Enable();
-        dialogOpen = true;
+        dialogueOpen = true;
     }
     public void ExitUIOrDialog() {
         PlayerInputModel.instance.exitUI();
@@ -149,20 +149,10 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
 //        playerInput.Camera.Enable();
 //        playerInput.UI.Disable();
 //        playerInput.Dialog.Disable();
-        dialogOpen = false;
+        dialogueOpen = false;
     }
 
     #region FootstepAudio
-    void PlaySoftFootstep() {
-        // The soft footstep sound is for grass/sand/dirt etc., but currently
-        // everything is urban only, so this sound  is not used for now 
-
-        /*footsteps.clip =
-            Resources.Load<AudioClip>("Audio/SFX/Characters/Soft Footsteps/SoftFootsteps" + Random.Range(1, 4));
-        footsteps.pitch = Random.Range(0.7f, 1.0f);
-        footsteps.volume = Random.Range(0.1f, 0.2f);
-        footsteps.Play();*/
-    }
 
     void PlayHardFootstep() {
         footsteps.clip = footstepsSound[Random.Range(0, 6)];
@@ -238,7 +228,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     public void OnJump(InputAction.CallbackContext context) {
         if (context.performed && playerCanMove) {
             // Signal jump pressed
-            jump = jumpStart = true;
+            jumpStart = true;
             
             // If not in antigrav and the player just pressed the jump key:
             if (!antiGrav && jumpMode == JumpMode.VelocityBased && touchingGround)
@@ -252,7 +242,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
             }
             anim.SetBool("startJump", true);
         } else {
-            jump = jumpStart = false;
+            jumpStart = false;
             anim.SetBool("startJump", false);
         }
     }
@@ -261,41 +251,42 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     void FixedUpdate() {
         if (playerCanMove) {
             // If you are allowed free flight
-            if (antiGrav)
-            {
+            if (antiGrav) {
 //                Vector2 movement = PlayerInputModel.instance.movement;
                 transform.position += (Vector3.up * movement.y * maxWalkSpeed * 5 +
                                       Vector3.right * movement.x * maxWalkSpeed * 5) 
                                       * Time.deltaTime;
                 playerCollider.isTrigger = true;
-            } else {
+            }
+            else {
                 playerCollider.isTrigger = false; // so the player isn't no-clipping after exiting anti-grav mode
 
                 // -- Jumping Logic: --
-                if (jumpMode == JumpMode.VelocityBased) VelocityBasedJump();
-                else if (jumpMode == JumpMode.GravityBased) GravityBasedJump();
-
-                prevJump = jump;
+                if (jumpMode == JumpMode.VelocityBased)
+                    VelocityBasedJump();
+                else if (jumpMode == JumpMode.GravityBased)
+                    GravityBasedJump();
 
                 // -- Walking Logic: --
                 // prevh = h;
-                h = movement.x;
+                horizontalInput = movement.x;
 
-                if (System.Math.Abs(h) < 0.01 && touchingGround) { //when ther'es little-to-no sideways input && we're on the ground bring the player to a stop
+                if (System.Math.Abs(horizontalInput) < 0.01 && touchingGround) { //when ther'es little-to-no sideways input && we're on the ground bring the player to a stop
                     // increse the stopLerpTime, 
                     stopLerpTime += 3.5f * Time.deltaTime;
                     // slow down the x velocity by an value between the current x velocity and 0, determined by how far along stopLerpTime is, 
                     body.velocity =
                         new Vector2(Mathf.Lerp(body.velocity.x, 0, stopLerpTime),
                             body.velocity.y); //new Vector2(0, 0);//
-                } else {
+                }
+                else {
                     // when we start moving, reset stopLerpTime
                     stopLerpTime = 0;
-                    if (h * body.velocity.x < maxWalkSpeed) {
+                    if (horizontalInput * body.velocity.x < maxWalkSpeed) {
                         //if we just did a wall jump (wallJumpTimer > 0), decrese the effectiveness of the players horizontal control, so they can't keep planting themselves back on the wall.
                         if (walljumpTimer != 0)
-                            body.AddForce(Vector2.right * h * Mathf.Max(0, walkForce / (walljumpTimer / 2)));
-                        else body.AddForce(Vector2.right * h * walkForce);
+                            body.AddForce(Vector2.right * horizontalInput * Mathf.Max(0, walkForce / (walljumpTimer / 2)));
+                        else body.AddForce(Vector2.right * horizontalInput * walkForce);
                     }
 
                     if (Mathf.Abs(body.velocity.x) > maxWalkSpeed)
@@ -303,7 +294,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
                 }
             }
         }else{
-			// Copied and pasted from the "if touching ground". Needed to stop player from moving when freeCam is activated
+			// stop player from moving when freeCam is activated
 			stopLerpTime += 3.5f * Time.deltaTime;
                     // slow down the x velocity by an value between the current x velocity and 0, determined by how far along stopLerpTime is, 
                     body.velocity =
@@ -344,16 +335,6 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
                     touchingWall = 0;
                     hangingOnLedge = false;
                 }
-                //else if (playerLeftTrigger.IsTouching(objCollider))
-                //{
-                //    touchingWall = 1;
-                //    hangingOnLedge = !playerTopTrigger.IsTouching(otherCol);
-                //}
-                //else if (playerRightTrigger.IsTouching(objCollider))
-                //{
-                //    touchingWall = -1;
-                //    hangingOnLedge = !playerTopTrigger.IsTouching(otherCol);
-                //}
             }
         }
     }
@@ -364,8 +345,7 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
     }
 
     private void VelocityBasedJump() {
-        if (jump && jumpTime <= maxJumpTime && allowedToJump)
-        {
+        if (jumpStart && jumpTime <= maxJumpTime && allowedToJump) {
             //float coef = 0.0f;
             //float force = 0.0f;
 
@@ -377,69 +357,50 @@ public class PlayerController : MonoBehaviour, IPlayerActions {
             dif -= Physics.gravity.y;
 
             body.AddForce(dif * body.mass * Vector3.up * Time.deltaTime);
-            /*
-            //coef = 2 / (1 + Mathf.Pow(50, (jumpTime + 1)));
-            //coef = Mathf.Sqrt(coef);
-            coef = 1 / Mathf.Pow(jumpTime+1, 2) + 0.3f;
-            coef*=body.mass;
-            if (jumpTime <= 0.3f)
-            {
-                coef = 1;
-                force = jumpForce;
-            }
-            body.AddForce(force * coef * Vector3.up);
-            */
+
             jumpTime += Time.deltaTime;
         }
-        else if (!touchingGround)
-        {
+        else if (!touchingGround) {
             allowedToJump = false;
-            if (body.velocity.y >= 0)
-            {
+            if (body.velocity.y >= 0) {
                 body.AddForce(jump_forced_decel * body.mass * Vector3.up);
             }
         }
     }
 
     private void GravityBasedJump() {
-        if (touchingGround)
-        {
+        if (touchingGround) {
             walljumpTimer = 0;
             // if the jump was just started
-            if (jumpStart)
-            {
+            if (jumpStart) {
                 jumpTimer = jumpExtensionTime;
                 body.AddForce(jumpForce * Vector3.up);
             }
         }
-        else
-        {
-            if (jump && jumpTimer != 0)
-            {
+        else {
+            if (jumpStart && jumpTimer != 0) {
                 body.AddForce(-Physics2D.gravity -
                               (1 / jumpTimer) *
                               Vector2.up); // counteract gravity while the user is holding the jump button & jump timer hasn't gotten to zero.
                 jumpTimer--;
             }
-            else
-            {
+            else {
                 jumpTimer = 0;
             }
 
-            if (wallJumpingEnabled)
-            {
-                if (jumpStart && touchingWall != 0)
-                {
+            if (wallJumpingEnabled) {
+                if (jumpStart && touchingWall != 0) {
                     walljumpTimer = 60;
                     jumpTimer = jumpExtensionTime;
-                    if (!hangingOnLedge) body.velocity = new Vector2(touchingWall * 4, 4);
+                    if (!hangingOnLedge)
+                        body.velocity = new Vector2(touchingWall * 4, 4);
                 }
 
-                if (walljumpTimer != 0) walljumpTimer--;
+                if (walljumpTimer != 0)
+                    walljumpTimer--;
             }
 
-            if (ledgeRecoveryEnabled && jumpStart && hangingOnLedge && body.velocity.y < 1)
-            {
+            if (ledgeRecoveryEnabled && jumpStart && hangingOnLedge && body.velocity.y < 1) {
                 body.velocity = new Vector2(-touchingWall, 4);
             }
         }

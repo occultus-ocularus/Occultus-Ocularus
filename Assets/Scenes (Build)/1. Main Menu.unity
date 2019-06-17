@@ -127,6 +127,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802539061}
     m_Modifications:
+    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
+        type: 3}
+      propertyPath: m_Name
+      value: CreditsButton
+      objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660184, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -231,11 +236,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
-        type: 3}
-      propertyPath: m_Name
-      value: CreditsButton
       objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660191, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
@@ -515,9 +515,9 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
+  m_HorizontalAxis: h
+  m_VerticalAxis: v
+  m_SubmitButton: s
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
@@ -632,6 +632,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802539061}
     m_Modifications:
+    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
+        type: 3}
+      propertyPath: m_Name
+      value: QuitButton
+      objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660184, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -736,11 +741,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
-        type: 3}
-      propertyPath: m_Name
-      value: QuitButton
       objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660191, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
@@ -1591,11 +1591,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2399992737705285727, guid: e769eb633e11b4672872d78081ab5cd7,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 120
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e769eb633e11b4672872d78081ab5cd7, type: 3}
 --- !u!224 &3218341926005669853 stripped
@@ -1750,6 +1745,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802539061}
     m_Modifications:
+    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayButton
+      objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660184, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1844,11 +1844,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697776827479660185, guid: dec46f2cf1397491587b01ab56c9206c,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayButton
       objectReference: {fileID: 0}
     - target: {fileID: 6697776827479660191, guid: dec46f2cf1397491587b01ab56c9206c,
         type: 3}

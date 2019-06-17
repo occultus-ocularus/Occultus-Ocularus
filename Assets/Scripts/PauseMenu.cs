@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour {
         }
     }
     private PlayerController player;
+    private LevelTransition levelTransition;
     
     private void SetInputCallbacks() {
 //        playerInput.UI.SetCallbacks(this);
@@ -29,11 +30,13 @@ public class PauseMenu : MonoBehaviour {
         instance = this;
         SetInputCallbacks();
         player = GameObject.FindObjectsOfType<PlayerController>()[0];
+        levelTransition = FindObjectOfType<LevelTransition>();
     }
     public void RestartLevel() {
         Resume();
-        PlayStats.instance.RestartGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        PlayStats.instance?.RestartGame();
+        levelTransition.nextScene  =  SceneManager.GetActiveScene().name;
+        levelTransition.FadeLoadScene();
 //        foreach (var player in GameObject.FindObjectsOfType<PlayerController>()) {
 //            player.ResetPlayer();
 //        }
@@ -41,13 +44,13 @@ public class PauseMenu : MonoBehaviour {
     public void QuitToMenu()
     {
         Resume();
-        PlayStats.instance.RestartGame();
-        SceneManager.LoadScene("1. Main Menu");
+        PlayStats.instance?.RestartGame();
+        levelTransition.nextScene = "1. Main Menu";
+        levelTransition.FadeLoadScene();
     }
     public void QuitToDesktop()
     {
         Resume();
-        PlayStats.instance.OnApplicationQuit();
         Application.Quit();
     }
     [FormerlySerializedAs("uiInput")] public PlayerInputMapping playerInput;

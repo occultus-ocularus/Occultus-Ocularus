@@ -111,7 +111,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
 
             // Position player at a set distance from the NPC
             if (!playerPositionSet) {
-                if (System.Math.Abs(arielOrSamsonTransform.position.x - 1.8f - transform.position.x) < 0.05) {
+                if (System.Math.Abs(arielOrSamsonTransform.position.x - 1.8f - player.transform.position.x) < 0.05f) {
                     lerpTimer = 0;
                     playerPositionSet = true;
                 }

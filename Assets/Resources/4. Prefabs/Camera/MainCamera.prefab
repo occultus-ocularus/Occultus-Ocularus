@@ -45,7 +45,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.7490196, g: 0.38823533, b: 0.49411768, a: 0}
+  m_BackGroundColor: {r: 0.8018868, g: 0.5030705, b: 0.69607955, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -119,6 +119,7 @@ MonoBehaviour:
   DistFromPlayer: {x: 0, y: 0}
   MaxDistFromPlayer: {x: 10, y: 10}
   cameraPreviewTime: 1.8
+  canFree: 0
 --- !u!50 &8827026157958543745
 Rigidbody2D:
   serializedVersion: 4

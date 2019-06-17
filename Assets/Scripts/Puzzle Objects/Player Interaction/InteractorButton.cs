@@ -88,7 +88,7 @@ public class InteractorButton : MonoBehaviour, IInteractionActions {
             onInteract.Invoke();
             triggered = false;
         }
-        if (interactSound.isPlaying) {
+        if (interactSound != null && interactSound.isPlaying) {
             interactSoundTimer -= Time.fixedDeltaTime;
             if (interactSoundTimer <= 0)
                 interactSound.Stop();

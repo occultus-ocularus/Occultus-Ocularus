@@ -100,7 +100,7 @@ public class PlayStats : MonoBehaviour
     void FormatOutput()
     {
 
-        gameOutput += SystemInfo.deviceName + "\n\n";
+        gameOutput += SystemInfo.deviceUniqueIdentifier + "\n\n";
 
         // Makes a line of comma-separated values (CSV) for checkpoint names
         for (int i = 0; i < checkpointNames.Count; i++)
