@@ -5,11 +5,15 @@ using UnityEngine;
 public class Pulsate : MonoBehaviour
 {
     public float pulseTime = 1.0f;
-    private SpriteRenderer rend;
-    Color originalColor;
     public float min = 0.95f;
-       public float max = 1.2f;
+    public float max = 1.2f;
     public bool pulsating = false;
+
+    private SpriteRenderer rend;
+    private Color originalColor;
+
+    private float lerp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +24,8 @@ public class Pulsate : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (pulsating) {
-            float lerp = Mathf.PingPong(Time.time, pulseTime) / pulseTime;
-            print(lerp);
+            lerp = Mathf.PingPong(Time.time, pulseTime) / pulseTime;
+            // print(lerp);
             rend.material.color = Color.Lerp(originalColor * min, originalColor * max, lerp);
         } else if (!rend.material.color.Equals(originalColor)) {
             rend.material.color = ((originalColor - rend.material.color) / 3)+rend.material.color;
