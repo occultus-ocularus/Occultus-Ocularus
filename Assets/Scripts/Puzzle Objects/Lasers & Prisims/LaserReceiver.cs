@@ -25,6 +25,7 @@ public class LaserReceiver : MonoBehaviour, ILaserAffector
         if (!isHit && activated)
         {
             Deactivate.Invoke();
+            GetComponent<Pulsate>().StopPulsing();
             activated = false;
         }
         isHit = false;
@@ -36,6 +37,7 @@ public class LaserReceiver : MonoBehaviour, ILaserAffector
         if(!activated)
         {
             Activate.Invoke();
+            GetComponent<Pulsate>().StartPulsing();
             activated = true;
         }
 

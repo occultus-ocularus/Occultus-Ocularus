@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5847541926919599191}
   - component: {fileID: 5847541926919599184}
   - component: {fileID: 5847541926919599185}
+  - component: {fileID: 5815401856278098254}
   - component: {fileID: 5847541926919599186}
   m_Layer: 18
   m_Name: LaserReceiver
@@ -94,7 +95,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b061d78ffd3a645338f43770da5c8511, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,7 +116,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: eda4b46a3496b4cf49f172f22fcbb5d9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8235294}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,6 +126,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5815401856278098254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5847541926919599187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf83b21ed9c454223afdc6f921f8ddb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseTime: 1.5
+  pulsating: 0
 --- !u!60 &5847541926919599186
 PolygonCollider2D:
   m_ObjectHideFlags: 0
