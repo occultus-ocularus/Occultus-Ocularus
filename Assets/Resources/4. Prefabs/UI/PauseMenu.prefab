@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2874774097876217412}
   - component: {fileID: 2874774097876217413}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 2874774098843293682}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -221,9 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 2874774098843293682}
+    m_SelectOnDown: {fileID: 380293315436317063}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -342,7 +342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit to Desktop
+  m_Text: Quit
 --- !u!1 &2874774098606191779
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,8 +609,8 @@ RectTransform:
   - {fileID: 2874774098606191778}
   - {fileID: 2874774098712401869}
   - {fileID: 2874774098087958211}
-  - {fileID: 2874774098843293683}
   - {fileID: 7392512427186325995}
+  - {fileID: 2874774098843293683}
   - {fileID: 2874774097876217410}
   m_Father: {fileID: 2874774099189681584}
   m_RootOrder: 0
@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 2874774098843293685}
   - component: {fileID: 2874774098843293682}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: Restart Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,7 +729,7 @@ RectTransform:
   m_Children:
   - {fileID: 2874774099130021112}
   m_Father: {fileID: 2874774098741844746}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -786,9 +786,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 2874774098087958210}
-    m_SelectOnDown: {fileID: 380293315436317063}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 380293315436317063}
+    m_SelectOnDown: {fileID: 2874774097876217413}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 5886533235651912774}
   - component: {fileID: 380293315436317063}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1069,7 +1069,7 @@ RectTransform:
   m_Children:
   - {fileID: 2903801539785949474}
   m_Father: {fileID: 2874774098741844746}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1126,9 +1126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 2874774098843293682}
-    m_SelectOnDown: {fileID: 2874774097876217413}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 2874774098087958210}
+    m_SelectOnDown: {fileID: 2874774098843293682}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
