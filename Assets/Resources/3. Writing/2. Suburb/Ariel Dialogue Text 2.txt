@@ -61,16 +61,16 @@ But, we digress! Regarding Ascension...
 |
 To put it simply, Ascension is how you know you’re on
 the right path. It’s a measure of how far you’ve come
-over time — a reflection of personal growth, both
+over time - a reflection of personal growth, both
 |
 intellectual and emotional.
 |
 Perhaps an example will help! You reconnecting the
-power in the city — that must have taken a lot of hard
+power in the city - that must have taken a lot of hard
 thinking. But turning the power back on also helped
 |
-a lot of people — a selfless act. If you do a lot of
-things like that, eventually you might —
+a lot of people - a selfless act. If you do a lot of
+things like that, eventually you might -
 |
 {Player grows eyes on shoulders}
 |
@@ -92,9 +92,9 @@ and change your perspective.
 |
 As you continue on your journey, you might notice
 places where you can't proceed with your current
-perspective. If somewhere else — some other
+perspective. If somewhere else - some other
 |
-layer of your view — seems more viable, shift
+layer of your view - seems more viable, shift
 between layers. 
 |
 {Controls for shift appear in controls overlay}
