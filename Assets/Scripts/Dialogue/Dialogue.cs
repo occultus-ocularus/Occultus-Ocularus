@@ -18,6 +18,8 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     public Color samsonColor;
     public Color arielColor;
 
+    public UIDisplay uIDisplay;
+
     private string[] phrases;
     private string[] actions;
     private bool actionPerformed;
@@ -36,14 +38,20 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     private bool awaitingUser;
     private bool skipToEndOfPhrase;
 
+    private bool initializedInputCallbacks = false;
     public void Awake() {
-        playerInput.Dialog.SetCallbacks(this);
+        if (!initializedInputCallbacks) {
+            initializedInputCallbacks = true;
+            playerInput.Dialog.SetCallbacks(this);
+        }
     }
+
     public void Setup(IDialogueEncounter de) {
         BeginDialog(de);
     }
     public void BeginDialog(IDialogueEncounter de) {
         player.EnterUIOrDialog();
+        uIDisplay.ShowDialogueControls();
         player.body.velocity = Vector2.zero;
         dialogueEncounter = de;
         lastUpdateTime = Time.time;
@@ -62,6 +70,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
     }
     public void EndDialog() {
         player.ExitUIOrDialog();
+        uIDisplay.HideDialogueControls();
         dialogueEncounter.DialogueFinished();
         dialogueBox.SetActive(false);
         text.text = "";
@@ -74,12 +83,12 @@ public class Dialogue : MonoBehaviour, IDialogActions {
             if (!awaitingUser)
                 skipToEndOfPhrase = true;
 
-            // Resume text scroll & increase scroll rate if space key is down
+            // Resume text scroll if space key is down
             awaitingUser = false;
-            currentScrollRate = FAST_SCROLL_RATE;
+            //currentScrollRate = FAST_SCROLL_RATE;
 
             // End dialogue if it all has already appeared
-            if (phraseIndex >= phrases.Length && charIndex == -1) {
+            if (phrases != null && phraseIndex >= phrases.Length && charIndex == -1) {
                 EndDialog();
             }
         } else if (!context.performed) {
@@ -102,7 +111,7 @@ public class Dialogue : MonoBehaviour, IDialogActions {
 
             // Position player at a set distance from the NPC
             if (!playerPositionSet) {
-                if (System.Math.Abs(arielOrSamsonTransform.position.x - 1.8f - transform.position.x) < 0.05) {
+                if (System.Math.Abs(arielOrSamsonTransform.position.x - 1.8f - player.transform.position.x) < 0.05f) {
                     lerpTimer = 0;
                     playerPositionSet = true;
                 }
@@ -151,9 +160,9 @@ public class Dialogue : MonoBehaviour, IDialogActions {
                     charIndex++;
                 }
 
-                // Play text blip once every four characters
-                if (charIndex % 4 == 0)
-                    dialogueEncounter.PlayTextBlip(characterName.text);   
+                // Play text blip once every 3 characters
+                if (charIndex % 3 == 0)
+                    dialogueEncounter.PlayTextBlip(characterName.text, currentScrollRate);   
 
                 // Prep for next phrase when the end of current phrase is reached
                 if (charIndex == phrase.Length) {

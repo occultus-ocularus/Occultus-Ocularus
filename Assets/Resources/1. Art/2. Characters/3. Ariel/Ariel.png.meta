@@ -1,0 +1,1541 @@
+fileFormatVersion: 2
+guid: 11b4a6de27041431db314f8cf3981af1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8704014280465074648
+    second: OccOc Ariel-Idle-00
+  - first:
+      213: 7802937188884037410
+    second: OccOc Ariel-Idle-01
+  - first:
+      213: -3862552286501956485
+    second: OccOc Ariel-Idle-02
+  - first:
+      213: 984007799172528492
+    second: OccOc Ariel-Idle-03
+  - first:
+      213: 2048144530539428739
+    second: OccOc Ariel-Idle-04
+  - first:
+      213: 5184127991006739130
+    second: OccOc Ariel-Idle-05
+  - first:
+      213: 8465226763091097774
+    second: OccOc Ariel-Idle-06
+  - first:
+      213: 8534924428688174845
+    second: OccOc Ariel-Idle-07
+  - first:
+      213: 1514524221918080126
+    second: OccOc Ariel-Idle-08
+  - first:
+      213: -6507201644286221008
+    second: OccOc Ariel-Idle-09
+  - first:
+      213: 2394207140282095799
+    second: OccOc Ariel-Idle-10
+  - first:
+      213: -1407905195199785903
+    second: OccOc Ariel-Idle-11
+  - first:
+      213: 687951993873606366
+    second: OccOc Ariel-Idle-12
+  - first:
+      213: -9205418902154604938
+    second: OccOc Ariel-Idle-13
+  - first:
+      213: -8134054430353784790
+    second: OccOc Ariel-Idle-14
+  - first:
+      213: -6632808931143034675
+    second: OccOc Ariel-Idle-15
+  - first:
+      213: 5086698607980488680
+    second: OccOc Ariel-Idle-16
+  - first:
+      213: 2443499499423587379
+    second: OccOc Ariel-Idle-17
+  - first:
+      213: 4580185099998120103
+    second: OccOc Ariel-Idle-18
+  - first:
+      213: 6468393810357856533
+    second: OccOc Ariel-Idle-19
+  - first:
+      213: 9096862727711371279
+    second: OccOc Ariel-Idle-20
+  - first:
+      213: -7888182605487168324
+    second: OccOc Ariel-Idle-21
+  - first:
+      213: -8904600845285959603
+    second: OccOc Ariel-Idle-22
+  - first:
+      213: 8814426184243890910
+    second: OccOc Ariel-Idle-23
+  - first:
+      213: 1692468184746614845
+    second: OccOc Ariel-Idle-24
+  - first:
+      213: -3031334523591785071
+    second: OccOc Ariel-Idle-25
+  - first:
+      213: 1407019576574714772
+    second: OccOc Ariel-Idle-26
+  - first:
+      213: 1080372701320246227
+    second: OccOc Ariel-Idle-27
+  - first:
+      213: 1963505326011705810
+    second: OccOc Ariel-Idle-28
+  - first:
+      213: 7714376227105028008
+    second: OccOc Ariel-Idle-29
+  - first:
+      213: -4976563042563026236
+    second: OccOc Ariel-Idle-30
+  - first:
+      213: 1849043556436832158
+    second: OccOc Ariel-Idle-31
+  - first:
+      213: -8378561700808902360
+    second: OccOc Ariel-Idle-32
+  - first:
+      213: -4616591205486557558
+    second: OccOc Ariel-Idle-33
+  - first:
+      213: 5297360430033502102
+    second: OccOc Ariel-Idle-34
+  - first:
+      213: 2129517587788669336
+    second: OccOc Ariel-Idle-35
+  - first:
+      213: -3764382588253267460
+    second: OccOc Ariel-Idle-36
+  - first:
+      213: -6335197421257641585
+    second: OccOc Ariel-Idle-37
+  - first:
+      213: -5120630468745765458
+    second: OccOc Ariel-Idle-38
+  - first:
+      213: -3297942129787713526
+    second: OccOc Ariel-Idle-39
+  - first:
+      213: -536627167319154742
+    second: OccOc Ariel-Idle-40
+  - first:
+      213: -5850515087333249612
+    second: OccOc Ariel-Idle-41
+  - first:
+      213: 5902102912297259587
+    second: OccOc Ariel-Idle-42
+  - first:
+      213: -1353310170949810901
+    second: OccOc Ariel-Idle-43
+  - first:
+      213: -3501660393457942336
+    second: OccOc Ariel-Idle-44
+  - first:
+      213: 7617782753585769529
+    second: OccOc Ariel-Idle-45
+  - first:
+      213: -6171685289247959121
+    second: OccOc Ariel-Idle-46
+  - first:
+      213: 8711219651013285954
+    second: OccOc Ariel-Idle-47
+  - first:
+      213: -5693274969971304158
+    second: OccOc Ariel-Idle-48
+  - first:
+      213: 5561909385997140040
+    second: OccOc Ariel-Idle-49
+  - first:
+      213: -8619785001531396449
+    second: OccOc Ariel-Idle-50
+  - first:
+      213: -4071948939484353401
+    second: OccOc Ariel-Idle-51
+  - first:
+      213: -9114752570089225042
+    second: OccOc Ariel-Idle-52
+  - first:
+      213: -7290092277035710729
+    second: OccOc Ariel-Idle-53
+  - first:
+      213: 158426989586462272
+    second: OccOc Ariel-Idle-54
+  - first:
+      213: 6332829555223186439
+    second: OccOc Ariel-Idle-55
+  - first:
+      213: 288629281471987298
+    second: OccOc Ariel-Idle-56
+  - first:
+      213: 2015958375558319093
+    second: OccOc Ariel-Idle-57
+  - first:
+      213: 4782331830552518868
+    second: OccOc Ariel-Idle-58
+  - first:
+      213: -3057470346337482278
+    second: OccOc Ariel-Idle-59
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 950
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-00
+      rect:
+        serializedVersion: 2
+        x: 2582
+        y: 101
+        width: 205
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4585366, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbc706b9b86a453b98f1cd4ec26d80e
+      internalID: -8704014280465074648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-01
+      rect:
+        serializedVersion: 2
+        x: 2418
+        y: 3098
+        width: 211
+        height: 995
+      alignment: 9
+      pivot: {x: 0.46919432, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2ed09fa207f4704b81bb37e2856dac
+      internalID: 7802937188884037410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-02
+      rect:
+        serializedVersion: 2
+        x: 2791
+        y: 101
+        width: 205
+        height: 995
+      alignment: 9
+      pivot: {x: 0.44878048, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886eee9202b214eb0b18f4fd8faed7ae
+      internalID: -3862552286501956485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-03
+      rect:
+        serializedVersion: 2
+        x: 2806
+        y: 2099
+        width: 201
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4477612, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24b7d30dd2424f9eb3939fb24d5c343
+      internalID: 984007799172528492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-04
+      rect:
+        serializedVersion: 2
+        x: 3459
+        y: 3098
+        width: 199
+        height: 995
+      alignment: 9
+      pivot: {x: 0.43718594, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 788975ee3653f44efa0619da2c5c3262
+      internalID: 2048144530539428739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-05
+      rect:
+        serializedVersion: 2
+        x: 3011
+        y: 2099
+        width: 192
+        height: 995
+      alignment: 9
+      pivot: {x: 0.421875, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fc2bde2062d4468aa61cf5c5c6fdc8
+      internalID: 5184127991006739130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-06
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 2099
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41884816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6e340caa9164949aa6cd06cce21abf
+      internalID: 8465226763091097774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-07
+      rect:
+        serializedVersion: 2
+        x: 3794
+        y: 2099
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41884816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c8a9f46c810480685380c40dcd6a49
+      internalID: 8534924428688174845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-08
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1100
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41884816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a990d8a1ecc154c1dbbc3922333196b1
+      internalID: 1514524221918080126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-09
+      rect:
+        serializedVersion: 2
+        x: 3662
+        y: 3098
+        width: 193
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41450778, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1b754cf83fb4a499eed14ca2fe9ebc
+      internalID: -6507201644286221008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-10
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 101
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41884816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7274e38f51640c1868550c23c8764b
+      internalID: 2394207140282095799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-11
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 1100
+        width: 190
+        height: 995
+      alignment: 9
+      pivot: {x: 0.42105263, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d66a40cd09d24bbcbe58a962466b784
+      internalID: -1407905195199785903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-12
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 101
+        width: 190
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41578948, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c608a81adf264052825bc8593f726a0
+      internalID: 687951993873606366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-13
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 1100
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41361257, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742668568864d4bc980f5459e77a248b
+      internalID: -9205418902154604938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-14
+      rect:
+        serializedVersion: 2
+        x: 2633
+        y: 3098
+        width: 207
+        height: 995
+      alignment: 9
+      pivot: {x: 0.42028984, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358f00e8e7cf347a6b2de79d53699052
+      internalID: -8134054430353784790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-15
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 2099
+        width: 215
+        height: 995
+      alignment: 9
+      pivot: {x: 0.45581394, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b4e5ad5b5a544bebea6eda93eb602e
+      internalID: -6632808931143034675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-16
+      rect:
+        serializedVersion: 2
+        x: 2339
+        y: 101
+        width: 239
+        height: 995
+      alignment: 9
+      pivot: {x: 0.46025103, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789a5d2379be842418d57b03f438633d
+      internalID: 5086698607980488680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-17
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 1100
+        width: 252
+        height: 995
+      alignment: 9
+      pivot: {x: 0.48015872, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ee6888c998947fc9ecad8fdb69d870
+      internalID: 2443499499423587379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-18
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1100
+        width: 275
+        height: 995
+      alignment: 9
+      pivot: {x: 0.5018182, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4759f6297ae2b45228eb8331c6dfb05a
+      internalID: 4580185099998120103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-19
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 101
+        width: 290
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4827586, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148d4cf9e1f184a00b1d8a1de997c5c0
+      internalID: 6468393810357856533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-20
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 2099
+        width: 309
+        height: 995
+      alignment: 9
+      pivot: {x: 0.48220065, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1d54c67180d4b13ae885df287ba3c6
+      internalID: 9096862727711371279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-21
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 3098
+        width: 322
+        height: 995
+      alignment: 9
+      pivot: {x: 0.48136646, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caba2cfcee10e471cb91cc5f0dc2f24d
+      internalID: -7888182605487168324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-22
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1100
+        width: 350
+        height: 995
+      alignment: 9
+      pivot: {x: 0.50857145, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec29c7bfa34048d8932c9ef8c09c35e
+      internalID: -8904600845285959603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-23
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 2099
+        width: 353
+        height: 995
+      alignment: 9
+      pivot: {x: 0.50141644, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac3e31e958e44c53b5ad6c95bf0aa8f
+      internalID: 8814426184243890910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-24
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 2099
+        width: 353
+        height: 995
+      alignment: 9
+      pivot: {x: 0.49008498, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7965767913b4148b999e964327a30f26
+      internalID: 1692468184746614845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-25
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 3098
+        width: 361
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4930748, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c7b711f50a4459b9ee0c6eece82160
+      internalID: -3031334523591785071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-26
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3098
+        width: 372
+        height: 995
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f888a026fe004c06a65208493159ec2
+      internalID: 1407019576574714772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-27
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1100
+        width: 371
+        height: 995
+      alignment: 9
+      pivot: {x: 0.5013477, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771dc4e186caa4be3adbe9c0317c8867
+      internalID: 1080372701320246227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2099
+        width: 372
+        height: 995
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ecf730125966461badcc9fb8b4a6294
+      internalID: 1963505326011705810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1100
+        width: 372
+        height: 995
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c153190c293d140c3bda7061dc92d420
+      internalID: 7714376227105028008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-30
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 101
+        width: 372
+        height: 995
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5812adee90fba4bebbb8f34ceb44b121
+      internalID: -4976563042563026236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-31
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 3098
+        width: 372
+        height: 995
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db323a04e4ee4dac87cd144d2c9f0fb
+      internalID: 1849043556436832158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-32
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 2099
+        width: 372
+        height: 995
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53823dfe4ac854600ad6487d27af8543
+      internalID: -8378561700808902360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-33
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 101
+        width: 370
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4972973, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec39438492d94681afabb8906d3ed0d
+      internalID: -4616591205486557558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-34
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 101
+        width: 367
+        height: 995
+      alignment: 9
+      pivot: {x: 0.49318802, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e0e64986feb4edd8c9a5daadc70f95
+      internalID: 5297360430033502102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-35
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 101
+        width: 368
+        height: 995
+      alignment: 9
+      pivot: {x: 0.5027174, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70316da730b024138998e2fb4e9b7f98
+      internalID: 2129517587788669336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-36
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1100
+        width: 368
+        height: 995
+      alignment: 9
+      pivot: {x: 0.49456522, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c933c279fb4a840209bf04ca8f62637f
+      internalID: -3764382588253267460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-37
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3098
+        width: 347
+        height: 995
+      alignment: 9
+      pivot: {x: 0.48991355, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c68caae868614299b04e9165a8a3038
+      internalID: -6335197421257641585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-38
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 2099
+        width: 338
+        height: 995
+      alignment: 9
+      pivot: {x: 0.49112427, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c479ae1ef700344bfb3586edcf7b46cc
+      internalID: -5120630468745765458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-39
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1100
+        width: 328
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11b45fb07bc24b9983f6079663d56aa
+      internalID: -3297942129787713526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-40
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 3098
+        width: 316
+        height: 995
+      alignment: 9
+      pivot: {x: 0.49050632, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5419bfa5366194bbfbe800c52321e26c
+      internalID: -536627167319154742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-41
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 3098
+        width: 297
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4949495, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b599b96b6aa444ab03a4f09513794b
+      internalID: -5850515087333249612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-42
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 101
+        width: 279
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4982079, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21bc71deaf4d46d897319a9beac4289
+      internalID: 5902102912297259587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-43
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 101
+        width: 262
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4923664, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476fa363c2f48493abb0be2bb8603c1c
+      internalID: -1353310170949810901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-44
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 2099
+        width: 244
+        height: 995
+      alignment: 9
+      pivot: {x: 0.48360655, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea138b968c35641b9a1bf89a9ae538ca
+      internalID: -3501660393457942336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-45
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 1100
+        width: 223
+        height: 995
+      alignment: 9
+      pivot: {x: 0.47085202, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc65f8b65167a4d9abb8d52794067512
+      internalID: 7617782753585769529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-46
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 1100
+        width: 214
+        height: 995
+      alignment: 9
+      pivot: {x: 0.43457943, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4856e3b370c64920b7bc30db489be9a
+      internalID: -6171685289247959121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-47
+      rect:
+        serializedVersion: 2
+        x: 2844
+        y: 3098
+        width: 201
+        height: 995
+      alignment: 9
+      pivot: {x: 0.39303482, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca5a7050e76547d49dee334c724ec6b
+      internalID: 8711219651013285954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-48
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 1100
+        width: 190
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41578948, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e89f9b4364fd44cd8492a028097335f
+      internalID: -5693274969971304158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-49
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 101
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41884816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a94a5db1fd27443e89ae14eaa174a31
+      internalID: 5561909385997140040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-50
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 2099
+        width: 192
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41666666, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127cd5cfc725a49efb41656aad8aff50
+      internalID: -8619785001531396449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-51
+      rect:
+        serializedVersion: 2
+        x: 3403
+        y: 2099
+        width: 192
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41666666, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510d5e734f5574c77b2e3d8e7f34e942
+      internalID: -4071948939484353401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-52
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 101
+        width: 190
+        height: 995
+      alignment: 9
+      pivot: {x: 0.42105263, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee412b53277242d7acce29db15fc56d
+      internalID: -9114752570089225042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-53
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 1100
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41884816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf56e0a710b3b46a39e5191131c454fd
+      internalID: -7290092277035710729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-54
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 101
+        width: 191
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41884816, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304857b4a4dfd4fb0b06ef143d601f44
+      internalID: 158426989586462272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-55
+      rect:
+        serializedVersion: 2
+        x: 3859
+        y: 3098
+        width: 193
+        height: 995
+      alignment: 9
+      pivot: {x: 0.41968912, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0639c14fc74f54fe9910f081f0c296a6
+      internalID: 6332829555223186439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-56
+      rect:
+        serializedVersion: 2
+        x: 3049
+        y: 3098
+        width: 201
+        height: 995
+      alignment: 9
+      pivot: {x: 0.44278607, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9188520c9d2a84386bd18f913a11f2c4
+      internalID: 288629281471987298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-57
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 3098
+        width: 201
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4477612, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4062d812550a74df5bec1f2489f12c33
+      internalID: 2015958375558319093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-58
+      rect:
+        serializedVersion: 2
+        x: 2792
+        y: 1100
+        width: 204
+        height: 995
+      alignment: 9
+      pivot: {x: 0.4509804, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51441135b6eb44275815eea982280ffa
+      internalID: 4782331830552518868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc Ariel-Idle-59
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 2099
+        width: 211
+        height: 995
+      alignment: 9
+      pivot: {x: 0.46919432, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ba7050a61a749849e3f3686cf2b793
+      internalID: -3057470346337482278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bb1bf5fd2535542f88aeda849bb6565e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

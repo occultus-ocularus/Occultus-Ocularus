@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Input;
 
 /*
  * This script can be attached to the player. If we create a trigger box around the player, 
@@ -8,7 +10,9 @@ using UnityEngine;
  * trigger box enters the object and the key 'keyCode' is pressed.
  */
 
-public class PrismInteraction : MonoBehaviour {
+public class PrismInteraction : MonoBehaviour, IInteractionActions {
+
+    public PlayerInputMapping playerInput;
 
     [Tooltip("Object with this tag will be rotated")] 
     public string rotateTag = "Prism";
@@ -16,15 +20,14 @@ public class PrismInteraction : MonoBehaviour {
     [Tooltip("How much to rotate the object by")]
     public int degrees = 45;
 
-    [Tooltip("Which key is used for rotation")] [SerializeField] 
-    public KeyCode keyCode = KeyCode.E;
-
     // All of the objects that the player is currently "colliding" with (e.i. the objects to possibly rotate)
     private List<GameObject> currentlyColliding = new List<GameObject>();
 
-    void Update() {
-        // If key pressed, in range, and colliding object is not null...
-        if (Input.GetKeyDown(keyCode))
+    public void Awake() {
+        playerInput.Interaction.SetCallbacks(this);
+    }
+    public void OnInteract(InputAction.CallbackContext context) {
+        if (context.performed)
         {
             // If the thing with which you are colliding with is tagged correctly, rotate it
             for (int i = 0; i < currentlyColliding.Count; i++)
@@ -50,4 +53,6 @@ public class PrismInteraction : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision) {
         currentlyColliding.Remove(collision.transform.gameObject);
     }
+
+    
 }

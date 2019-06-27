@@ -18,11 +18,19 @@ MonoBehaviour:
   m_Sprites:
   - m_OriginalSprite: {fileID: 7502524240001321012, guid: 0e1e5896364c640ccb7b15933d73df25,
       type: 3}
-    m_OverrideSprite: {fileID: 9163842115373488274, guid: 0e1e5896364c640ccb7b15933d73df25,
+    m_OverrideSprite: {fileID: 6734121915674721801, guid: 2eb3736eebd704f289c243c563651adb,
       type: 3}
   - m_OriginalSprite: {fileID: 5324188766673694720, guid: 0e1e5896364c640ccb7b15933d73df25,
       type: 3}
     m_OverrideSprite: {fileID: 9163842115373488274, guid: 0e1e5896364c640ccb7b15933d73df25,
+      type: 3}
+  - m_OriginalSprite: {fileID: -2791528289844733887, guid: 2eb3736eebd704f289c243c563651adb,
+      type: 3}
+    m_OverrideSprite: {fileID: 6734121915674721801, guid: 2eb3736eebd704f289c243c563651adb,
+      type: 3}
+  - m_OriginalSprite: {fileID: 3375278847246551714, guid: 2eb3736eebd704f289c243c563651adb,
+      type: 3}
+    m_OverrideSprite: {fileID: 6734121915674721801, guid: 2eb3736eebd704f289c243c563651adb,
       type: 3}
   m_OverrideTilingRules: []
   m_OverrideDefault:

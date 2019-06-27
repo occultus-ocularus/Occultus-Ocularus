@@ -32,6 +32,14 @@ MonoBehaviour:
       type: 3}
     m_OverrideSprite: {fileID: 1101392778790926231, guid: b27fadc44addd514e81dc386866465f4,
       type: 3}
+  - m_OriginalSprite: {fileID: -7050162095637017787, guid: c32ecccabc1fa4564bb106f8bd6c658f,
+      type: 3}
+    m_OverrideSprite: {fileID: -8780296677283160942, guid: c32ecccabc1fa4564bb106f8bd6c658f,
+      type: 3}
+  - m_OriginalSprite: {fileID: -6773995352087215105, guid: c32ecccabc1fa4564bb106f8bd6c658f,
+      type: 3}
+    m_OverrideSprite: {fileID: -8780296677283160942, guid: c32ecccabc1fa4564bb106f8bd6c658f,
+      type: 3}
   m_OverrideTilingRules: []
   m_OverrideDefault:
     m_Enabled: 0

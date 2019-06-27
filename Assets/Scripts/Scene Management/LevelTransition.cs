@@ -1,7 +1,7 @@
 ﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine;
 
 public class LevelTransition : MonoBehaviour
 {
@@ -9,7 +9,8 @@ public class LevelTransition : MonoBehaviour
     public string nextScene;
     [Tooltip("UI image that will bridge the transition")]
     public Image fadeOutUIImage;
-    [Tooltip("Audio clip to play instead of the level music during the transition")]
+    [Tooltip("Audio clip to play instead of the level music during the " +
+        "transition")]
     public AudioClip transitionSound;
 
     [HideInInspector]
@@ -29,21 +30,26 @@ public class LevelTransition : MonoBehaviour
 
     // Fade out a screen transition image and get the music
     // player AudioSource to be used when exiting the scene
-    void Start()
-    {
-        if (GameObject.FindWithTag("Player") != null)
-            player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        if (GameObject.Find("MusicPlayer") != null)
-            musicPlayer = GameObject.Find("MusicPlayer").GetComponent<AudioSource>();
+    void Start() {
+        if (GameObject.Find("Player") != null)
+            player =
+                GameObject.Find("Player").GetComponent<PlayerController>();
+
         fadeOutUIImage.enabled = true;
         StartCoroutine(Fade(FadeDirection.Out));
     }
 
     // Fade in a screen transition image, then load next scene
-    public void FadeLoadScene()
-    {
+    public void FadeLoadScene() {
+        if (GameObject.Find("MusicPlayer") != null)
+            musicPlayer =
+                GameObject.Find("MusicPlayer").GetComponent<AudioSource>();
+        else
+            musicPlayer =
+                GameObject.Find("MusicPlayerEnd")?.GetComponent<AudioSource>();
+
         // Stop music and play level transition sound
-        if (musicPlayer != null) {
+        if (musicPlayer != null && transitionSound != null) {
             musicPlayer.clip = transitionSound;
             musicPlayer.Play();
         }
@@ -56,8 +62,7 @@ public class LevelTransition : MonoBehaviour
     }
 
     // Fade out a SpriteRenderer as it disappears
-    public void FadeAway(SpriteRenderer sr)
-    {
+    public void FadeAway(SpriteRenderer sr) {
         spriteRenderer = sr;
         StartCoroutine(Fade(FadeDirection.Out, sr));
     }
@@ -71,8 +76,7 @@ public class LevelTransition : MonoBehaviour
     }
 
     // Coroutine to fade an Image or SpriteRenderer
-    private IEnumerator Fade(FadeDirection direction, SpriteRenderer sr = null)
-    {
+    private IEnumerator Fade(FadeDirection direction, SpriteRenderer sr = null) {
         // Set start and end values if just beginning to fade
         if (!fadeStarted) {
             if (direction == FadeDirection.Out)
@@ -137,7 +141,12 @@ public class LevelTransition : MonoBehaviour
 
     // Helper function for setting transparency on an Image (UI element)
     private void SetTransparencyImage(FadeDirection fadeDirection) {
-        fadeOutUIImage.color = new Color(fadeOutUIImage.color.r, fadeOutUIImage.color.g, fadeOutUIImage.color.b, fadeStartValue);
+        fadeOutUIImage.color = new Color(
+            fadeOutUIImage.color.r,
+            fadeOutUIImage.color.g,
+            fadeOutUIImage.color.b,
+            fadeStartValue
+            );
         if (fadeDirection == FadeDirection.Out)
             fadeStartValue -= Time.deltaTime / fadeSpeed;
         else
@@ -146,7 +155,12 @@ public class LevelTransition : MonoBehaviour
 
     // Helper function for setting transparency on a SpriteRenderer
     private void SetTransparencySR(FadeDirection fadeDirection) {
-        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, fadeStartValue);
+        spriteRenderer.color = new Color(
+            spriteRenderer.color.r,
+            spriteRenderer.color.g,
+            spriteRenderer.color.b,
+            fadeStartValue
+            );
         if (fadeDirection == FadeDirection.Out)
             fadeStartValue -= Time.deltaTime / fadeSpeed;
         else

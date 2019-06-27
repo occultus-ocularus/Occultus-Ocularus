@@ -24,17 +24,10 @@ public class PlayerInputMapping : InputActionAssetReference
         m_Player_Jump = m_Player.GetAction("Jump");
         m_Player_ResetPlayer = m_Player.GetAction("ResetPlayer");
         m_Player_ToggleFlying = m_Player.GetAction("ToggleFlying");
-        // UI
-        m_UI = asset.GetActionMap("UI");
-        m_UI_Navigate = m_UI.GetAction("Navigate");
-        m_UI_Submit = m_UI.GetAction("Submit");
-        m_UI_Cancel = m_UI.GetAction("Cancel");
-        m_UI_Point = m_UI.GetAction("Point");
-        m_UI_Click = m_UI.GetAction("Click");
-        m_UI_OpenMenu = m_UI.GetAction("OpenMenu");
         // Camera
         m_Camera = asset.GetActionMap("Camera");
         m_Camera_ToggleCamera = m_Camera.GetAction("ToggleCamera");
+        m_Camera_Move = m_Camera.GetAction("Move");
         m_Camera_SetCameraMode1 = m_Camera.GetAction("SetCameraMode1");
         m_Camera_SetCameraMode2 = m_Camera.GetAction("SetCameraMode2");
         m_Camera_SetCameraMode3 = m_Camera.GetAction("SetCameraMode3");
@@ -61,23 +54,13 @@ public class PlayerInputMapping : InputActionAssetReference
         m_Player_Jump = null;
         m_Player_ResetPlayer = null;
         m_Player_ToggleFlying = null;
-        if (m_UIActionsCallbackInterface != null)
-        {
-            UI.SetCallbacks(null);
-        }
-        m_UI = null;
-        m_UI_Navigate = null;
-        m_UI_Submit = null;
-        m_UI_Cancel = null;
-        m_UI_Point = null;
-        m_UI_Click = null;
-        m_UI_OpenMenu = null;
         if (m_CameraActionsCallbackInterface != null)
         {
             Camera.SetCallbacks(null);
         }
         m_Camera = null;
         m_Camera_ToggleCamera = null;
+        m_Camera_Move = null;
         m_Camera_SetCameraMode1 = null;
         m_Camera_SetCameraMode2 = null;
         m_Camera_SetCameraMode3 = null;
@@ -106,7 +89,6 @@ public class PlayerInputMapping : InputActionAssetReference
     {
         if (newAsset == asset) return;
         var PlayerCallbacks = m_PlayerActionsCallbackInterface;
-        var UICallbacks = m_UIActionsCallbackInterface;
         var CameraCallbacks = m_CameraActionsCallbackInterface;
         var InteractionCallbacks = m_InteractionActionsCallbackInterface;
         var LayerSwitchingCallbacks = m_LayerSwitchingActionsCallbackInterface;
@@ -114,7 +96,6 @@ public class PlayerInputMapping : InputActionAssetReference
         if (m_Initialized) Uninitialize();
         asset = newAsset;
         Player.SetCallbacks(PlayerCallbacks);
-        UI.SetCallbacks(UICallbacks);
         Camera.SetCallbacks(CameraCallbacks);
         Interaction.SetCallbacks(InteractionCallbacks);
         LayerSwitching.SetCallbacks(LayerSwitchingCallbacks);
@@ -188,90 +169,11 @@ public class PlayerInputMapping : InputActionAssetReference
             return new PlayerActions(this);
         }
     }
-    // UI
-    private InputActionMap m_UI;
-    private IUIActions m_UIActionsCallbackInterface;
-    private InputAction m_UI_Navigate;
-    private InputAction m_UI_Submit;
-    private InputAction m_UI_Cancel;
-    private InputAction m_UI_Point;
-    private InputAction m_UI_Click;
-    private InputAction m_UI_OpenMenu;
-    public struct UIActions
-    {
-        private PlayerInputMapping m_Wrapper;
-        public UIActions(PlayerInputMapping wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Navigate { get { return m_Wrapper.m_UI_Navigate; } }
-        public InputAction @Submit { get { return m_Wrapper.m_UI_Submit; } }
-        public InputAction @Cancel { get { return m_Wrapper.m_UI_Cancel; } }
-        public InputAction @Point { get { return m_Wrapper.m_UI_Point; } }
-        public InputAction @Click { get { return m_Wrapper.m_UI_Click; } }
-        public InputAction @OpenMenu { get { return m_Wrapper.m_UI_OpenMenu; } }
-        public InputActionMap Get() { return m_Wrapper.m_UI; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled { get { return Get().enabled; } }
-        public InputActionMap Clone() { return Get().Clone(); }
-        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
-        public void SetCallbacks(IUIActions instance)
-        {
-            if (m_Wrapper.m_UIActionsCallbackInterface != null)
-            {
-                Navigate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
-                Navigate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
-                Navigate.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
-                Submit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
-                Submit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
-                Submit.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
-                Cancel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
-                Cancel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
-                Cancel.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
-                Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
-                Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
-                Point.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
-                Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                Click.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
-                OpenMenu.started -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenMenu;
-                OpenMenu.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenMenu;
-                OpenMenu.cancelled -= m_Wrapper.m_UIActionsCallbackInterface.OnOpenMenu;
-            }
-            m_Wrapper.m_UIActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                Navigate.started += instance.OnNavigate;
-                Navigate.performed += instance.OnNavigate;
-                Navigate.cancelled += instance.OnNavigate;
-                Submit.started += instance.OnSubmit;
-                Submit.performed += instance.OnSubmit;
-                Submit.cancelled += instance.OnSubmit;
-                Cancel.started += instance.OnCancel;
-                Cancel.performed += instance.OnCancel;
-                Cancel.cancelled += instance.OnCancel;
-                Point.started += instance.OnPoint;
-                Point.performed += instance.OnPoint;
-                Point.cancelled += instance.OnPoint;
-                Click.started += instance.OnClick;
-                Click.performed += instance.OnClick;
-                Click.cancelled += instance.OnClick;
-                OpenMenu.started += instance.OnOpenMenu;
-                OpenMenu.performed += instance.OnOpenMenu;
-                OpenMenu.cancelled += instance.OnOpenMenu;
-            }
-        }
-    }
-    public UIActions @UI
-    {
-        get
-        {
-            if (!m_Initialized) Initialize();
-            return new UIActions(this);
-        }
-    }
     // Camera
     private InputActionMap m_Camera;
     private ICameraActions m_CameraActionsCallbackInterface;
     private InputAction m_Camera_ToggleCamera;
+    private InputAction m_Camera_Move;
     private InputAction m_Camera_SetCameraMode1;
     private InputAction m_Camera_SetCameraMode2;
     private InputAction m_Camera_SetCameraMode3;
@@ -281,6 +183,7 @@ public class PlayerInputMapping : InputActionAssetReference
         private PlayerInputMapping m_Wrapper;
         public CameraActions(PlayerInputMapping wrapper) { m_Wrapper = wrapper; }
         public InputAction @ToggleCamera { get { return m_Wrapper.m_Camera_ToggleCamera; } }
+        public InputAction @Move { get { return m_Wrapper.m_Camera_Move; } }
         public InputAction @SetCameraMode1 { get { return m_Wrapper.m_Camera_SetCameraMode1; } }
         public InputAction @SetCameraMode2 { get { return m_Wrapper.m_Camera_SetCameraMode2; } }
         public InputAction @SetCameraMode3 { get { return m_Wrapper.m_Camera_SetCameraMode3; } }
@@ -298,6 +201,9 @@ public class PlayerInputMapping : InputActionAssetReference
                 ToggleCamera.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnToggleCamera;
                 ToggleCamera.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnToggleCamera;
                 ToggleCamera.cancelled -= m_Wrapper.m_CameraActionsCallbackInterface.OnToggleCamera;
+                Move.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnMove;
+                Move.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnMove;
+                Move.cancelled -= m_Wrapper.m_CameraActionsCallbackInterface.OnMove;
                 SetCameraMode1.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnSetCameraMode1;
                 SetCameraMode1.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnSetCameraMode1;
                 SetCameraMode1.cancelled -= m_Wrapper.m_CameraActionsCallbackInterface.OnSetCameraMode1;
@@ -317,6 +223,9 @@ public class PlayerInputMapping : InputActionAssetReference
                 ToggleCamera.started += instance.OnToggleCamera;
                 ToggleCamera.performed += instance.OnToggleCamera;
                 ToggleCamera.cancelled += instance.OnToggleCamera;
+                Move.started += instance.OnMove;
+                Move.performed += instance.OnMove;
+                Move.cancelled += instance.OnMove;
                 SetCameraMode1.started += instance.OnSetCameraMode1;
                 SetCameraMode1.performed += instance.OnSetCameraMode1;
                 SetCameraMode1.cancelled += instance.OnSetCameraMode1;
@@ -488,18 +397,10 @@ public interface IPlayerActions
     void OnResetPlayer(InputAction.CallbackContext context);
     void OnToggleFlying(InputAction.CallbackContext context);
 }
-public interface IUIActions
-{
-    void OnNavigate(InputAction.CallbackContext context);
-    void OnSubmit(InputAction.CallbackContext context);
-    void OnCancel(InputAction.CallbackContext context);
-    void OnPoint(InputAction.CallbackContext context);
-    void OnClick(InputAction.CallbackContext context);
-    void OnOpenMenu(InputAction.CallbackContext context);
-}
 public interface ICameraActions
 {
     void OnToggleCamera(InputAction.CallbackContext context);
+    void OnMove(InputAction.CallbackContext context);
     void OnSetCameraMode1(InputAction.CallbackContext context);
     void OnSetCameraMode2(InputAction.CallbackContext context);
     void OnSetCameraMode3(InputAction.CallbackContext context);

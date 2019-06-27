@@ -74,9 +74,11 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     // float yOffset = 0;
 
     [Header("FreeCam")]
-    public float freeMoveSpeed = 0.2f;
+    public float freeMoveSpeed = 10;
     public Vector2 DistFromPlayer;
     public Vector2 MaxDistFromPlayer = new Vector2(10, 10);
+    private Rigidbody2D body;
+
     float desiredCameraTargetX;
     float desiredCameraTargetY;
 
@@ -99,39 +101,16 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         player = GameObject.Find("Player");
         playerRigidbody = player.GetComponent<Rigidbody2D>();
         playerScript = player.GetComponent<PlayerController>();
+        body = GetComponent<Rigidbody2D>();
         start = destination = transform.position;
         CameraToPlayerZDistance = transform.position.z - player.transform.position.z;
         cameraMovingTarget = player.transform.position;
     }
-
     void Update() {
         //Camera is a set a point and does not travel with player
-        if (mode == CameraMode.Fixed)
-        {
-            if (fixedCamera != null)
-            {
-                //remove this camera being parented to the child. Disables direct following
-                if (this.transform.parent == player.transform)
-                {
-                    this.transform.parent = null;
-                }
-                
-                destination = fixedCamera.transform.position;
-                destination.z = transform.position.z;
-                destFov = fixedCamera.fieldOfView;
-
-                Camera.main.fieldOfView = Mathf.MoveTowards(Camera.main.fieldOfView, destFov, Time.deltaTime * 300);
-
-                if (destination == transform.position)
-                    lerpTimer = 0;
-                else
-                    transform.position = Vector3.Lerp(this.transform.position, destination, 1.0f / 30 * lerpTimer++);
-            }
-        }
 
         //Camera is set to follow player
         if (mode == CameraMode.FollowPlayer) {
-
             //So unity only makes it happen once for better performance
             if (this.transform.parent != player.transform) {
                 this.transform.parent = player.transform;
@@ -154,7 +133,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         }
         // This updates the Z(into screen) position of the camera when the player switches layers, 
         // which I think should happen for all camera modes, because it helps the player notice which layer they are on.
-        if ((transform.position.z - player.transform.position.z) != CameraToPlayerZDistance) {//warning is ok, because we keep updating the camera z distance each frame to be closer to the correct one;
+        if (mode != CameraMode.Fixed && (transform.position.z - player.transform.position.z) != CameraToPlayerZDistance) {//warning is ok, because we keep updating the camera z distance each frame to be closer to the correct one;
             transform.Translate(new Vector3(0, 0, CameraToPlayerZDistance - (transform.position.z - player.transform.position.z)) * Time.deltaTime * followSpeed, Space.World);
         }
     }
@@ -187,9 +166,15 @@ public class CameraScript : MonoBehaviour, ICameraActions {
 			GetComponent<BoxCollider2D> ().enabled = false;
         }
     }
+
+    
+    private Vector2 cameraMovementInput = Vector2.zero;
+    public void OnMove(InputAction.CallbackContext context) {
+        cameraMovementInput = context.ReadValue<Vector2>();
+    }
+
     public void OnSetCameraMode1(InputAction.CallbackContext context) {
         ToggleFixedCameraMode();
-		GetComponent<BoxCollider2D> ().enabled = false;
     }
 
     public void OnSetCameraMode2(InputAction.CallbackContext context) {
@@ -202,17 +187,12 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     public void OnSetCameraMode3(InputAction.CallbackContext context) {
         if (context.performed) {
             SetCameraMode(CameraMode.FollowPlayerSmooth);
-			GetComponent<BoxCollider2D> ().enabled = false;
-//            DistFromPlayer = Vector2.zero;
-//            playerScript.canMove = true;
         }
     }
 
     public void OnSetCameraMode4(InputAction.CallbackContext context) {
         if (context.performed && canFree) {
             SetCameraMode(CameraMode.FreeCam);
-			GetComponent<BoxCollider2D> ().enabled = true;
-//            playerScript.canMove = false;
         }
     }
     
@@ -230,15 +210,17 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             previewPreviousCameraMode = newMode;
         } else {
             mode = newMode;
-            if (mode != CameraMode.FreeCam)
-            {
-                DistFromPlayer = Vector2.zero;
-                playerScript.canMove = true;
-            }
-            else
-            {
-                playerScript.canMove = false;
-            }
+//            if (mode != CameraMode.FreeCam)
+//            {
+//                DistFromPlayer = Vector2.zero;
+//                playerScript.canMove = true;
+////                GetComponent<BoxCollider2D>().enabled = true;
+//            }
+//            else
+//            {
+//                playerScript.canMove = true;
+//                GetComponent<BoxCollider2D>().enabled = false;
+//            }
         }
     }
 
@@ -295,10 +277,7 @@ public class CameraScript : MonoBehaviour, ICameraActions {
     }
     
     #endregion
-
     
-    
-
     private bool jumpLastPressed = false;
 
     public void FixedUpdate() {
@@ -313,9 +292,32 @@ public class CameraScript : MonoBehaviour, ICameraActions {
         if (playerScript.canMove && jumpDown)
             playerEverJumped = true;
 
+        if (mode == CameraMode.Fixed) {
+
+
+            if (fixedCamera != null) {
+                //remove this camera being parented to the child. Disables direct following
+                if (this.transform.parent == player.transform) {
+                    this.transform.parent = null;
+                }
+
+                destination = fixedCamera.transform.position;
+                // destination.z = transform.position.z;
+                destFov = fixedCamera.fieldOfView;
+
+                Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, destFov, 0.002f * lerpTimer);
+
+                if (destination == transform.position)
+                    lerpTimer = 0;
+                else
+                    transform.position = Vector3.Lerp(this.transform.position, destination, 0.002f * lerpTimer++);
+            }
+        }
         // Putting the camera following in fixed update keeps jitter between the player and camera low.
         if (mode == CameraMode.FollowPlayerSmooth)
         {
+            lerpTimer = 0;
+
             // Get the center of the screen (mainCamera) in the unity world units:
             screenCenterVector = Camera.main.ScreenToWorldPoint(new Vector2((Screen.width / 2), (Screen.height / 2)));
             // Subtracts the center of the screen coordinates (2d) from the player's coordinates;
@@ -400,29 +402,31 @@ public class CameraScript : MonoBehaviour, ICameraActions {
             //transform.Translate(new Vector2((player.transform.position.x + desiredCameraTargetX - screenCenterVector.x) * Time.deltaTime * (followSmoothSpeedX + Mathf.Abs(desiredCameraTargetX)), (player.transform.position.y - screenCenterVector.y) * Time.deltaTime * followSmoothSpeedY), Space.World);
         }
 
-        //player can control camera with arrow keys
+        //player can control camera with input
         else if (mode == CameraMode.FreeCam) {
-            // 
-            if (GetComponent<BoxCollider2D>().enabled == false) { GetComponent<BoxCollider2D>().enabled = true; }
-			
-            //move left and right
-            if (Input.GetKey(KeyCode.RightArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x + freeMoveSpeed, this.transform.position.y, this.transform.position.z);
-                DistFromPlayer.x += freeMoveSpeed;
-            }
-            else if (Input.GetKey(KeyCode.LeftArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x - freeMoveSpeed, this.transform.position.y, this.transform.position.z);
-                DistFromPlayer.x -= freeMoveSpeed;
-            }
 
-            if (Input.GetKey(KeyCode.UpArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + freeMoveSpeed, this.transform.position.z);
-                DistFromPlayer.y += freeMoveSpeed;
+            //move left and right
+            if (cameraMovementInput.x > 0.01) {
+                body.velocity = new Vector2(body.velocity.x + freeMoveSpeed, body.velocity.y);
+                DistFromPlayer.x += freeMoveSpeed * 0.02f;
             }
-            else if (Input.GetKey(KeyCode.DownArrow)) {
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - freeMoveSpeed, this.transform.position.z);
-                DistFromPlayer.y -= freeMoveSpeed;
+            else if (cameraMovementInput.x < -0.01) {
+                body.velocity = new Vector2(body.velocity.x - freeMoveSpeed, body.velocity.y);
+                DistFromPlayer.x -= freeMoveSpeed * 0.02f;
             }
+            else
+                body.velocity = new Vector2(0, body.velocity.y);
+
+            if (cameraMovementInput.y > 0.01) {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y + freeMoveSpeed);
+                DistFromPlayer.y += freeMoveSpeed * 0.02f;
+            }
+            else if (cameraMovementInput.y < -0.01) {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y - freeMoveSpeed);
+                DistFromPlayer.y -= freeMoveSpeed * 0.02f;
+            }
+            else
+                body.velocity = new Vector2(body.velocity.x, 0);
         }
     }
 }

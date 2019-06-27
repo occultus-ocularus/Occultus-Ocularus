@@ -1,0 +1,4373 @@
+fileFormatVersion: 2
+guid: 28b3326e03f3d40e7bd33045acf0aa27
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5898256229282822594
+    second: OccOc MC 2-Fall-00
+  - first:
+      213: 7078058494126150657
+    second: OccOc MC 2-Fall-01
+  - first:
+      213: -6198589233972742539
+    second: OccOc MC 2-Fall-02
+  - first:
+      213: -2765155544191293150
+    second: OccOc MC 2-Fall-03
+  - first:
+      213: 4245455536941667323
+    second: OccOc MC 2-Fall-04
+  - first:
+      213: 3309461003882761300
+    second: OccOc MC 2-Fall-05
+  - first:
+      213: -763029807730540854
+    second: OccOc MC 2-Fall-06
+  - first:
+      213: 8901027111744882786
+    second: OccOc MC 2-Fall-07
+  - first:
+      213: 8596521582650834804
+    second: OccOc MC 2-Fall-08
+  - first:
+      213: -4713142557457956006
+    second: OccOc MC 2-Fall-09
+  - first:
+      213: 4664786623745677921
+    second: OccOc MC 2-Fall-10
+  - first:
+      213: 7352746264304166065
+    second: OccOc MC 2-Fall-11
+  - first:
+      213: -5435732301981661971
+    second: OccOc MC 2-Fall-12
+  - first:
+      213: 6459976743718886358
+    second: OccOc MC 2-Fall-13
+  - first:
+      213: 8414666400632011780
+    second: OccOc MC 2-Fall-14
+  - first:
+      213: -6669409464821582171
+    second: OccOc MC 2-Fall-15
+  - first:
+      213: -8862840683294700504
+    second: OccOc MC 2-Fall-16
+  - first:
+      213: 4061615880160174015
+    second: OccOc MC 2-Fall-17
+  - first:
+      213: -932018540072155465
+    second: OccOc MC 2-Fall-18
+  - first:
+      213: 5005918111865539631
+    second: OccOc MC 2-Fall-19
+  - first:
+      213: -8357147886912729299
+    second: OccOc MC 2-Fall-20
+  - first:
+      213: -1566892550226525084
+    second: OccOc MC 2-Fall-21
+  - first:
+      213: 8402860099018534923
+    second: OccOc MC 2-Fall-22
+  - first:
+      213: -7115662875919815859
+    second: OccOc MC 2-Fall-23
+  - first:
+      213: 6301388117249673926
+    second: OccOc MC 2-Fall-24
+  - first:
+      213: -3728702177694906410
+    second: OccOc MC 2-Fall-25
+  - first:
+      213: -8593346012510580505
+    second: OccOc MC 2-Fall-26
+  - first:
+      213: 4561562436934801679
+    second: OccOc MC 2-Fall-27
+  - first:
+      213: -7615413685064542778
+    second: OccOc MC 2-Fall-28
+  - first:
+      213: 8260853922770166354
+    second: OccOc MC 2-Fall-29
+  - first:
+      213: 1381383418837890478
+    second: OccOc MC 2-Idle-00
+  - first:
+      213: -6414634196590032620
+    second: OccOc MC 2-Idle-01
+  - first:
+      213: -550644420299046965
+    second: OccOc MC 2-Idle-02
+  - first:
+      213: 2750690508668966242
+    second: OccOc MC 2-Idle-03
+  - first:
+      213: -2011502573872131501
+    second: OccOc MC 2-Idle-04
+  - first:
+      213: 2381828306421615706
+    second: OccOc MC 2-Idle-05
+  - first:
+      213: -885316593342537619
+    second: OccOc MC 2-Idle-06
+  - first:
+      213: -51181913144374270
+    second: OccOc MC 2-Idle-07
+  - first:
+      213: -6362078185346905601
+    second: OccOc MC 2-Idle-08
+  - first:
+      213: 2086451704535722422
+    second: OccOc MC 2-Idle-09
+  - first:
+      213: 5816161883508044327
+    second: OccOc MC 2-Idle-10
+  - first:
+      213: -7137130311528976017
+    second: OccOc MC 2-Idle-11
+  - first:
+      213: -28748362476910815
+    second: OccOc MC 2-Idle-12
+  - first:
+      213: 9020014410488463732
+    second: OccOc MC 2-Idle-13
+  - first:
+      213: 7768709300847423974
+    second: OccOc MC 2-Idle-14
+  - first:
+      213: 6416884293630044609
+    second: OccOc MC 2-Idle-15
+  - first:
+      213: -3711841951126678953
+    second: OccOc MC 2-Idle-16
+  - first:
+      213: 4245159602511208485
+    second: OccOc MC 2-Idle-17
+  - first:
+      213: -8405077651902204496
+    second: OccOc MC 2-Idle-18
+  - first:
+      213: 4391991781073690890
+    second: OccOc MC 2-Idle-19
+  - first:
+      213: 1335924591177693062
+    second: OccOc MC 2-Idle-20
+  - first:
+      213: -5452406363784826055
+    second: OccOc MC 2-Idle-21
+  - first:
+      213: 6188474219820520031
+    second: OccOc MC 2-Idle-22
+  - first:
+      213: -5559454421956554905
+    second: OccOc MC 2-Idle-23
+  - first:
+      213: -1356340251237134796
+    second: OccOc MC 2-Idle-24
+  - first:
+      213: -806324226089745469
+    second: OccOc MC 2-Idle-25
+  - first:
+      213: 3301563178831170733
+    second: OccOc MC 2-Idle-26
+  - first:
+      213: -6348316527360660391
+    second: OccOc MC 2-Idle-27
+  - first:
+      213: -8364869153103077208
+    second: OccOc MC 2-Idle-28
+  - first:
+      213: -290955533514582990
+    second: OccOc MC 2-Idle-29
+  - first:
+      213: -7351376097145472991
+    second: OccOc MC 2-Idle-30
+  - first:
+      213: 510502288193399797
+    second: OccOc MC 2-Idle-31
+  - first:
+      213: -1635371780909627584
+    second: OccOc MC 2-Idle-32
+  - first:
+      213: -2805507348738949731
+    second: OccOc MC 2-Idle-33
+  - first:
+      213: 8546028496798027239
+    second: OccOc MC 2-Idle-34
+  - first:
+      213: -5646003172897851622
+    second: OccOc MC 2-Idle-35
+  - first:
+      213: -5581374593690009849
+    second: OccOc MC 2-Idle-36
+  - first:
+      213: 3434823875474533690
+    second: OccOc MC 2-Idle-37
+  - first:
+      213: 4821216630168119360
+    second: OccOc MC 2-Idle-38
+  - first:
+      213: -7553039864224653203
+    second: OccOc MC 2-Idle-39
+  - first:
+      213: 5225080095587656391
+    second: OccOc MC 2-Idle-40
+  - first:
+      213: 3000978270846579381
+    second: OccOc MC 2-Idle-41
+  - first:
+      213: -7901285353449713798
+    second: OccOc MC 2-Idle-42
+  - first:
+      213: -601597132071107497
+    second: OccOc MC 2-Idle-43
+  - first:
+      213: 9109902755722248873
+    second: OccOc MC 2-Idle-44
+  - first:
+      213: 3467846761319391852
+    second: OccOc MC 2-Idle-45
+  - first:
+      213: 1342711263841927263
+    second: OccOc MC 2-Idle-46
+  - first:
+      213: -5190089964395766433
+    second: OccOc MC 2-Idle-47
+  - first:
+      213: 404770960164242463
+    second: OccOc MC 2-Idle-48
+  - first:
+      213: 8445870783465649910
+    second: OccOc MC 2-Idle-49
+  - first:
+      213: 7941297093601301404
+    second: OccOc MC 2-Idle-50
+  - first:
+      213: -8395149827570107912
+    second: OccOc MC 2-Idle-51
+  - first:
+      213: -7208691681831662807
+    second: OccOc MC 2-Idle-52
+  - first:
+      213: 99534354329426272
+    second: OccOc MC 2-Idle-53
+  - first:
+      213: 2401156799336789644
+    second: OccOc MC 2-Idle-54
+  - first:
+      213: 2000982035634673313
+    second: OccOc MC 2-Idle-55
+  - first:
+      213: -5946124754038744006
+    second: OccOc MC 2-Idle-56
+  - first:
+      213: 8377420664666344487
+    second: OccOc MC 2-Idle-57
+  - first:
+      213: 2232090902390243713
+    second: OccOc MC 2-Idle-58
+  - first:
+      213: -1499016443978402233
+    second: OccOc MC 2-Idle-59
+  - first:
+      213: 2139599119906891857
+    second: OccOc MC 2-Jump-00
+  - first:
+      213: 7853232306459108601
+    second: OccOc MC 2-Jump-01
+  - first:
+      213: -4618279449945076604
+    second: OccOc MC 2-Jump-02
+  - first:
+      213: 6958403093527640104
+    second: OccOc MC 2-Jump-03
+  - first:
+      213: 1220886059363897613
+    second: OccOc MC 2-Jump-04
+  - first:
+      213: -8560517394578133834
+    second: OccOc MC 2-Jump-05
+  - first:
+      213: 1555163112320878029
+    second: OccOc MC 2-Jump-06
+  - first:
+      213: -3600337708521316594
+    second: OccOc MC 2-Jump-07
+  - first:
+      213: -9419235014040391
+    second: OccOc MC 2-Jump-08
+  - first:
+      213: 2282632315363975486
+    second: OccOc MC 2-Jump-09
+  - first:
+      213: -8795760360713228245
+    second: OccOc MC 2-Jump-10
+  - first:
+      213: -2820878447005501801
+    second: OccOc MC 2-Jump-11
+  - first:
+      213: -7205338792908953683
+    second: OccOc MC 2-Jump-12
+  - first:
+      213: 3320811982439967421
+    second: OccOc MC 2-Jump-13
+  - first:
+      213: 4398187804611977997
+    second: OccOc MC 2-Jump-14
+  - first:
+      213: 930510021272701299
+    second: OccOc MC 2-Jump-15
+  - first:
+      213: 6938052858903613816
+    second: OccOc MC 2-Jump-16
+  - first:
+      213: -8040637956866495253
+    second: OccOc MC 2-Jump-17
+  - first:
+      213: -3163788035862937394
+    second: OccOc MC 2-Jump-18
+  - first:
+      213: -386196218146437405
+    second: OccOc MC 2-Jump-19
+  - first:
+      213: -8243013382901748306
+    second: OccOc MC 2-Jump-20
+  - first:
+      213: -3247209527323751212
+    second: OccOc MC 2-Jump-21
+  - first:
+      213: -841361968619241970
+    second: OccOc MC 2-Jump-22
+  - first:
+      213: 2031962587395197088
+    second: OccOc MC 2-Jump-23
+  - first:
+      213: 3387346450843496063
+    second: OccOc MC 2-Jump-24
+  - first:
+      213: 1259037568618269711
+    second: OccOc MC 2-Jump-25
+  - first:
+      213: 2655136553631643761
+    second: OccOc MC 2-Jump-26
+  - first:
+      213: 7379732296098178795
+    second: OccOc MC 2-Jump-27
+  - first:
+      213: -1316577841654641821
+    second: OccOc MC 2-Jump-28
+  - first:
+      213: -8200411583082168023
+    second: OccOc MC 2-Jump-29
+  - first:
+      213: 6414254121873341661
+    second: OccOc MC 2-JumpToFall-00
+  - first:
+      213: -96856642971051436
+    second: OccOc MC 2-JumpToFall-01
+  - first:
+      213: 479678137907031194
+    second: OccOc MC 2-JumpToFall-02
+  - first:
+      213: -7037836848452623417
+    second: OccOc MC 2-JumpToFall-03
+  - first:
+      213: 6586211357222283598
+    second: OccOc MC 2-JumpToFall-04
+  - first:
+      213: 754064313745263131
+    second: OccOc MC 2-JumpToFall-05
+  - first:
+      213: -5402126537661305763
+    second: OccOc MC 2-JumpToFall-06
+  - first:
+      213: -6007661298892752434
+    second: OccOc MC 2-JumpToFall-07
+  - first:
+      213: 7044626358489699223
+    second: OccOc MC 2-JumpToFall-08
+  - first:
+      213: -5746997055365916783
+    second: OccOc MC 2-JumpToFall-09
+  - first:
+      213: 1321086291340836548
+    second: OccOc MC 2-JumpToFall-10
+  - first:
+      213: -2543616585997153571
+    second: OccOc MC 2-JumpToFall-11
+  - first:
+      213: 8138592789996954452
+    second: OccOc MC 2-JumpToFall-12
+  - first:
+      213: 7567854785683112177
+    second: OccOc MC 2-JumpToFall-13
+  - first:
+      213: -6940705496049401487
+    second: OccOc MC 2-JumpToFall-14
+  - first:
+      213: 4169130263259219919
+    second: OccOc MC 2-Land-00
+  - first:
+      213: 1868624705783676937
+    second: OccOc MC 2-Land-01
+  - first:
+      213: 2180034976660662132
+    second: OccOc MC 2-Land-02
+  - first:
+      213: -5131000114729184882
+    second: OccOc MC 2-Land-03
+  - first:
+      213: 6946099677200749096
+    second: OccOc MC 2-Land-04
+  - first:
+      213: -1109354880647837248
+    second: OccOc MC 2-Land-05
+  - first:
+      213: -7834824773646006323
+    second: OccOc MC 2-Land-06
+  - first:
+      213: 8817273918356433300
+    second: OccOc MC 2-Land-07
+  - first:
+      213: 7018076155579807635
+    second: OccOc MC 2-Land-08
+  - first:
+      213: 5211553219562374866
+    second: OccOc MC 2-Land-09
+  - first:
+      213: 1079927841396303376
+    second: OccOc MC 2-Land-10
+  - first:
+      213: -5897689606740663769
+    second: OccOc MC 2-Land-11
+  - first:
+      213: 3522779440053455766
+    second: OccOc MC 2-Land-12
+  - first:
+      213: -3351702080914912008
+    second: OccOc MC 2-Run-00
+  - first:
+      213: -8021277986367103399
+    second: OccOc MC 2-Run-01
+  - first:
+      213: -6394311616663474009
+    second: OccOc MC 2-Run-02
+  - first:
+      213: -3576531258819402262
+    second: OccOc MC 2-Run-03
+  - first:
+      213: -6654729422869410711
+    second: OccOc MC 2-Run-04
+  - first:
+      213: 5163687402632302833
+    second: OccOc MC 2-Run-05
+  - first:
+      213: -7653798436802402367
+    second: OccOc MC 2-Run-06
+  - first:
+      213: -3344158472873165617
+    second: OccOc MC 2-Run-07
+  - first:
+      213: 2884366566278834926
+    second: OccOc MC 2-Run-08
+  - first:
+      213: 5824846368807088485
+    second: OccOc MC 2-Run-09
+  - first:
+      213: 2951398074671173953
+    second: OccOc MC 2-Run-10
+  - first:
+      213: 8153084249111679210
+    second: OccOc MC 2-Run-11
+  - first:
+      213: -4326002488900230526
+    second: OccOc MC 2-Run-12
+  - first:
+      213: 7160061611895071217
+    second: OccOc MC 2-Run-13
+  - first:
+      213: -3486377683375462507
+    second: OccOc MC 2-Run-14
+  - first:
+      213: 2589403252678451849
+    second: OccOc MC 2-Run-15
+  - first:
+      213: -4081553235822610403
+    second: OccOc MC 2-Run-16
+  - first:
+      213: 5555821234036126672
+    second: OccOc MC 2-Run-17
+  - first:
+      213: 267123958779693111
+    second: OccOc MC 2-Run-18
+  - first:
+      213: -4525577289983484196
+    second: OccOc MC 2-Run-19
+  - first:
+      213: -4181074425225421925
+    second: OccOc MC 2-Run-20
+  - first:
+      213: 9144214017599129242
+    second: OccOc MC 2-Run-21
+  - first:
+      213: -1353421205120473982
+    second: OccOc MC 2-Run-22
+  - first:
+      213: -7069698188764359342
+    second: OccOc MC 2-Run-23
+  - first:
+      213: -3165091220713570376
+    second: OccOc MC 2-Run-24
+  - first:
+      213: -6354061561808201751
+    second: OccOc MC 2-Run-25
+  - first:
+      213: -3348905722648080780
+    second: OccOc MC 2-Run-26
+  - first:
+      213: 2864193022902337732
+    second: OccOc MC 2-Run-27
+  - first:
+      213: 4570191620334222501
+    second: OccOc MC 2-Run-28
+  - first:
+      213: 6263079602623778428
+    second: OccOc MC 2-Run-29
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 950
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-00
+      rect:
+        serializedVersion: 2
+        x: 4462
+        y: 4682
+        width: 399
+        height: 873
+      alignment: 9
+      pivot: {x: 0.5551379, y: 0.4742268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baff8dfccde904c22b5d4c1f222ec68d
+      internalID: 5898256229282822594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-01
+      rect:
+        serializedVersion: 2
+        x: 5367
+        y: 5571
+        width: 405
+        height: 870
+      alignment: 9
+      pivot: {x: 0.56419754, y: 0.4770115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ef7825130914b6c8f2dd26e1aa9b3f
+      internalID: 7078058494126150657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-02
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 3
+        width: 404
+        height: 866
+      alignment: 9
+      pivot: {x: 0.56064355, y: 0.4792148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbadcbf17ce564186b24bb2553bf7706
+      internalID: -6198589233972742539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-03
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 3765
+        width: 395
+        height: 879
+      alignment: 9
+      pivot: {x: 0.58607596, y: 0.48236632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2cf959ccda045f6bd1342fffa4a83f
+      internalID: -2765155544191293150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-04
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 125
+        width: 406
+        height: 882
+      alignment: 9
+      pivot: {x: 0.5726601, y: 0.4739229}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089ecc3ec1e2a4992aaf7db021b59213
+      internalID: 4245455536941667323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-05
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 7284
+        width: 390
+        height: 906
+      alignment: 9
+      pivot: {x: 0.58589745, y: 0.49117}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd25f5949e0f4f0fb2fb7038e441748
+      internalID: 3309461003882761300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-06
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 2847
+        width: 402
+        height: 883
+      alignment: 9
+      pivot: {x: 0.5733831, y: 0.4688562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f122af2478e4613a1d075f2ff067bf
+      internalID: -763029807730540854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-07
+      rect:
+        serializedVersion: 2
+        x: 4963
+        y: 5566
+        width: 402
+        height: 872
+      alignment: 9
+      pivot: {x: 0.5733831, y: 0.4701835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceab70d1706ca40e19edc56210ff75f5
+      internalID: 8901027111744882786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-08
+      rect:
+        serializedVersion: 2
+        x: 5114
+        y: 6443
+        width: 399
+        height: 872
+      alignment: 9
+      pivot: {x: 0.5726817, y: 0.4667431}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e9acd825a7f44d698f7f776bca8d3cc
+      internalID: 8596521582650834804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-09
+      rect:
+        serializedVersion: 2
+        x: 3057
+        y: 4646
+        width: 398
+        height: 880
+      alignment: 9
+      pivot: {x: 0.5665829, y: 0.4568182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c25759c5f8f744d3b6c3e810bebdd8a
+      internalID: -4713142557457956006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-10
+      rect:
+        serializedVersion: 2
+        x: 5266
+        y: 7318
+        width: 385
+        height: 872
+      alignment: 9
+      pivot: {x: 0.57532465, y: 0.4575688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6195f8a7a11bd4a8983c3a1c17b93985
+      internalID: 4664786623745677921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-11
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 4670
+        width: 393
+        height: 876
+      alignment: 9
+      pivot: {x: 0.5610687, y: 0.45890412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590ffcd10cc864c55a0aeadd662e7d3d
+      internalID: 7352746264304166065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-12
+      rect:
+        serializedVersion: 2
+        x: 2752
+        y: 5528
+        width: 386
+        height: 884
+      alignment: 9
+      pivot: {x: 0.56088084, y: 0.45475113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7525af512e41f42ef994f3fd6f1adc70
+      internalID: -5435732301981661971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-13
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 6386
+        width: 380
+        height: 896
+      alignment: 9
+      pivot: {x: 0.5644737, y: 0.46763393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b759c28a9604492ab34cf1f1f04bf3
+      internalID: 6459976743718886358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-14
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 4503
+        width: 386
+        height: 908
+      alignment: 9
+      pivot: {x: 0.53756475, y: 0.46696034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc3a6de8a02f4f8ab7cb1d4f3eede52
+      internalID: 8414666400632011780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-15
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 2789
+        width: 385
+        height: 891
+      alignment: 9
+      pivot: {x: 0.53636366, y: 0.46576878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268713f2ad64d48cd97eabcede9ba66f
+      internalID: -6669409464821582171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-16
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 930
+        width: 371
+        height: 897
+      alignment: 9
+      pivot: {x: 0.54043126, y: 0.47714603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4668f7f81aa5c429798fa1a46687697d
+      internalID: -8862840683294700504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-17
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 6338
+        width: 370
+        height: 912
+      alignment: 9
+      pivot: {x: 0.5445946, y: 0.4758772}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827c1253e2a734044b7c9b2e7decb919
+      internalID: 4061615880160174015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 5409
+        width: 375
+        height: 917
+      alignment: 9
+      pivot: {x: 0.5453333, y: 0.48854962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276295d71831044adb9265ec1979a001
+      internalID: -932018540072155465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-19
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 2729
+        width: 379
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5448549, y: 0.47438753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a59b3419c4354d28864791d1662936a
+      internalID: 5005918111865539631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-20
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 6371
+        width: 395
+        height: 907
+      alignment: 9
+      pivot: {x: 0.5455696, y: 0.48732084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b20458085154531919a96653ae4789
+      internalID: -8357147886912729299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-21
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 7296
+        width: 396
+        height: 894
+      alignment: 9
+      pivot: {x: 0.5694444, y: 0.4787472}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f6c728b89bc465ba4569b49e0ef0e6
+      internalID: -1566892550226525084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-22
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 1796
+        width: 391
+        height: 899
+      alignment: 9
+      pivot: {x: 0.5511509, y: 0.48832035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bc9e130e41549d695238223acee6e0
+      internalID: 8402860099018534923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-23
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 2697
+        width: 390
+        height: 901
+      alignment: 9
+      pivot: {x: 0.5679487, y: 0.4861265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb770dbd2be846b18861c40d7a0a0c7
+      internalID: -7115662875919815859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-24
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 3600
+        width: 391
+        height: 901
+      alignment: 9
+      pivot: {x: 0.5767263, y: 0.48057714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4a34235dc0c43c68922182a223e170
+      internalID: 6301388117249673926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-25
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 6401
+        width: 392
+        height: 893
+      alignment: 9
+      pivot: {x: 0.5880102, y: 0.4837626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604043c534ae54951b846da9f05f989a
+      internalID: -3728702177694906410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-26
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 5429
+        width: 399
+        height: 907
+      alignment: 9
+      pivot: {x: 0.58270675, y: 0.4895259}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceec2cc8f1a2c4733ae16175f745b4cb
+      internalID: -8593346012510580505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-27
+      rect:
+        serializedVersion: 2
+        x: 3499
+        y: 1119
+        width: 392
+        height: 877
+      alignment: 9
+      pivot: {x: 0.58035713, y: 0.47890535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830d8f03b385e4634a10660573b64e8b
+      internalID: 4561562436934801679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-28
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 4577
+        width: 387
+        height: 894
+      alignment: 9
+      pivot: {x: 0.5749354, y: 0.48657718}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 788136619a32d419b85cafd4d91c76db
+      internalID: -7615413685064542778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Fall-29
+      rect:
+        serializedVersion: 2
+        x: 5374
+        y: 3823
+        width: 381
+        height: 868
+      alignment: 9
+      pivot: {x: 0.5734908, y: 0.48156682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ee9e1ef06354587a34761f319a7335
+      internalID: 8260853922770166354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-00
+      rect:
+        serializedVersion: 2
+        x: 4940
+        y: 2061
+        width: 258
+        height: 870
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.52068967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06cc00b4daa9c443e847d621e6f7ba7a
+      internalID: 1381383418837890478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-01
+      rect:
+        serializedVersion: 2
+        x: 4680
+        y: 2050
+        width: 258
+        height: 872
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.5194954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abb58a107c8848269971721270dda93
+      internalID: -6414634196590032620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-02
+      rect:
+        serializedVersion: 2
+        x: 3115
+        y: 7306
+        width: 258
+        height: 884
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.5124434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0de2e43775d4294a6c5ffec4521fde
+      internalID: -550644420299046965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-03
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 3799
+        width: 258
+        height: 874
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.5183066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3a2022f9fc34ab19ef17fb938f09d9
+      internalID: 2750690508668966242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-04
+      rect:
+        serializedVersion: 2
+        x: 4369
+        y: 7315
+        width: 258
+        height: 875
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.51771426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e30875bca8c4f92a8a4d6a43dda937
+      internalID: -2011502573872131501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-05
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 3807
+        width: 258
+        height: 873
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.51890033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bacd0cbdd5b4b4b8f92b7430d984aa9c
+      internalID: 2381828306421615706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-06
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 1998
+        width: 256
+        height: 878
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.5159453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3d09e486c7243b39624287f5d9a25b
+      internalID: -885316593342537619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-07
+      rect:
+        serializedVersion: 2
+        x: 4742
+        y: 2933
+        width: 256
+        height: 872
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.5194954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b027da5a07d410cac08507ea7743af
+      internalID: -51181913144374270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-08
+      rect:
+        serializedVersion: 2
+        x: 5288
+        y: 4693
+        width: 260
+        height: 871
+      alignment: 9
+      pivot: {x: 0.5557692, y: 0.52009183}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa8c0d1c83b54fc39df934d10434ea6
+      internalID: -6362078185346905601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-09
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2944
+        width: 256
+        height: 870
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.52068967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431917c54b62e41a584b68b90a0faeeb
+      internalID: 2086451704535722422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-10
+      rect:
+        serializedVersion: 2
+        x: 3702
+        y: 3775
+        width: 256
+        height: 877
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.5165336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd49b00acc875493ca57002bb6d6b407
+      internalID: 5816161883508044327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-11
+      rect:
+        serializedVersion: 2
+        x: 5884
+        y: 6450
+        width: 256
+        height: 868
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.5218894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a5ada26e3c74237a6a6baaa020612c
+      internalID: -7137130311528976017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-12
+      rect:
+        serializedVersion: 2
+        x: 4310
+        y: 5557
+        width: 250
+        height: 875
+      alignment: 9
+      pivot: {x: 0.554, y: 0.5188571}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc29b1fd92024503a55eb7f3bdec21c
+      internalID: -28748362476910815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-13
+      rect:
+        serializedVersion: 2
+        x: 4629
+        y: 7315
+        width: 249
+        height: 875
+      alignment: 9
+      pivot: {x: 0.55220884, y: 0.5188571}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0418ccd9675ef4ca2b64781dd2c86263
+      internalID: 9020014410488463732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-14
+      rect:
+        serializedVersion: 2
+        x: 3172
+        y: 2878
+        width: 232
+        height: 880
+      alignment: 9
+      pivot: {x: 0.51508623, y: 0.5238636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e26ac4676100418bac304a9de4e39c0
+      internalID: 7768709300847423974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-15
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 6438
+        width: 250
+        height: 875
+      alignment: 9
+      pivot: {x: 0.554, y: 0.5188571}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94307f1bbc4ab483b802c084977df17c
+      internalID: 6416884293630044609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-16
+      rect:
+        serializedVersion: 2
+        x: 4207
+        y: 4675
+        width: 253
+        height: 875
+      alignment: 9
+      pivot: {x: 0.5474308, y: 0.51771426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f676ccae574f4c5c8f0fce0d8fbe9af
+      internalID: -3711841951126678953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-17
+      rect:
+        serializedVersion: 2
+        x: 3412
+        y: 220
+        width: 249
+        height: 878
+      alignment: 9
+      pivot: {x: 0.55220884, y: 0.5170843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976cfa6ea729745f3b2470d2abcfc39c
+      internalID: 4245159602511208485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-18
+      rect:
+        serializedVersion: 2
+        x: 3406
+        y: 2885
+        width: 253
+        height: 878
+      alignment: 9
+      pivot: {x: 0.5474308, y: 0.5170843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3f9be33d80d4badbcd4049527793e1
+      internalID: -8405077651902204496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-19
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1829
+        width: 254
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5610236, y: 0.5055679}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7001ca4def8424d3d98495d743e5506e
+      internalID: 4391991781073690890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-20
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 1963
+        width: 251
+        height: 882
+      alignment: 9
+      pivot: {x: 0.5517928, y: 0.515873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80de876d79864ea48b2a1a9d36e8959
+      internalID: 1335924591177693062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-21
+      rect:
+        serializedVersion: 2
+        x: 3065
+        y: 1980
+        width: 260
+        height: 880
+      alignment: 9
+      pivot: {x: 0.5480769, y: 0.51704544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719175a1e7bf0452faca645c59a68f5d
+      internalID: -5452406363784826055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-22
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 1964
+        width: 262
+        height: 881
+      alignment: 9
+      pivot: {x: 0.54389316, y: 0.5164586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6691d4b92092543ca96efd2f81f95e40
+      internalID: 6188474219820520031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-23
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 5543
+        width: 259
+        height: 879
+      alignment: 9
+      pivot: {x: 0.5501931, y: 0.5176337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e1eadfd619847ac8e455550629dc98
+      internalID: -5559454421956554905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-24
+      rect:
+        serializedVersion: 2
+        x: 3786
+        y: 5548
+        width: 256
+        height: 879
+      alignment: 9
+      pivot: {x: 0.5566406, y: 0.5153584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181aff5e001b7431eb1a3077344145c5
+      internalID: -1356340251237134796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-25
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 1082
+        width: 266
+        height: 880
+      alignment: 9
+      pivot: {x: 0.53571427, y: 0.5147727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8c91c1968fa4fcabca335b9d6d9de5
+      internalID: -806324226089745469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-26
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 7303
+        width: 265
+        height: 887
+      alignment: 9
+      pivot: {x: 0.5377358, y: 0.51071024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86295796613ee4985afd7daa78e7fa64
+      internalID: 3301563178831170733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-27
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 4597
+        width: 258
+        height: 892
+      alignment: 9
+      pivot: {x: 0.5523256, y: 0.5100897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca0a9e714b244e9294871b347218c02
+      internalID: -6348316527360660391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-28
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 6414
+        width: 261
+        height: 887
+      alignment: 9
+      pivot: {x: 0.545977, y: 0.51071024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d3c5b01cfa9454fb1c78e5c4d301a0
+      internalID: -8364869153103077208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-29
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 4598
+        width: 249
+        height: 891
+      alignment: 9
+      pivot: {x: 0.5160643, y: 0.5173962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25184ce343dbe4f8c8e610d78a0b3d47
+      internalID: -290955533514582990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-30
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 3745
+        width: 261
+        height: 883
+      alignment: 9
+      pivot: {x: 0.545977, y: 0.5130238}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef030dd045aad4f919001b69d1132708
+      internalID: -7351376097145472991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-31
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 3708
+        width: 262
+        height: 888
+      alignment: 9
+      pivot: {x: 0.54389316, y: 0.5101351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c2372d40277441682ff81035ebe6db
+      internalID: 510502288193399797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-32
+      rect:
+        serializedVersion: 2
+        x: 2246
+        y: 2820
+        width: 260
+        height: 886
+      alignment: 9
+      pivot: {x: 0.5480769, y: 0.5112867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1adc54379408476688aa211755d7f11
+      internalID: -1635371780909627584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 856
+        width: 258
+        height: 905
+      alignment: 9
+      pivot: {x: 0.5523256, y: 0.5005525}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d142ac53dd93406d81c49ac7f3396ed
+      internalID: -2805507348738949731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-34
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1080
+        width: 265
+        height: 881
+      alignment: 9
+      pivot: {x: 0.5490566, y: 0.5153235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f887bc6c5876b4ffca68a1dad8e352cc
+      internalID: 8546028496798027239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-35
+      rect:
+        serializedVersion: 2
+        x: 2852
+        y: 7303
+        width: 261
+        height: 887
+      alignment: 9
+      pivot: {x: 0.5574713, y: 0.51183766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba37c851815bf4103980ce8cedd4c3e7
+      internalID: -5646003172897851622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-36
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 3704
+        width: 263
+        height: 891
+      alignment: 9
+      pivot: {x: 0.54942966, y: 0.5084175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb1a7e78de084b4c8ee0faf6f235ab2
+      internalID: -5581374593690009849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-37
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 1041
+        width: 258
+        height: 882
+      alignment: 9
+      pivot: {x: 0.5523256, y: 0.5136054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88efec229a883444f87ad542f24bf635
+      internalID: 3434823875474533690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-38
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 7297
+        width: 264
+        height: 893
+      alignment: 9
+      pivot: {x: 0.5587121, y: 0.5095185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f9e2eca3d384689a97f472ceb889d2
+      internalID: 4821216630168119360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-39
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 5413
+        width: 263
+        height: 913
+      alignment: 9
+      pivot: {x: 0.5570342, y: 0.49835706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43b526e6a0854a30aaaf890885331aa
+      internalID: -7553039864224653203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-40
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1763
+        width: 250
+        height: 906
+      alignment: 9
+      pivot: {x: 0.538, y: 0.50993377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bcd448517354761b93d9058c471d4f
+      internalID: 5225080095587656391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-41
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3582
+        width: 259
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5501931, y: 0.4989011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20b2bf3ee04843afa10e4ffa404367f
+      internalID: 3000978270846579381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-42
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 3760
+        width: 257
+        height: 881
+      alignment: 9
+      pivot: {x: 0.5544747, y: 0.5141884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262f4f3256a224cdfa30cceef87e4785
+      internalID: -7901285353449713798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-43
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 3682
+        width: 253
+        height: 893
+      alignment: 9
+      pivot: {x: 0.55533594, y: 0.5162374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d39546fd83545199d934384c0857b4
+      internalID: -601597132071107497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-44
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 4619
+        width: 252
+        height: 888
+      alignment: 9
+      pivot: {x: 0.54960316, y: 0.5112613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1c05b2e39444880af4237efd5b43d1
+      internalID: 9109902755722248873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-45
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 2813
+        width: 255
+        height: 889
+      alignment: 9
+      pivot: {x: 0.5627451, y: 0.51068616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010433255012643aea71db8f750b395b
+      internalID: 3467846761319391852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-46
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 3732
+        width: 250
+        height: 885
+      alignment: 9
+      pivot: {x: 0.554, y: 0.51299435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac80f6b35e62a41f1ad5a43d53aa797b
+      internalID: 1342711263841927263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-47
+      rect:
+        serializedVersion: 2
+        x: 3742
+        y: 7311
+        width: 257
+        height: 879
+      alignment: 9
+      pivot: {x: 0.5544747, y: 0.5153584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f54829b4be04a178649003cc445642
+      internalID: -5190089964395766433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-48
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 4643
+        width: 250
+        height: 883
+      alignment: 9
+      pivot: {x: 0.554, y: 0.5141563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99def9bbe3ba4cd0b68189af738aed2
+      internalID: 404770960164242463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-49
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 895
+        width: 249
+        height: 899
+      alignment: 9
+      pivot: {x: 0.55220884, y: 0.5038932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258d8515a8f9849c2af1f1ccc4e0ee85
+      internalID: 8445870783465649910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-50
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 3745
+        width: 259
+        height: 883
+      alignment: 9
+      pivot: {x: 0.55791503, y: 0.5130238}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01eec35ea60ff4972903dd9f179406b7
+      internalID: 7941297093601301404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-51
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 1009
+        width: 256
+        height: 887
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.51071024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f714292fd614b00b1c29a6481aed58
+      internalID: -8395149827570107912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-52
+      rect:
+        serializedVersion: 2
+        x: 4740
+        y: 3807
+        width: 256
+        height: 873
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.51890033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdaf4dd826c2c4cf3936535a6c73d8cd
+      internalID: -7208691681831662807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-53
+      rect:
+        serializedVersion: 2
+        x: 3952
+        y: 6430
+        width: 256
+        height: 879
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.5153584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d42ad1ed211e453c8f4c5e5f8bce7a3
+      internalID: 99534354329426272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-54
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 7295
+        width: 256
+        height: 895
+      alignment: 9
+      pivot: {x: 0.5644531, y: 0.50614524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516a84b72d9b1420bbbd799070b251c1
+      internalID: 2401156799336789644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-55
+      rect:
+        serializedVersion: 2
+        x: 4044
+        y: 5552
+        width: 264
+        height: 876
+      alignment: 9
+      pivot: {x: 0.5473485, y: 0.5171233}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b07fc4c3da04ac08bc0b404916af10
+      internalID: 2000982035634673313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-56
+      rect:
+        serializedVersion: 2
+        x: 4210
+        y: 6434
+        width: 258
+        height: 876
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.5171233}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a97d015f3bd6468b9b411306f7e6f3e
+      internalID: -5946124754038744006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-57
+      rect:
+        serializedVersion: 2
+        x: 5258
+        y: 2945
+        width: 258
+        height: 869
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.5212888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b87ddca37fe6844d9ac85941d2a3382e
+      internalID: 8377420664666344487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-58
+      rect:
+        serializedVersion: 2
+        x: 3692
+        y: 6429
+        width: 258
+        height: 879
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.5153584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcc3f59c7d774e859ed0bcd2328b446
+      internalID: 2232090902390243713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Idle-59
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 3793
+        width: 258
+        height: 875
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.51771426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99968b41c9969418f86a2dd322e268e8
+      internalID: -1499016443978402233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-00
+      rect:
+        serializedVersion: 2
+        x: 5190
+        y: 330
+        width: 373
+        height: 858
+      alignment: 9
+      pivot: {x: 0.5857909, y: 0.56759906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbdbbcd5d33124556a77c7969f5625c9
+      internalID: 2139599119906891857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-01
+      rect:
+        serializedVersion: 2
+        x: 4652
+        y: 1168
+        width: 346
+        height: 872
+      alignment: 9
+      pivot: {x: 0.5563584, y: 0.5584862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9f09bd1b2d24c3ca51cab5662dcae1
+      internalID: 7853232306459108601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-02
+      rect:
+        serializedVersion: 2
+        x: 4383
+        y: 2924
+        width: 357
+        height: 873
+      alignment: 9
+      pivot: {x: 0.5588235, y: 0.5578465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94663e2a64c764a09ab27485c9dd10cf
+      internalID: -4618279449945076604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-03
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 1190
+        width: 370
+        height: 869
+      alignment: 9
+      pivot: {x: 0.59864867, y: 0.56041425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6196f5191e8f74a65aa165683ffae432
+      internalID: 6958403093527640104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-04
+      rect:
+        serializedVersion: 2
+        x: 6142
+        y: 6461
+        width: 378
+        height: 861
+      alignment: 9
+      pivot: {x: 0.58597887, y: 0.5656214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6437eabe4695044c08374a5c67a1e03a
+      internalID: 1220886059363897613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-05
+      rect:
+        serializedVersion: 2
+        x: 4001
+        y: 7312
+        width: 366
+        height: 878
+      alignment: 9
+      pivot: {x: 0.60519123, y: 0.55353075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf02b5a06568c4f21af9b09afcc625da
+      internalID: -8560517394578133834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-06
+      rect:
+        serializedVersion: 2
+        x: 4998
+        y: 3816
+        width: 374
+        height: 871
+      alignment: 9
+      pivot: {x: 0.5975936, y: 0.55797935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c95dcfc584c34200ac2af9bb1b6a6c9
+      internalID: 1555163112320878029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-07
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 2010
+        width: 356
+        height: 874
+      alignment: 9
+      pivot: {x: 0.5519663, y: 0.55720824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878b99c6e303943afa842412f342622a
+      internalID: -3600337708521316594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-08
+      rect:
+        serializedVersion: 2
+        x: 3457
+        y: 4654
+        width: 353
+        height: 879
+      alignment: 9
+      pivot: {x: 0.5736544, y: 0.5540387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a085a8037e86492b83ab02fa54ae500
+      internalID: -9419235014040391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-09
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 2006
+        width: 371
+        height: 877
+      alignment: 9
+      pivot: {x: 0.55121297, y: 0.55188143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dacc155edb4f24b899d668a1f1dce8da
+      internalID: 2282632315363975486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-10
+      rect:
+        serializedVersion: 2
+        x: 4025
+        y: 2917
+        width: 356
+        height: 874
+      alignment: 9
+      pivot: {x: 0.58848315, y: 0.55263156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae2780e4f8eb45d09a36ce928d7bc93
+      internalID: -8795760360713228245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-11
+      rect:
+        serializedVersion: 2
+        x: 6004
+        y: 7324
+        width: 352
+        height: 866
+      alignment: 9
+      pivot: {x: 0.5980114, y: 0.5600462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ab6df203bca48e7bbe8474f8a6724e
+      internalID: -2820878447005501801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-12
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 1100
+        width: 359
+        height: 878
+      alignment: 9
+      pivot: {x: 0.586351, y: 0.5523918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 047617d1ee8474f2793345263e676ae8
+      internalID: -7205338792908953683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-13
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 2886
+        width: 362
+        height: 877
+      alignment: 9
+      pivot: {x: 0.5732044, y: 0.5541619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167825bd740c24d9293318e237b0d33f
+      internalID: 3320811982439967421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-14
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 6424
+        width: 368
+        height: 880
+      alignment: 9
+      pivot: {x: 0.5964674, y: 0.55227274}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecc2a3cb882445f4b5fb7347ea56d84
+      internalID: 4398187804611977997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-15
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 2073
+        width: 364
+        height: 869
+      alignment: 9
+      pivot: {x: 0.59203297, y: 0.5535098}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9b2c99d04ec430ca14ae2b607b364a
+      internalID: 930510021272701299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-16
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 198
+        width: 345
+        height: 880
+      alignment: 9
+      pivot: {x: 0.59275365, y: 0.55227274}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a60df9b73864285bc011bee0ee7d52
+      internalID: 6938052858903613816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-17
+      rect:
+        serializedVersion: 2
+        x: 3044
+        y: 202
+        width: 366
+        height: 878
+      alignment: 9
+      pivot: {x: 0.5778689, y: 0.55353075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 885f40bb9fa3948c284185f7a8b080e3
+      internalID: -8040637956866495253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-18
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 7310
+        width: 365
+        height: 880
+      alignment: 9
+      pivot: {x: 0.5684931, y: 0.5511364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05421f05ec215421c8c3aacf55ab7c83
+      internalID: -3163788035862937394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-19
+      rect:
+        serializedVersion: 2
+        x: 5653
+        y: 7320
+        width: 349
+        height: 870
+      alignment: 9
+      pivot: {x: 0.5716332, y: 0.55402297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b534bc3874e44d699b2c3a3aa108b9f
+      internalID: -386196218146437405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-20
+      rect:
+        serializedVersion: 2
+        x: 4316
+        y: 2042
+        width: 362
+        height: 873
+      alignment: 9
+      pivot: {x: 0.5814917, y: 0.5578465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4865de7b7a94a43629739e682746b29e
+      internalID: -8243013382901748306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-21
+      rect:
+        serializedVersion: 2
+        x: 5774
+        y: 5576
+        width: 356
+        height: 868
+      alignment: 9
+      pivot: {x: 0.5772472, y: 0.55990785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81123512e6f9b4df3bcedc2d1658f2e8
+      internalID: -3247209527323751212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-22
+      rect:
+        serializedVersion: 2
+        x: 5550
+        y: 4701
+        width: 374
+        height: 868
+      alignment: 9
+      pivot: {x: 0.5949198, y: 0.55760366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57967b6b4dda944368f2841543fb42c3
+      internalID: -841361968619241970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-23
+      rect:
+        serializedVersion: 2
+        x: 4812
+        y: 297
+        width: 376
+        height: 869
+      alignment: 9
+      pivot: {x: 0.59707445, y: 0.5592635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7df9cbfd2274fb48612c3a76a64967
+      internalID: 2031962587395197088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-24
+      rect:
+        serializedVersion: 2
+        x: 5926
+        y: 4711
+        width: 384
+        height: 863
+      alignment: 9
+      pivot: {x: 0.59244794, y: 0.56431055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3558ff14be6403da16f555f4de20f8
+      internalID: 3387346450843496063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-25
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 7317
+        width: 384
+        height: 873
+      alignment: 9
+      pivot: {x: 0.60026044, y: 0.5578465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fba42354d9d4ec28323acbe3e4bf36
+      internalID: 1259037568618269711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-26
+      rect:
+        serializedVersion: 2
+        x: 4057
+        y: 255
+        width: 378
+        height: 873
+      alignment: 9
+      pivot: {x: 0.59656084, y: 0.5578465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7eccc44892247babab1a3703537ce5
+      internalID: 2655136553631643761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-27
+      rect:
+        serializedVersion: 2
+        x: 5515
+        y: 6446
+        width: 367
+        height: 870
+      alignment: 9
+      pivot: {x: 0.59536785, y: 0.5597701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf3a0592fce84c3aab54b57ab81f7c9
+      internalID: 7379732296098178795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-28
+      rect:
+        serializedVersion: 2
+        x: 4276
+        y: 1135
+        width: 374
+        height: 873
+      alignment: 9
+      pivot: {x: 0.57887703, y: 0.5578465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffa32a251784448eb90a3972a49846e
+      internalID: -1316577841654641821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Jump-29
+      rect:
+        serializedVersion: 2
+        x: 4437
+        y: 261
+        width: 373
+        height: 872
+      alignment: 9
+      pivot: {x: 0.58847183, y: 0.5584862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995d90026da0d441cb4dbe5bca29c8eb
+      internalID: -8200411583082168023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-00
+      rect:
+        serializedVersion: 2
+        x: 5190
+        y: 330
+        width: 373
+        height: 858
+      alignment: 9
+      pivot: {x: 0.5857909, y: 0.56759906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acffeff4e0efb4bb7af8cbbe760711b4
+      internalID: 6414254121873341661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-01
+      rect:
+        serializedVersion: 2
+        x: 6132
+        y: 5586
+        width: 373
+        height: 862
+      alignment: 9
+      pivot: {x: 0.5857909, y: 0.5649652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eee6029376584d5ea5bc65205e86ff7
+      internalID: -96856642971051436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-02
+      rect:
+        serializedVersion: 2
+        x: 5757
+        y: 3835
+        width: 368
+        height: 864
+      alignment: 9
+      pivot: {x: 0.5991848, y: 0.5601852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dd5e20e3c8e45c588ac45e1f81e1f6
+      internalID: 479678137907031194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-03
+      rect:
+        serializedVersion: 2
+        x: 2941
+        y: 6417
+        width: 379
+        height: 884
+      alignment: 9
+      pivot: {x: 0.6055409, y: 0.54751134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3a8de94f61047e589308485e4c31b6
+      internalID: -7037836848452623417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-04
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1925
+        width: 410
+        height: 886
+      alignment: 9
+      pivot: {x: 0.6280488, y: 0.5451467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0c6f7b497304de3a1c80222e361765
+      internalID: 6586211357222283598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-05
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 3629
+        width: 417
+        height: 898
+      alignment: 9
+      pivot: {x: 0.6654676, y: 0.53452116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b616a78cba22346f8b92a2bc4f1c21bd
+      internalID: 754064313745263131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-06
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 860
+        width: 429
+        height: 903
+      alignment: 9
+      pivot: {x: 0.67016315, y: 0.52934664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be9f6d9276854cc9b018c520ba875c7
+      internalID: -5402126537661305763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-07
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 2
+        width: 443
+        height: 891
+      alignment: 9
+      pivot: {x: 0.6783296, y: 0.51290685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3318422013a948b6a70a4a773759351
+      internalID: -6007661298892752434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-08
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 5491
+        width: 451
+        height: 893
+      alignment: 9
+      pivot: {x: 0.6995565, y: 0.50839865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73c8628425984af3adb7881d067149e
+      internalID: 7044626358489699223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-09
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 871
+        width: 438
+        height: 901
+      alignment: 9
+      pivot: {x: 0.6609589, y: 0.5005549}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f07ecd5df50a445dfbc36baea9c733ff
+      internalID: -5746997055365916783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-10
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 5516
+        width: 445
+        height: 887
+      alignment: 9
+      pivot: {x: 0.65280896, y: 0.4994363}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe60e4d822394eac8d9da4d4e0578ab
+      internalID: 1321086291340836548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-11
+      rect:
+        serializedVersion: 2
+        x: 4863
+        y: 4689
+        width: 423
+        height: 872
+      alignment: 9
+      pivot: {x: 0.62765956, y: 0.49541286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227b5206731284d07807086978ee7f7a
+      internalID: -2543616585997153571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-12
+      rect:
+        serializedVersion: 2
+        x: 5518
+        y: 2957
+        width: 401
+        height: 864
+      alignment: 9
+      pivot: {x: 0.617207, y: 0.4872685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82068de31c4514c498144213821523cb
+      internalID: 8138592789996954452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-13
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 6440
+        width: 390
+        height: 873
+      alignment: 9
+      pivot: {x: 0.58589745, y: 0.48682705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86268625c7763448fa72e02e6d67f62c
+      internalID: 7567854785683112177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-JumpToFall-14
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 5563
+        width: 399
+        height: 873
+      alignment: 9
+      pivot: {x: 0.5551379, y: 0.4742268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0107ab94db7b848949dcdda55c18d24c
+      internalID: -6940705496049401487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-00
+      rect:
+        serializedVersion: 2
+        x: 6312
+        y: 4742
+        width: 354
+        height: 842
+      alignment: 9
+      pivot: {x: 0.54096043, y: 0.4976247}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426287016d0d644babd89cce1eeac457
+      internalID: 4169130263259219919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-01
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 8
+        width: 384
+        height: 850
+      alignment: 9
+      pivot: {x: 0.60546875, y: 0.49882352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa00bf35ad7604a4a85df96d43b4dbbf
+      internalID: 1868624705783676937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-02
+      rect:
+        serializedVersion: 2
+        x: 5921
+        y: 2989
+        width: 346
+        height: 844
+      alignment: 9
+      pivot: {x: 0.63439304, y: 0.5390995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a9a0fe9253f4ef0ad715e8f3ea2ecf
+      internalID: 2180034976660662132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-03
+      rect:
+        serializedVersion: 2
+        x: 7099
+        y: 7405
+        width: 349
+        height: 785
+      alignment: 9
+      pivot: {x: 0.67765045, y: 0.58343947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a9baaa73f6043b59afb16cbded526f
+      internalID: -5131000114729184882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-04
+      rect:
+        serializedVersion: 2
+        x: 7450
+        y: 6750
+        width: 361
+        height: 702
+      alignment: 9
+      pivot: {x: 0.66897506, y: 0.65242165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77bff4d52a73b4e4fa5d970ad6466c27
+      internalID: 6946099677200749096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-05
+      rect:
+        serializedVersion: 2
+        x: 7832
+        y: 7484
+        width: 358
+        height: 706
+      alignment: 9
+      pivot: {x: 0.6243017, y: 0.65439093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9167b88343f46fe801843bbc50da69
+      internalID: -1109354880647837248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-06
+      rect:
+        serializedVersion: 2
+        x: 7450
+        y: 7454
+        width: 380
+        height: 736
+      alignment: 9
+      pivot: {x: 0.66973686, y: 0.6168478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc06b3c7e191c47828d3c5cb726ce235
+      internalID: -7834824773646006323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-07
+      rect:
+        serializedVersion: 2
+        x: 6800
+        y: 6575
+        width: 392
+        height: 790
+      alignment: 9
+      pivot: {x: 0.684949, y: 0.5772152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c369ac37fc23c40dfa8e5e4cc2bb190f
+      internalID: 8817273918356433300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-08
+      rect:
+        serializedVersion: 2
+        x: 6723
+        y: 7367
+        width: 374
+        height: 823
+      alignment: 9
+      pivot: {x: 0.68582886, y: 0.5504253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38ccc6731c354e8597a192621d13b2d
+      internalID: 7018076155579807635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-09
+      rect:
+        serializedVersion: 2
+        x: 6127
+        y: 3866
+        width: 354
+        height: 843
+      alignment: 9
+      pivot: {x: 0.670904, y: 0.54092526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4385dac6da341968948785652f5dbb
+      internalID: 5211553219562374866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-10
+      rect:
+        serializedVersion: 2
+        x: 5372
+        y: 1213
+        width: 314
+        height: 858
+      alignment: 9
+      pivot: {x: 0.62261146, y: 0.52913755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7952456080cec4ccf86b8f9dcd0fadd1
+      internalID: 1079927841396303376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-11
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 2
+        width: 288
+        height: 867
+      alignment: 9
+      pivot: {x: 0.5920139, y: 0.52364475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaed490a255394dd8b413b23858bba4a
+      internalID: -5897689606740663769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Land-12
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 2862
+        width: 258
+        height: 881
+      alignment: 9
+      pivot: {x: 0.56782943, y: 0.5141884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e312c246553349d7acdcdeace71eed9
+      internalID: 3522779440053455766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-00
+      rect:
+        serializedVersion: 2
+        x: 6507
+        y: 5618
+        width: 341
+        height: 841
+      alignment: 9
+      pivot: {x: 0.5645161, y: 0.51248515}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a00488bf3d4463190fcd45dc0b5af2
+      internalID: -3351702080914912008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-01
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 2105
+        width: 333
+        height: 850
+      alignment: 9
+      pivot: {x: 0.5960961, y: 0.5058824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe8674b3af8d483787c5f105573dfb5
+      internalID: -8021277986367103399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-02
+      rect:
+        serializedVersion: 2
+        x: 5688
+        y: 1254
+        width: 370
+        height: 849
+      alignment: 9
+      pivot: {x: 0.58243245, y: 0.5041225}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f05f48453714252a2029ff91157521
+      internalID: -6394311616663474009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-03
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 5535
+        width: 383
+        height: 880
+      alignment: 9
+      pivot: {x: 0.55744123, y: 0.49886364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8deeae969e7184379a1825e053122e46
+      internalID: -3576531258819402262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-04
+      rect:
+        serializedVersion: 2
+        x: 3893
+        y: 1130
+        width: 381
+        height: 874
+      alignment: 9
+      pivot: {x: 0.52362204, y: 0.47482836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18dd7c3ff265545b487292dcbcfccd3b
+      internalID: -6654729422869410711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-05
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 1898
+        width: 410
+        height: 889
+      alignment: 9
+      pivot: {x: 0.53292686, y: 0.47356582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada41a1aadbd44bd89808e7b042c8641
+      internalID: 5163687402632302833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-06
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 5473
+        width: 394
+        height: 896
+      alignment: 9
+      pivot: {x: 0.48096448, y: 0.46205357}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e7f1141bb4140568093547cdf16f1e
+      internalID: -7653798436802402367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-07
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 5509
+        width: 409
+        height: 890
+      alignment: 9
+      pivot: {x: 0.49511003, y: 0.45393258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b74337d178c724e9d89ec638c782dbbb
+      internalID: -3344158472873165617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-08
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6328
+        width: 387
+        height: 922
+      alignment: 9
+      pivot: {x: 0.4715762, y: 0.47180045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a1dd15a7e8d481bbf6a70ed7e923b7
+      internalID: 2884366566278834926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-09
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7252
+        width: 408
+        height: 938
+      alignment: 9
+      pivot: {x: 0.42769608, y: 0.48081023}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9be1dbce54ff4249ab2680eb95d3826
+      internalID: 5824846368807088485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-10
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 7280
+        width: 411
+        height: 910
+      alignment: 9
+      pivot: {x: 0.4513382, y: 0.46703297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2658da6df58c244b3bc84e1bf5b8223f
+      internalID: 2951398074671173953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-11
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 31
+        width: 371
+        height: 897
+      alignment: 9
+      pivot: {x: 0.40026954, y: 0.47268674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2efab7cf6454ea98132f1df53dd172
+      internalID: 8153084249111679210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-12
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 6412
+        width: 341
+        height: 887
+      alignment: 9
+      pivot: {x: 0.3328446, y: 0.48703495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d105c3a1229464c2b9dc48d9d98e7e37
+      internalID: -4326002488900230526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-13
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 895
+        width: 326
+        height: 899
+      alignment: 9
+      pivot: {x: 0.33895704, y: 0.48609567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f852abe93b09c48e0857225ceb1aeaad
+      internalID: 7160061611895071217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-14
+      rect:
+        serializedVersion: 2
+        x: 5565
+        y: 361
+        width: 288
+        height: 850
+      alignment: 9
+      pivot: {x: 0.3871528, y: 0.5011765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d081a4f845aa14d599b169d9fd82e6e6
+      internalID: -3486377683375462507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-15
+      rect:
+        serializedVersion: 2
+        x: 6522
+        y: 6486
+        width: 276
+        height: 841
+      alignment: 9
+      pivot: {x: 0.42210144, y: 0.5136742}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45334c7a53eb44f0d83d00e88652e333
+      internalID: 2589403252678451849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-16
+      rect:
+        serializedVersion: 2
+        x: 5901
+        y: 2106
+        width: 301
+        height: 849
+      alignment: 9
+      pivot: {x: 0.48006645, y: 0.5041225}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00be878260e44756b090d0c54ddceeb
+      internalID: -4081553235822610403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-17
+      rect:
+        serializedVersion: 2
+        x: 6358
+        y: 7329
+        width: 363
+        height: 861
+      alignment: 9
+      pivot: {x: 0.5192838, y: 0.50406504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb136984487e4269844db609ad0489f
+      internalID: 5555821234036126672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-18
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 243
+        width: 392
+        height: 874
+      alignment: 9
+      pivot: {x: 0.49617347, y: 0.49427918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a74fc251adc46cc8cee47756b25fb3
+      internalID: 267123958779693111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-19
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 2679
+        width: 420
+        height: 903
+      alignment: 9
+      pivot: {x: 0.47738096, y: 0.49169436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a24e106d2f149f28132f5bb90d3f4d
+      internalID: -4525577289983484196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2671
+        width: 403
+        height: 909
+      alignment: 9
+      pivot: {x: 0.4751861, y: 0.48184818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8a18343c6d94a7ab7c00f5bfb14c6e
+      internalID: -4181074425225421925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-21
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 6405
+        width: 397
+        height: 890
+      alignment: 9
+      pivot: {x: 0.44710326, y: 0.45842695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636887c107b234d078ac9175d0c8bf98
+      internalID: 9144214017599129242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-22
+      rect:
+        serializedVersion: 2
+        x: 2398
+        y: 4630
+        width: 405
+        height: 884
+      alignment: 9
+      pivot: {x: 0.445679, y: 0.449095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457876698160846158b6c90b254ed4c5
+      internalID: -1353421205120473982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-23
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 4529
+        width: 421
+        height: 898
+      alignment: 9
+      pivot: {x: 0.45486936, y: 0.45768374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1effe202a164e4562ace4d7ebedf8966
+      internalID: -7069698188764359342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4494
+        width: 429
+        height: 913
+      alignment: 9
+      pivot: {x: 0.46969697, y: 0.46659365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19c1e1288148465d87f9825899be422
+      internalID: -3165091220713570376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-25
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1774
+        width: 412
+        height: 903
+      alignment: 9
+      pivot: {x: 0.47451457, y: 0.4651163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564377653f8d043f694f3143c2f04b15
+      internalID: -6354061561808201751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-26
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1765
+        width: 405
+        height: 904
+      alignment: 9
+      pivot: {x: 0.5074074, y: 0.4778761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e16f886cd5b4caa9a1084e80a6a8e9
+      internalID: -3348905722648080780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 3584
+        width: 409
+        height: 908
+      alignment: 9
+      pivot: {x: 0.52933985, y: 0.4834802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc506d8b1ff5046f391d157ada1ce363
+      internalID: 2864193022902337732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-28
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 7301
+        width: 444
+        height: 889
+      alignment: 9
+      pivot: {x: 0.5754505, y: 0.49156356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fe920411b5a46909c78e2b31b71417
+      internalID: 4570191620334222501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OccOc MC 2-Run-29
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 385
+        height: 851
+      alignment: 9
+      pivot: {x: 0.55974025, y: 0.506463}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1573e2eb94ab0405797750793dc8243b
+      internalID: 6263079602623778428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ce8610c661a524a3ca64e285832a5671
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
